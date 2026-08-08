@@ -1,3 +1,7 @@
+/* =================================
+   DPF OS LIBRARY PAGE
+================================= */
+
 .library-page {
   min-height: 100vh;
   background: #020617;
@@ -6,9 +10,9 @@
 }
 
 
-/* ================================
+/* =================================
    SHARED CONTAINER
-================================ */
+================================= */
 
 .library-container {
   width: min(1180px, calc(100% - 80px));
@@ -16,20 +20,21 @@
 }
 
 
-/* ================================
+/* =================================
    LIBRARY HERO
-================================ */
+================================= */
 
 .library-hero {
   min-height: calc(100vh - 80px);
 
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 
   text-align: center;
 
-  padding: 90px 40px 100px;
+  padding: 120px 40px 100px;
 
   background:
     linear-gradient(
@@ -47,11 +52,11 @@
 }
 
 
-/* ================================
+/* =================================
    HERO LABEL
-================================ */
+================================= */
 
-.library-label {
+.library-hero-label {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -65,29 +70,25 @@
 
   font-size: 11px;
   font-weight: 700;
-
   letter-spacing: 3px;
   text-transform: uppercase;
 
-  margin-bottom: 30px;
+  margin-bottom: 38px;
 }
 
 
-/* ================================
+/* =================================
    HERO TITLE
-================================ */
+================================= */
 
 .library-hero h1 {
-  margin: 0 auto;
+  margin: 0;
 
   max-width: 1100px;
 
   font-size: clamp(64px, 8vw, 120px);
-
   line-height: 0.95;
-
   letter-spacing: -5px;
-
   font-weight: 800;
 
   color: #ffffff;
@@ -95,33 +96,33 @@
 
 .library-hero h1 span {
   display: block;
+
   color: #ffcc33;
 }
 
 
-/* ================================
+/* =================================
    HERO DESCRIPTION
-================================ */
+================================= */
 
 .library-hero p {
   max-width: 760px;
 
-  margin: 32px auto 0;
+  margin: 38px auto 0;
 
   color: #9fb2d4;
 
   font-size: 17px;
-
   line-height: 1.7;
 }
 
 
-/* ================================
-   INTRO
-================================ */
+/* =================================
+   LIBRARY INTRO
+================================= */
 
 .library-intro {
-  padding: 110px 0 140px;
+  padding: 140px 0 160px;
 
   background-color: #020617;
 
@@ -142,38 +143,36 @@
 }
 
 
-/* ================================
+/* =================================
    INTRO GRID
-================================ */
+================================= */
 
 .library-intro-grid {
   display: grid;
 
   grid-template-columns: 1fr 0.8fr;
 
-  gap: 80px;
+  gap: 100px;
 
   align-items: end;
 
-  margin-bottom: 70px;
+  margin-bottom: 90px;
 }
 
 
-/* ================================
+/* =================================
    INTRO TITLE
-================================ */
+================================= */
 
 .library-intro-title > span {
   display: block;
 
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 
   color: #ffcf3f;
 
   font-size: 12px;
-
   font-weight: 700;
-
   letter-spacing: 3px;
 }
 
@@ -181,9 +180,7 @@
   margin: 0;
 
   font-size: clamp(48px, 6vw, 82px);
-
   line-height: 0.95;
-
   letter-spacing: -4px;
 }
 
@@ -193,9 +190,9 @@
 }
 
 
-/* ================================
+/* =================================
    INTRO TEXT
-================================ */
+================================= */
 
 .library-intro-text p {
   margin: 0;
@@ -205,14 +202,45 @@
   color: #8fa2c5;
 
   font-size: 17px;
-
   line-height: 1.8;
 }
 
 
-/* ================================
+/* =================================
+   SECTION HEADINGS
+================================= */
+
+.library-section-heading {
+  margin: 110px 0 34px;
+}
+
+.library-section-heading span {
+  display: block;
+
+  margin-bottom: 12px;
+
+  color: #ffcf3f;
+
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.library-section-heading h3 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: -0.8px;
+}
+
+
+/* =================================
    LIBRARY GRID
-================================ */
+================================= */
 
 .library-grid {
   display: grid;
@@ -220,22 +248,20 @@
   grid-template-columns: repeat(3, 1fr);
 
   border-top: 1px solid rgba(255, 255, 255, 0.1);
-
   border-left: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 
-/* ================================
+/* =================================
    LIBRARY CARD
-================================ */
+================================= */
 
 .library-card {
   min-height: 270px;
 
-  padding: 32px;
+  padding: 34px;
 
   border-right: 1px solid rgba(255, 255, 255, 0.1);
-
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 
   background: rgba(255, 255, 255, 0.012);
@@ -246,6 +272,11 @@
     transform 0.3s ease;
 }
 
+
+/* =================================
+   CARD HOVER
+================================= */
+
 .library-card:hover {
   background: rgba(255, 255, 255, 0.035);
 
@@ -255,43 +286,39 @@
 }
 
 
-/* ================================
+/* =================================
    CARD NUMBER
-================================ */
+================================= */
 
 .library-card > span {
   display: block;
 
-  margin-bottom: 45px;
+  margin-bottom: 55px;
 
   color: #ffcf3f;
 
   font-size: 12px;
-
   font-weight: 700;
-
   letter-spacing: 2px;
 }
 
 
-/* ================================
+/* =================================
    CARD TITLE
-================================ */
+================================= */
 
 .library-card h3 {
-  margin: 0 0 16px;
+  margin: 0 0 18px;
 
   font-size: 25px;
-
   line-height: 1.15;
-
   letter-spacing: -0.7px;
 }
 
 
-/* ================================
+/* =================================
    CARD DESCRIPTION
-================================ */
+================================= */
 
 .library-card p {
   margin: 0;
@@ -301,17 +328,48 @@
   color: #8fa2c5;
 
   font-size: 14px;
-
   line-height: 1.7;
 }
 
 
-/* ================================
-   TABLET
-================================ */
+/* =================================
+   CARD META
+================================= */
+
+.library-card-meta {
+  margin-top: 24px;
+
+  color: #ffcf3f;
+
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+
+/* =================================
+   SOON CARDS
+================================= */
+
+.library-card-soon {
+  opacity: 0.62;
+}
+
+.library-card-soon .library-card-meta {
+  color: #7f8da8;
+}
+
+.library-card-soon:hover {
+  opacity: 0.85;
+}
+
+
+/* =================================
+   RESPONSIVE
+================================= */
 
 @media (max-width: 900px) {
-
   .library-container {
     width: min(100% - 40px, 700px);
   }
@@ -319,7 +377,7 @@
   .library-hero {
     min-height: 620px;
 
-    padding: 80px 0 80px;
+    padding: 100px 0 80px;
   }
 
   .library-hero h1 {
@@ -331,9 +389,7 @@
   .library-intro-grid {
     grid-template-columns: 1fr;
 
-    gap: 40px;
-
-    margin-bottom: 60px;
+    gap: 50px;
   }
 
   .library-grid {
@@ -342,129 +398,68 @@
 }
 
 
-/* ================================
+/* =================================
    MOBILE
-================================ */
+================================= */
 
 @media (max-width: 600px) {
-
   .library-container {
     width: calc(100% - 32px);
   }
 
-
-  /* HERO */
-
   .library-hero {
-    min-height: auto;
+    min-height: 560px;
 
-    padding: 72px 0 68px;
+    padding: 80px 0 70px;
   }
 
+  .library-hero-label {
+    font-size: 10px;
 
-  .library-label {
+    letter-spacing: 2px;
+
     padding: 8px 16px;
 
-    font-size: 9px;
-
-    letter-spacing: 2.5px;
-
-    margin-bottom: 24px;
+    margin-bottom: 30px;
   }
 
-
   .library-hero h1 {
-    font-size: 50px;
-
-    line-height: 0.98;
+    font-size: 52px;
 
     letter-spacing: -2.5px;
   }
 
-
   .library-hero p {
-    max-width: 330px;
-
-    margin-top: 26px;
+    margin-top: 30px;
 
     font-size: 15px;
-
-    line-height: 1.65;
   }
-
-
-  /* INTRO */
 
   .library-intro {
-    padding: 70px 0 85px;
+    padding: 100px 0;
   }
-
-
-  .library-intro-grid {
-    gap: 28px;
-
-    margin-bottom: 48px;
-  }
-
-
-  .library-intro-title > span {
-    margin-bottom: 16px;
-
-    font-size: 10px;
-
-    letter-spacing: 3px;
-  }
-
 
   .library-intro-title h2 {
-    font-size: 44px;
+    font-size: 50px;
 
-    line-height: 0.98;
-
-    letter-spacing: -2px;
+    letter-spacing: -2.5px;
   }
 
-
-  .library-intro-text p {
-    font-size: 15px;
-
-    line-height: 1.7;
+  .library-section-heading {
+    margin: 80px 0 28px;
   }
 
-
-  /* BOOK GRID */
+  .library-section-heading h3 {
+    font-size: 24px;
+  }
 
   .library-grid {
     grid-template-columns: 1fr;
   }
 
-
   .library-card {
-    min-height: 220px;
+    min-height: 240px;
 
-    padding: 25px;
-  }
-
-
-  .library-card > span {
-    margin-bottom: 35px;
-
-    font-size: 11px;
-  }
-
-
-  .library-card h3 {
-    margin-bottom: 14px;
-
-    font-size: 24px;
-  }
-
-
-  .library-card p {
-    max-width: 100%;
-
-    font-size: 14px;
-
-    line-height: 1.65;
+    padding: 30px;
   }
 }
