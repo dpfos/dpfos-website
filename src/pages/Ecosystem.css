@@ -1,0 +1,423 @@
+/* =========================================================
+   DPF OS
+   ECOSYSTEM PAGE
+   ========================================================= */
+
+.eco-page {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+
+  color: #ffffff;
+  background-color: #020617;
+
+  background-image:
+    linear-gradient(
+      rgba(255, 255, 255, 0.035) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.035) 1px,
+      transparent 1px
+    );
+
+  background-size: 48px 48px;
+
+  overflow: hidden;
+}
+
+.eco-page *,
+.eco-page *::before,
+.eco-page *::after {
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.eco-hero {
+  width: min(1200px, calc(100% - 80px));
+  min-height: 680px;
+
+  margin: 0 auto;
+  padding: 110px 0 120px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  position: relative;
+}
+
+
+.eco-label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 9px 18px;
+  margin-bottom: 36px;
+
+  border: 1px solid rgba(255, 204, 51, 0.4);
+  border-radius: 999px;
+
+  color: #ffcc33;
+
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  line-height: 1;
+
+  background: rgba(255, 204, 51, 0.025);
+}
+
+
+.eco-hero-title {
+  width: 100%;
+  max-width: 1100px;
+
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  font-size: clamp(60px, 7vw, 108px);
+  line-height: 0.95;
+  letter-spacing: -5px;
+  font-weight: 800;
+}
+
+
+.eco-white {
+  display: block;
+  color: #ffffff;
+}
+
+
+.eco-yellow {
+  display: block;
+  color: #ffcc33;
+}
+
+
+.eco-hero-text {
+  width: 100%;
+  max-width: 760px;
+
+  margin: 42px 0 0;
+
+  color: #9ba9c4;
+
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   CORE
+   ========================================================= */
+
+.eco-core {
+  width: min(1200px, calc(100% - 80px));
+
+  margin: 0 auto;
+  padding: 100px 0 150px;
+
+  display: block;
+
+  position: relative;
+}
+
+
+.eco-core-label {
+  display: block;
+
+  margin: 0 0 55px;
+
+  color: #ffcc33;
+
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+
+/* =========================================================
+   CORE INTRO
+   ========================================================= */
+
+.eco-core-intro {
+  width: 100%;
+
+  margin: 0 0 80px;
+
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(300px, 0.85fr);
+
+  column-gap: 100px;
+  align-items: end;
+}
+
+
+.eco-core-heading {
+  min-width: 0;
+}
+
+
+.eco-core-heading h2 {
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  font-size: clamp(50px, 5vw, 78px);
+  line-height: 0.98;
+  letter-spacing: -4px;
+  font-weight: 800;
+}
+
+
+.eco-core-heading h2 span {
+  display: block;
+  color: #ffffff;
+}
+
+
+.eco-core-heading h2 strong {
+  display: block;
+
+  color: #ffcc33;
+
+  font-weight: 800;
+}
+
+
+.eco-core-copy {
+  width: 100%;
+  max-width: 440px;
+}
+
+
+.eco-core-copy p {
+  margin: 0;
+
+  color: #9ba9c4;
+
+  font-size: 16px;
+  line-height: 1.85;
+}
+
+
+/* =========================================================
+   CARDS
+   ========================================================= */
+
+.eco-cards {
+  width: 100%;
+
+  margin: 0;
+  padding: 0;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+
+.eco-card {
+  min-width: 0;
+  min-height: 290px;
+
+  margin: 0;
+  padding: 34px;
+
+  display: flex;
+  flex-direction: column;
+
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+  background: rgba(8, 15, 32, 0.55);
+
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+
+.eco-card:hover {
+  background: rgba(255, 204, 51, 0.045);
+
+  border-color: rgba(255, 204, 51, 0.3);
+
+  transform: translateY(-3px);
+}
+
+
+.eco-card-number {
+  display: block;
+
+  margin: 0 0 62px;
+
+  color: #ffcc33;
+
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+
+.eco-card h3 {
+  margin: 0 0 16px;
+
+  color: #ffffff;
+
+  font-size: 25px;
+  line-height: 1.15;
+  font-weight: 700;
+}
+
+
+.eco-card p {
+  max-width: 280px;
+
+  margin: 0;
+
+  color: #8fa0bd;
+
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .eco-hero,
+  .eco-core {
+    width: calc(100% - 48px);
+  }
+
+
+  .eco-hero {
+    min-height: 600px;
+    padding: 90px 0 100px;
+  }
+
+
+  .eco-hero-title {
+    font-size: clamp(52px, 8vw, 82px);
+    letter-spacing: -3px;
+  }
+
+
+  .eco-core-intro {
+    grid-template-columns: 1fr;
+    row-gap: 35px;
+  }
+
+
+  .eco-core-copy {
+    max-width: 650px;
+  }
+
+
+  .eco-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  .eco-hero,
+  .eco-core {
+    width: calc(100% - 32px);
+  }
+
+
+  .eco-hero {
+    min-height: 540px;
+    padding: 70px 0 80px;
+  }
+
+
+  .eco-label {
+    padding: 8px 14px;
+
+    font-size: 9px;
+    letter-spacing: 2px;
+  }
+
+
+  .eco-hero-title {
+    font-size: 48px;
+    line-height: 0.98;
+    letter-spacing: -2px;
+  }
+
+
+  .eco-hero-text {
+    margin-top: 30px;
+
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+
+  .eco-core {
+    padding: 80px 0 100px;
+  }
+
+
+  .eco-core-label {
+    margin-bottom: 40px;
+  }
+
+
+  .eco-core-heading h2 {
+    font-size: 45px;
+    letter-spacing: -2px;
+  }
+
+
+  .eco-core-intro {
+    margin-bottom: 60px;
+  }
+
+
+  .eco-cards {
+    grid-template-columns: 1fr;
+  }
+
+
+  .eco-card {
+    min-height: 250px;
+  }
+
+
+  .eco-card-number {
+    margin-bottom: 45px;
+  }
+}
