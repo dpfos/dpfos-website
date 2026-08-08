@@ -20,7 +20,7 @@ export default function Navbar() {
           <NavLink to="/contact">Contact</NavLink>
         </nav>
 
-        <NavLink to="/contact" className="cta">
+        <NavLink to="/get-started" className="cta">
           Get Started
         </NavLink>
 

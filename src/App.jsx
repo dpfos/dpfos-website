@@ -9,6 +9,7 @@ import Library from "./pages/Library";
 import Research from "./pages/Research";
 import Technology from "./pages/Technology";
 import Contact from "./pages/Contact";
+import GetStarted from "./pages/GetStarted";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/research" element={<Research />} />
         <Route path="/technology" element={<Technology />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/get-started" element={<GetStarted />} />
       </Routes>
     </Layout>
   );

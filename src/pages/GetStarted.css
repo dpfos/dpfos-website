@@ -1,0 +1,304 @@
+/* =========================================
+   DPF OS — GET STARTED
+========================================= */
+
+.get-started-page {
+  min-height: 100vh;
+
+  padding-top: 76px;
+
+  background:
+    radial-gradient(
+      circle at 50% 15%,
+      rgba(20, 62, 140, 0.2),
+      transparent 38%
+    ),
+    #04081b;
+
+  color: #ffffff;
+}
+
+/* =========================================
+   HERO
+========================================= */
+
+.get-started-hero {
+  position: relative;
+
+  width: min(1100px, 90%);
+
+  min-height: calc(100vh - 76px);
+
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  padding: 100px 0;
+}
+
+/* =========================================
+   GRID
+========================================= */
+
+.get-started-hero::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background-image:
+    linear-gradient(
+      rgba(255, 255, 255, 0.025) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.025) 1px,
+      transparent 1px
+    );
+
+  background-size: 64px 64px;
+
+  mask-image: linear-gradient(
+    to bottom,
+    black,
+    transparent 80%
+  );
+
+  pointer-events: none;
+
+  z-index: 0;
+}
+
+/* =========================================
+   EYEBROW
+========================================= */
+
+.get-started-eyebrow {
+  position: relative;
+  z-index: 1;
+
+  margin-bottom: 28px;
+
+  color: #ffd54a;
+
+  font-size: 0.75rem;
+  font-weight: 600;
+
+  letter-spacing: 3px;
+
+  text-transform: uppercase;
+}
+
+/* =========================================
+   TITLE
+========================================= */
+
+.get-started-hero h1 {
+  position: relative;
+  z-index: 1;
+
+  margin: 0;
+
+  max-width: 900px;
+
+  color: #ffffff;
+
+  font-size: clamp(3.5rem, 8vw, 7rem);
+
+  line-height: 0.92;
+
+  font-weight: 800;
+
+  letter-spacing: -0.055em;
+}
+
+.get-started-hero h1 span {
+  color: #ffd54a;
+}
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.get-started-hero p {
+  position: relative;
+  z-index: 1;
+
+  max-width: 650px;
+
+  margin: 38px auto 0;
+
+  color: #9fa8c6;
+
+  font-size: 1.05rem;
+
+  line-height: 1.8;
+}
+
+/* =========================================
+   ACTIONS
+========================================= */
+
+.get-started-actions {
+  position: relative;
+  z-index: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 16px;
+
+  margin-top: 42px;
+}
+
+/* =========================================
+   PRIMARY ACTION
+========================================= */
+
+.primary-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 190px;
+  height: 52px;
+
+  padding: 0 28px;
+
+  border-radius: 999px;
+
+  background: #ffd54a;
+  color: #07102b;
+
+  text-decoration: none;
+
+  font-size: 0.9rem;
+  font-weight: 700;
+
+  border: 1px solid #ffd54a;
+
+  box-shadow:
+    0 10px 35px rgba(255, 213, 74, 0.14);
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.primary-action:hover {
+  background: #ffe17a;
+
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 14px 40px rgba(255, 213, 74, 0.22);
+}
+
+/* =========================================
+   SECONDARY ACTION
+========================================= */
+
+.secondary-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 170px;
+  height: 52px;
+
+  padding: 0 28px;
+
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.025);
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  font-size: 0.9rem;
+  font-weight: 600;
+
+  border: 1px solid rgba(255, 255, 255, 0.14);
+
+  backdrop-filter: blur(10px);
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.secondary-action:hover {
+  background: rgba(255, 255, 255, 0.07);
+
+  border-color: rgba(255, 213, 74, 0.35);
+
+  transform: translateY(-3px);
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 700px) {
+  .get-started-hero {
+    width: min(92%, 1100px);
+
+    padding: 80px 0;
+  }
+
+  .get-started-hero h1 {
+    font-size: clamp(3rem, 15vw, 5rem);
+  }
+
+  .get-started-hero p {
+    font-size: 0.95rem;
+
+    line-height: 1.75;
+  }
+
+  .get-started-actions {
+    width: 100%;
+
+    flex-direction: column;
+  }
+
+  .primary-action,
+  .secondary-action {
+    width: min(100%, 320px);
+  }
+}
+
+@media (max-width: 480px) {
+  .get-started-page {
+    padding-top: 68px;
+  }
+
+  .get-started-hero {
+    min-height: calc(100vh - 68px);
+  }
+
+  .get-started-eyebrow {
+    font-size: 0.65rem;
+
+    letter-spacing: 2px;
+  }
+
+  .get-started-hero p {
+    margin-top: 30px;
+  }
+
+  .get-started-actions {
+    margin-top: 34px;
+  }
+}
