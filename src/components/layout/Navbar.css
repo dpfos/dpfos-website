@@ -1,0 +1,239 @@
+/* =========================================
+   DPF OS NAVBAR
+   ========================================= */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 76px;
+
+  z-index: 1000;
+
+  background: rgba(4, 8, 27, 0.78);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+
+/* =========================================
+   CONTAINER
+   ========================================= */
+
+.navbar-container {
+  width: min(1400px, 90%);
+  height: 100%;
+
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 40px;
+}
+
+
+/* =========================================
+   LOGO
+   ========================================= */
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+
+  text-decoration: none;
+
+  font-size: 1.65rem;
+  font-weight: 800;
+  letter-spacing: -0.8px;
+
+  white-space: nowrap;
+}
+
+.logo-main {
+  color: #ffffff;
+}
+
+.logo-accent {
+  color: #ffd54a;
+  margin-left: 5px;
+}
+
+
+/* =========================================
+   NAVIGATION LINKS
+   ========================================= */
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 34px;
+
+  margin-left: auto;
+  margin-right: 20px;
+}
+
+.nav-links a {
+  position: relative;
+
+  color: #aeb7d0;
+
+  text-decoration: none;
+
+  font-size: 0.92rem;
+  font-weight: 500;
+
+  transition:
+    color 0.25s ease,
+    opacity 0.25s ease;
+}
+
+.nav-links a:hover {
+  color: #ffffff;
+}
+
+.nav-links a.active {
+  color: #ffffff;
+}
+
+
+/* =========================================
+   ACTIVE LINK INDICATOR
+   ========================================= */
+
+.nav-links a::after {
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+  bottom: -9px;
+
+  width: 0;
+  height: 2px;
+
+  background: #ffd54a;
+
+  transform: translateX(-50%);
+
+  transition: width 0.25s ease;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  width: 18px;
+}
+
+
+/* =========================================
+   CTA BUTTON
+   ========================================= */
+
+.cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 112px;
+  height: 46px;
+
+  padding: 0 22px;
+
+  border-radius: 999px;
+
+  background: #ffd54a;
+  color: #07102b;
+
+  text-decoration: none;
+
+  font-size: 0.9rem;
+  font-weight: 700;
+
+  border: 1px solid #ffd54a;
+
+  box-shadow: 0 8px 30px rgba(255, 213, 74, 0.12);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+}
+
+.cta:hover {
+  background: #ffe17a;
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 12px 35px rgba(255, 213, 74, 0.22);
+}
+
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+
+@media (max-width: 1000px) {
+
+  .nav-links {
+    gap: 20px;
+  }
+
+  .nav-links a {
+    font-size: 0.85rem;
+  }
+
+  .navbar-container {
+    gap: 20px;
+  }
+
+}
+
+
+@media (max-width: 800px) {
+
+  .nav-links {
+    display: none;
+  }
+
+  .navbar-container {
+    width: min(92%, 1400px);
+  }
+
+  .cta {
+    min-width: 105px;
+    height: 42px;
+
+    padding: 0 18px;
+
+    font-size: 0.85rem;
+  }
+
+}
+
+
+@media (max-width: 480px) {
+
+  .navbar {
+    height: 68px;
+  }
+
+  .logo {
+    font-size: 1.4rem;
+  }
+
+  .cta {
+    min-width: 96px;
+    height: 40px;
+
+    padding: 0 15px;
+
+    font-size: 0.8rem;
+  }
+
+}

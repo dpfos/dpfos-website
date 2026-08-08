@@ -1,0 +1,65 @@
+/* ==========================================
+   DPF OS Typography
+========================================== */
+
+h1{
+
+  font-family:var(--font-heading);
+
+  font-size:clamp(4rem,7vw,7rem);
+
+  line-height:.95;
+
+  font-weight:700;
+
+  letter-spacing:-3px;
+
+}
+
+h2{
+
+  font-family:var(--font-heading);
+
+  font-size:clamp(3rem,5vw,5rem);
+
+  font-weight:700;
+
+}
+
+h3{
+
+  font-family:var(--font-heading);
+
+  font-size:2rem;
+
+  font-weight:600;
+
+}
+
+p{
+
+  font-size:1.05rem;
+
+  line-height:1.9;
+
+  color:var(--color-muted);
+
+}
+
+.small{
+
+  font-size:.875rem;
+
+}
+
+.eyebrow{
+
+  color:var(--color-primary);
+
+  text-transform:uppercase;
+
+  letter-spacing:4px;
+
+  font-weight:700;
+
+}

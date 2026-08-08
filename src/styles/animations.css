@@ -1,0 +1,95 @@
+/* ==========================================
+   DPF OS Animations
+========================================== */
+
+@keyframes fadeUp{
+
+  from{
+
+    opacity:0;
+
+    transform:translateY(40px);
+
+  }
+
+  to{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+  }
+
+}
+
+@keyframes fadeIn{
+
+  from{
+
+    opacity:0;
+
+  }
+
+  to{
+
+    opacity:1;
+
+  }
+
+}
+
+@keyframes rotateSlow{
+
+  from{
+
+    transform:rotate(0deg);
+
+  }
+
+  to{
+
+    transform:rotate(360deg);
+
+  }
+
+}
+
+@keyframes pulse{
+
+  0%,100%{
+
+    transform:scale(1);
+
+  }
+
+  50%{
+
+    transform:scale(1.04);
+
+  }
+
+}
+
+.fade-up{
+
+  animation:fadeUp .8s ease forwards;
+
+}
+
+.fade{
+
+  animation:fadeIn .8s ease forwards;
+
+}
+
+.rotate{
+
+  animation:rotateSlow 40s linear infinite;
+
+}
+
+.pulse{
+
+  animation:pulse 3s ease-in-out infinite;
+
+}
