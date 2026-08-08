@@ -1,0 +1,430 @@
+/* =========================================================
+   DPF OS LIBRARY
+   ========================================================= */
+
+.library-page {
+  min-height: 100vh;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    #020617;
+  background-size: 48px 48px;
+  color: #ffffff;
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.library-hero {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 140px 60px 150px;
+}
+
+.library-label,
+.library-intro-label,
+.library-section-label,
+.library-architecture-label,
+.library-cta-label {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid rgba(255, 204, 51, 0.35);
+  border-radius: 999px;
+  padding: 9px 18px;
+  color: #ffcc33;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.library-hero h1 {
+  max-width: 1200px;
+  margin: 42px 0 32px;
+  font-size: clamp(64px, 8vw, 124px);
+  line-height: 0.92;
+  letter-spacing: -6px;
+  font-weight: 800;
+}
+
+.library-hero h1 span {
+  color: #ffcc33;
+}
+
+.library-hero p {
+  max-width: 760px;
+  margin: 0;
+  color: #9eb0d2;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   INTRO
+   ========================================================= */
+
+.library-intro {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 110px 60px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  display: grid;
+  grid-template-columns: 0.8fr 1.8fr;
+  gap: 80px;
+}
+
+.library-intro-content h2 {
+  margin: 0;
+  max-width: 850px;
+  font-size: clamp(48px, 5vw, 76px);
+  line-height: 0.98;
+  letter-spacing: -4px;
+  font-weight: 800;
+}
+
+.library-intro-content h2 span {
+  color: #ffcc33;
+}
+
+.library-intro-content p {
+  max-width: 720px;
+  margin: 38px 0 0;
+  color: #9eb0d2;
+  font-size: 17px;
+  line-height: 1.9;
+}
+
+
+/* =========================================================
+   BOOK LIBRARY
+   ========================================================= */
+
+.library-books {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 110px 60px 140px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.library-section-heading {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 100px;
+  align-items: end;
+  margin-bottom: 70px;
+}
+
+.library-section-heading h2 {
+  margin: 30px 0 0;
+  font-size: clamp(48px, 5vw, 78px);
+  line-height: 0.95;
+  letter-spacing: -4px;
+  font-weight: 800;
+}
+
+.library-section-heading h2 span {
+  color: #ffcc33;
+}
+
+.library-section-heading > p {
+  margin: 0;
+  color: #9eb0d2;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   BOOK GRID
+   ========================================================= */
+
+.library-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.library-card {
+  min-height: 330px;
+  padding: 32px;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(5, 12, 30, 0.45);
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.library-card:hover {
+  background: rgba(14, 25, 52, 0.8);
+  border-color: rgba(255, 204, 51, 0.35);
+  transform: translateY(-4px);
+}
+
+.library-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 70px;
+}
+
+.library-card-top span {
+  color: #ffcc33;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.library-card-top small {
+  color: #6f82a8;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.library-card h3 {
+  margin: 0;
+  font-size: 27px;
+  line-height: 1.1;
+  letter-spacing: -1px;
+  font-weight: 700;
+}
+
+.library-card p {
+  max-width: 330px;
+  margin: 18px 0 28px;
+  color: #8fa3c9;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.library-card button,
+.library-cta button {
+  border: 0;
+  background: transparent;
+  color: #ffcc33;
+  padding: 0;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.library-card button span,
+.library-cta button span {
+  display: inline-block;
+  margin-left: 10px;
+  transition: transform 0.2s ease;
+}
+
+.library-card button:hover span,
+.library-cta button:hover span {
+  transform: translateX(5px);
+}
+
+
+/* =========================================================
+   KNOWLEDGE ARCHITECTURE
+   ========================================================= */
+
+.library-architecture {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 140px 60px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.library-architecture h2 {
+  max-width: 800px;
+  margin: 35px 0 30px;
+  font-size: clamp(52px, 6vw, 88px);
+  line-height: 0.94;
+  letter-spacing: -5px;
+  font-weight: 800;
+}
+
+.library-architecture h2 span {
+  color: #ffcc33;
+}
+
+.library-architecture > p {
+  max-width: 700px;
+  margin: 0 0 80px;
+  color: #9eb0d2;
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   FLOW
+   ========================================================= */
+
+.library-flow {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.library-flow > div {
+  min-height: 190px;
+  padding: 28px;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.library-flow span {
+  color: #ffcc33;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.library-flow strong {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.library-flow small {
+  color: #8094b9;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   CTA
+   ========================================================= */
+
+.library-cta {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 150px 60px 180px;
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.library-cta h2 {
+  margin: 35px auto 28px;
+  font-size: clamp(58px, 7vw, 100px);
+  line-height: 0.92;
+  letter-spacing: -5px;
+  font-weight: 800;
+}
+
+.library-cta h2 span {
+  color: #ffcc33;
+}
+
+.library-cta p {
+  max-width: 620px;
+  margin: 0 auto 40px;
+  color: #9eb0d2;
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.library-cta button {
+  display: inline-flex;
+  align-items: center;
+  padding: 16px 26px;
+  border-radius: 999px;
+  background: #ffcc33;
+  color: #020617;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.library-cta button:hover span {
+  transform: translateX(5px);
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+  .library-hero,
+  .library-intro,
+  .library-books,
+  .library-architecture,
+  .library-cta {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  .library-intro {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .library-section-heading {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .library-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .library-flow {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+@media (max-width: 650px) {
+
+  .library-hero {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  .library-hero h1 {
+    font-size: clamp(52px, 15vw, 80px);
+    letter-spacing: -3px;
+  }
+
+  .library-intro,
+  .library-books,
+  .library-architecture,
+  .library-cta {
+    padding-top: 80px;
+    padding-bottom: 90px;
+  }
+
+  .library-intro-content h2,
+  .library-section-heading h2,
+  .library-architecture h2,
+  .library-cta h2 {
+    letter-spacing: -3px;
+  }
+
+  .library-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .library-flow {
+    grid-template-columns: 1fr;
+  }
+
+  .library-card {
+    min-height: 280px;
+  }
+
+  .library-card-top {
+    margin-bottom: 50px;
+  }
+}
