@@ -1,6 +1,6 @@
 /* =========================================
    DPF OS NAVBAR
-   ========================================= */
+========================================= */
 
 .navbar {
   position: fixed;
@@ -18,12 +18,11 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
-
 /* =========================================
    CONTAINER
-   ========================================= */
+========================================= */
 
-.navbar-container {
+.navbar-inner {
   width: min(1400px, 90%);
   height: 100%;
 
@@ -31,15 +30,13 @@
 
   display: flex;
   align-items: center;
-  justify-content: space-between;
 
   gap: 40px;
 }
 
-
 /* =========================================
    LOGO
-   ========================================= */
+========================================= */
 
 .logo {
   display: inline-flex;
@@ -52,6 +49,8 @@
   letter-spacing: -0.8px;
 
   white-space: nowrap;
+
+  flex-shrink: 0;
 }
 
 .logo-main {
@@ -63,10 +62,9 @@
   margin-left: 5px;
 }
 
-
 /* =========================================
    NAVIGATION LINKS
-   ========================================= */
+========================================= */
 
 .nav-links {
   display: flex;
@@ -76,7 +74,6 @@
   gap: 34px;
 
   margin-left: auto;
-  margin-right: 20px;
 }
 
 .nav-links a {
@@ -88,6 +85,8 @@
 
   font-size: 0.92rem;
   font-weight: 500;
+
+  white-space: nowrap;
 
   transition:
     color 0.25s ease,
@@ -102,10 +101,9 @@
   color: #ffffff;
 }
 
-
 /* =========================================
    ACTIVE LINK INDICATOR
-   ========================================= */
+========================================= */
 
 .nav-links a::after {
   content: "";
@@ -130,10 +128,9 @@
   width: 18px;
 }
 
-
 /* =========================================
    CTA BUTTON
-   ========================================= */
+========================================= */
 
 .cta {
   display: inline-flex;
@@ -157,6 +154,10 @@
 
   border: 1px solid #ffd54a;
 
+  white-space: nowrap;
+
+  flex-shrink: 0;
+
   box-shadow: 0 8px 30px rgba(255, 213, 74, 0.12);
 
   transition:
@@ -173,13 +174,11 @@
   box-shadow: 0 12px 35px rgba(255, 213, 74, 0.22);
 }
 
-
 /* =========================================
    RESPONSIVE
-   ========================================= */
+========================================= */
 
 @media (max-width: 1000px) {
-
   .nav-links {
     gap: 20px;
   }
@@ -188,21 +187,19 @@
     font-size: 0.85rem;
   }
 
-  .navbar-container {
+  .navbar-inner {
     gap: 20px;
   }
-
 }
 
-
 @media (max-width: 800px) {
-
   .nav-links {
     display: none;
   }
 
-  .navbar-container {
+  .navbar-inner {
     width: min(92%, 1400px);
+    justify-content: space-between;
   }
 
   .cta {
@@ -213,12 +210,9 @@
 
     font-size: 0.85rem;
   }
-
 }
 
-
 @media (max-width: 480px) {
-
   .navbar {
     height: 68px;
   }
@@ -235,5 +229,4 @@
 
     font-size: 0.8rem;
   }
-
 }

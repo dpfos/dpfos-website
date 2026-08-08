@@ -4,7 +4,7 @@ import "./Navbar.css";
 export default function Navbar() {
   return (
     <header className="navbar">
-      <div className="container navbar-inner">
+      <div className="navbar-inner">
 
         <NavLink to="/" className="logo">
           <span className="logo-main">DPF</span>
@@ -12,31 +12,12 @@ export default function Navbar() {
         </NavLink>
 
         <nav className="nav-links">
-
-          <NavLink to="/platform">
-            Platform
-          </NavLink>
-
-          <NavLink to="/ecosystem">
-            Ecosystem
-          </NavLink>
-
-          <NavLink to="/library">
-            Library
-          </NavLink>
-
-          <NavLink to="/research">
-            Research
-          </NavLink>
-
-          <NavLink to="/technology">
-            Technology
-          </NavLink>
-
-          <NavLink to="/contact">
-            Contact
-          </NavLink>
-
+          <NavLink to="/platform">Platform</NavLink>
+          <NavLink to="/ecosystem">Ecosystem</NavLink>
+          <NavLink to="/library">Library</NavLink>
+          <NavLink to="/research">Research</NavLink>
+          <NavLink to="/technology">Technology</NavLink>
+          <NavLink to="/contact">Contact</NavLink>
         </nav>
 
         <NavLink to="/contact" className="cta">
