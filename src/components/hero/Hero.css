@@ -1,3 +1,7 @@
+/* =========================
+   HERO
+========================= */
+
 .hero {
   position: relative;
 
@@ -13,6 +17,11 @@
 
   overflow: hidden;
 }
+
+
+/* =========================
+   HERO CONTAINER
+========================= */
 
 .hero-container {
   width: min(1400px, 90%);
@@ -32,6 +41,11 @@
   z-index: 2;
 }
 
+
+/* =========================
+   HERO LEFT
+========================= */
+
 .hero-left {
   display: flex;
 
@@ -40,6 +54,11 @@
   gap: 32px;
 }
 
+
+/* =========================
+   HERO RIGHT
+========================= */
+
 .hero-right {
   display: flex;
 
@@ -47,6 +66,11 @@
 
   align-items: center;
 }
+
+
+/* =========================
+   HERO BADGE
+========================= */
 
 .hero-badge {
   display: inline-flex;
@@ -70,6 +94,11 @@
   text-transform: uppercase;
 }
 
+
+/* =========================
+   HERO TITLE
+========================= */
+
 .hero-title {
   font-size: clamp(4rem, 8vw, 7rem);
 
@@ -79,6 +108,11 @@
 
   color: white;
 }
+
+
+/* =========================
+   HERO DESCRIPTION
+========================= */
 
 .hero-description {
   max-width: 650px;
@@ -90,6 +124,11 @@
   line-height: 1.8;
 }
 
+
+/* =========================
+   HERO ACTIONS
+========================= */
+
 .hero-actions {
   display: flex;
 
@@ -99,6 +138,11 @@
 
   flex-wrap: wrap;
 }
+
+
+/* =========================
+   HERO STATS
+========================= */
 
 .hero-stats {
   display: flex;
@@ -136,9 +180,15 @@
   text-transform: uppercase;
 }
 
+
+/* =========================
+   TABLET
+========================= */
+
 @media (max-width: 1000px) {
+
   .hero {
-    padding-top: 140px;
+    padding-top: 80px;
   }
 
   .hero-container {
@@ -152,9 +202,30 @@
   }
 }
 
+
 @media (max-width: 600px) {
+
   .hero {
-    padding-top: 120px;
+    min-height: auto;
+
+    display: block;
+
+    padding-top: 24px;
+    padding-bottom: 80px;
+  }
+
+  .hero-container {
+    width: 90%;
+
+    margin: 0 auto;
+
+    grid-template-columns: 1fr;
+
+    gap: 50px;
+  }
+
+  .hero-left {
+    gap: 26px;
   }
 
   .hero-title {
@@ -163,9 +234,29 @@
 
   .hero-description {
     font-size: 1rem;
+
+    line-height: 1.8;
   }
 
   .hero-stats {
     gap: 30px;
   }
+}
+
+/* =========================
+   REMOVE SPACE ABOVE HERO
+   ========================= */
+
+.hero {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+main {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+.hero-container {
+  margin-top: 0 !important;
 }

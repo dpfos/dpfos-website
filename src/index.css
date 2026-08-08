@@ -109,3 +109,13 @@ code {
   padding: 4px 8px;
   background: var(--code-bg);
 }
+
+:root {
+  --dpf-bg: #020617;
+  --dpf-white: #ffffff;
+  --dpf-gold: #ffcc33;
+  --dpf-text: #9fb2d4;
+  --dpf-grid: rgba(255, 255, 255, 0.035);
+  --dpf-grid-size: 32px;
+  --dpf-container: 1200px;
+}

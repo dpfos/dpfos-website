@@ -1,477 +1,647 @@
-/* =========================================
+/* =========================================================
    DPF OS PLATFORM
-========================================= */
+   FINAL VISUAL SYSTEM
+   ========================================================= */
 
 .platform-page {
-  width: 100%;
+  background: #020617;
+  color: #f8fafc;
   min-height: 100vh;
+  overflow: hidden;
+  box-sizing: border-box;
+}
 
-  background:
-    radial-gradient(
-      circle at 15% 15%,
-      rgba(21, 73, 170, 0.28),
-      transparent 32%
-    ),
-    #030817;
-
-  color: #ffffff;
+.platform-page *,
+.platform-page *::before,
+.platform-page *::after {
+  box-sizing: border-box;
 }
 
 
-/* =========================================
-   HERO
-========================================= */
+/* =========================================================
+   GLOBAL SECTIONS
+   ========================================================= */
+
+.platform-page > section:not(.platform-hero) {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 140px 40px;
+}
+
+
+/* =========================================================
+   GLOBAL TYPOGRAPHY
+   ========================================================= */
+
+.platform-page h2 {
+  margin: 0;
+  max-width: 1000px;
+
+  color: #f8fafc;
+
+  font-size: clamp(48px, 6vw, 82px);
+  line-height: 0.98;
+  letter-spacing: -0.045em;
+  font-weight: 800;
+}
+
+.platform-page h2 span {
+  color: #ffcc33;
+}
+
+.platform-page p {
+  margin: 28px 0 0;
+
+  max-width: 850px;
+
+  color: #9db1d0;
+
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   EYEBROW
+   ========================================================= */
+
+.platform-page .section-eyebrow,
+.section-eyebrow {
+  display: inline-block;
+
+  margin-bottom: 28px;
+
+  color: #ffcc33;
+
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   PLATFORM HERO
+   ========================================================= */
 
 .platform-hero {
   position: relative;
 
-  min-height: 760px;
+  width: 100%;
+  min-height: calc(100vh - 80px);
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  overflow: hidden;
-
-  background:
-    linear-gradient(
-      180deg,
-      rgba(3, 8, 23, 0.25),
-      rgba(3, 8, 23, 0.85)
-    );
-
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-}
-
-.platform-hero::before {
-  content: "";
-
-  position: absolute;
-  inset: 0;
-
-  background-image:
-    linear-gradient(
-      rgba(255, 255, 255, 0.035) 1px,
-      transparent 1px
-    ),
-    linear-gradient(
-      90deg,
-      rgba(255, 255, 255, 0.035) 1px,
-      transparent 1px
-    );
-
-  background-size: 58px 58px;
-
-  mask-image: linear-gradient(
-    to bottom,
-    black,
-    transparent
-  );
-
-  pointer-events: none;
-}
-
-.platform-hero-inner {
-  position: relative;
-
-  width: min(1100px, 90%);
-
-  margin: 0 auto;
+  padding: 100px 40px 120px;
 
   text-align: center;
 
-  padding-top: 90px;
+  overflow: hidden;
 }
 
-.platform-eyebrow,
-.section-eyebrow,
-.closing-eyebrow {
-  color: #ffd54a;
+.platform-hero-inner {
+  width: 100%;
+  max-width: 1250px;
 
-  font-size: 0.72rem;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* =========================================================
+   HERO EYEBROW
+   ========================================================= */
+
+.platform-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 8px 18px;
+
+  margin-bottom: 42px;
+
+  border: 1px solid rgba(255, 204, 51, 0.55);
+  border-radius: 999px;
+
+  color: #ffcc33;
+
+  font-size: 11px;
   font-weight: 700;
-
-  letter-spacing: 0.28em;
+  letter-spacing: 0.25em;
   text-transform: uppercase;
+
+  background: rgba(255, 204, 51, 0.02);
 }
+
+
+/* =========================================================
+   HERO TITLE
+   ========================================================= */
 
 .platform-hero h1 {
-  margin: 28px 0 30px;
+  width: 100%;
+  max-width: 1150px;
 
-  font-size: clamp(4rem, 8vw, 7.4rem);
+  margin: 0 auto;
 
-  line-height: 0.94;
+  color: #f8fafc;
 
-  letter-spacing: -0.065em;
-
+  font-size: clamp(58px, 7vw, 96px);
+  line-height: 0.96;
+  letter-spacing: -0.055em;
   font-weight: 800;
+
+  text-align: center;
 }
 
 .platform-hero h1 span {
-  color: #ffd54a;
+  color: #ffcc33;
 }
+
+
+/* =========================================================
+   HERO DESCRIPTION
+   ========================================================= */
 
 .platform-hero p {
-  max-width: 760px;
+  max-width: 820px;
 
-  margin: 0 auto;
+  margin: 34px auto 0;
 
-  color: #aeb7d0;
+  color: #9db1d0;
 
-  font-size: 1.05rem;
+  font-size: 16px;
+  line-height: 1.75;
 
-  line-height: 1.8;
+  text-align: center;
 }
 
 
-/* =========================================
-   ARCHITECTURE
-========================================= */
+/* =========================================================
+   CORE ARCHITECTURE
+   ========================================================= */
 
 .architecture-section {
-  width: min(1200px, 90%);
+  position: relative;
 
-  margin: 0 auto;
-
-  padding: 150px 0;
+  border-top: 1px solid rgba(148, 163, 184, 0.12);
 }
+
+
+/* =========================================================
+   SECTION HEADING
+   ========================================================= */
 
 .section-heading {
   display: grid;
+  grid-template-columns: 90px 1fr;
+  gap: 50px;
+  align-items: start;
 
-  grid-template-columns: 80px 1fr;
-
-  gap: 35px;
-
-  margin-bottom: 80px;
+  margin-bottom: 70px;
 }
 
 .section-heading > span {
-  color: #ffd54a;
+  display: block;
 
-  font-size: 0.8rem;
+  padding-top: 8px;
+
+  color: #ffcc33;
+
+  font-size: 12px;
   font-weight: 700;
+  letter-spacing: 0.2em;
+}
 
-  letter-spacing: 0.15em;
-
-  padding-top: 10px;
+.section-heading > div {
+  min-width: 0;
 }
 
 .section-heading h2 {
-  max-width: 850px;
-
-  margin: 18px 0 22px;
-
-  font-size: clamp(2.8rem, 5vw, 5rem);
-
-  line-height: 0.98;
-
-  letter-spacing: -0.055em;
+  max-width: 900px;
 }
 
 .section-heading p {
-  max-width: 720px;
+  max-width: 780px;
 
-  margin: 0;
+  margin: 30px 0 0;
 
-  color: #8f9bb8;
+  color: #9db1d0;
 
-  font-size: 1rem;
-
+  font-size: 17px;
   line-height: 1.8;
 }
 
 
-/* =========================================
+/* =========================================================
    ARCHITECTURE GRID
-========================================= */
+   ========================================================= */
 
 .architecture-grid {
   display: grid;
-
   grid-template-columns: repeat(3, 1fr);
 
-  gap: 18px;
+  border-top: 1px solid rgba(148, 163, 184, 0.16);
+  border-left: 1px solid rgba(148, 163, 184, 0.16);
 }
+
+
+/* =========================================================
+   ARCHITECTURE CARDS
+   ========================================================= */
 
 .architecture-card {
   position: relative;
 
-  min-height: 260px;
-
+  min-height: 300px;
   padding: 34px;
 
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-right: 1px solid rgba(148, 163, 184, 0.16);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.16);
 
-  border-radius: 18px;
-
-  background:
-    linear-gradient(
-      145deg,
-      rgba(255, 255, 255, 0.045),
-      rgba(255, 255, 255, 0.015)
-    );
+  background: rgba(15, 23, 42, 0.14);
 
   transition:
-    transform 0.3s ease,
-    border-color 0.3s ease,
-    background 0.3s ease;
+    background 0.25s ease,
+    transform 0.25s ease;
 }
 
 .architecture-card:hover {
-  transform: translateY(-6px);
-
-  border-color: rgba(255, 213, 74, 0.35);
-
-  background:
-    linear-gradient(
-      145deg,
-      rgba(255, 213, 74, 0.08),
-      rgba(255, 255, 255, 0.02)
-    );
+  background: rgba(255, 204, 51, 0.035);
+  transform: translateY(-3px);
 }
 
 .architecture-card.featured {
-  border-color: rgba(255, 213, 74, 0.3);
-
   background:
     linear-gradient(
       145deg,
-      rgba(255, 213, 74, 0.1),
-      rgba(255, 255, 255, 0.02)
+      rgba(255, 204, 51, 0.045),
+      rgba(15, 23, 42, 0.12)
     );
 }
 
-.card-number {
+
+/* =========================================================
+   CARD NUMBER
+   ========================================================= */
+
+.architecture-card .card-number {
   display: block;
 
-  margin-bottom: 55px;
+  margin-bottom: 70px;
 
-  color: #ffd54a;
+  color: #ffcc33;
 
-  font-size: 0.72rem;
+  font-size: 12px;
   font-weight: 700;
-
-  letter-spacing: 0.16em;
+  letter-spacing: 0.18em;
 }
+
+
+/* =========================================================
+   CARD TITLE
+   ========================================================= */
 
 .architecture-card h3 {
-  margin: 0 0 14px;
-
-  font-size: 1.45rem;
-
-  letter-spacing: -0.03em;
-}
-
-.architecture-card p {
   margin: 0;
 
-  color: #8f9bb8;
+  color: #f8fafc;
 
-  font-size: 0.92rem;
-
-  line-height: 1.7;
+  font-size: 25px;
+  line-height: 1.15;
+  font-weight: 700;
+  letter-spacing: -0.02em;
 }
 
 
-/* =========================================
+/* =========================================================
+   CARD DESCRIPTION
+   ========================================================= */
+
+.architecture-card p {
+  max-width: 330px;
+
+  margin: 18px 0 0;
+
+  color: #91a8ca;
+
+  font-size: 14px;
+  line-height: 1.75;
+}
+
+
+/* =========================================================
    SYSTEM LOGIC
-========================================= */
+   ========================================================= */
 
 .system-section {
   position: relative;
 
-  padding: 150px 5%;
-
-  border-top: 1px solid rgba(255, 255, 255, 0.06);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-
-  background:
-    radial-gradient(
-      circle at 50% 50%,
-      rgba(21, 73, 170, 0.18),
-      transparent 45%
-    );
+  border-top: 1px solid rgba(148, 163, 184, 0.12);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.12);
 }
 
+
+/* =========================================================
+   SYSTEM CONTENT
+   ========================================================= */
+
 .system-content {
-  width: min(900px, 100%);
-
-  margin: 0 auto 90px;
-
-  text-align: center;
+  max-width: 1100px;
 }
 
 .system-content h2 {
-  margin: 22px 0 25px;
-
-  font-size: clamp(2.6rem, 5vw, 4.8rem);
-
-  line-height: 1;
-
-  letter-spacing: -0.055em;
+  max-width: 1050px;
 }
 
 .system-content p {
-  max-width: 760px;
+  max-width: 850px;
 
-  margin: 0 auto;
+  margin: 30px 0 0;
 
-  color: #8f9bb8;
+  color: #9db1d0;
 
+  font-size: 17px;
   line-height: 1.8;
 }
 
 
-/* =========================================
+/* =========================================================
    SYSTEM FLOW
-========================================= */
+   ========================================================= */
 
 .system-flow {
-  width: min(1200px, 100%);
+  display: grid;
 
-  margin: 0 auto;
-
-  display: flex;
+  grid-template-columns:
+    1fr
+    auto
+    1fr
+    auto
+    1fr
+    auto
+    1fr
+    auto
+    1fr;
 
   align-items: center;
-  justify-content: center;
+
+  margin-top: 80px;
+
+  border-top: 1px solid rgba(148, 163, 184, 0.16);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.16);
 }
 
-.flow-node {
-  width: 150px;
-  height: 150px;
 
-  flex-shrink: 0;
+/* =========================================================
+   FLOW NODE
+   ========================================================= */
+
+.flow-node {
+  min-height: 180px;
+
+  padding: 30px;
 
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 
-  align-items: center;
-  justify-content: center;
-
-  gap: 12px;
-
-  border: 1px solid rgba(255, 255, 255, 0.1);
-
-  border-radius: 50%;
-
-  background: rgba(4, 8, 27, 0.8);
-
-  box-shadow:
-    0 0 50px rgba(21, 73, 170, 0.12);
+  box-sizing: border-box;
 }
 
 .flow-node strong {
-  color: #ffd54a;
+  color: #ffcc33;
 
-  font-size: 0.72rem;
-
-  letter-spacing: 0.15em;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
 }
 
 .flow-node span {
-  font-size: 0.95rem;
-  font-weight: 600;
+  color: #f8fafc;
+
+  font-size: 22px;
+  font-weight: 700;
 }
+
+
+/* =========================================================
+   FLOW LINE
+   ========================================================= */
 
 .flow-line {
-  width: 70px;
+  width: 55px;
   height: 1px;
 
-  background:
-    linear-gradient(
-      90deg,
-      rgba(255, 213, 74, 0.15),
-      rgba(255, 213, 74, 0.7)
-    );
+  background: rgba(148, 163, 184, 0.22);
 }
 
 
-/* =========================================
+/* =========================================================
    CLOSING
-========================================= */
+   ========================================================= */
 
 .platform-closing {
-  width: min(950px, 90%);
-
-  margin: 0 auto;
-
-  padding: 180px 0;
-
   text-align: center;
+
+  border-top: 1px solid rgba(148, 163, 184, 0.12);
+}
+
+.closing-eyebrow {
+  margin-bottom: 28px;
+
+  color: #ffcc33;
+
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
 }
 
 .platform-closing h2 {
-  margin: 25px 0;
+  max-width: 900px;
 
-  font-size: clamp(3rem, 6vw, 6rem);
-
-  line-height: 0.96;
-
-  letter-spacing: -0.06em;
+  margin: 0 auto;
 }
 
 .platform-closing h2 span {
-  color: #ffd54a;
+  color: #ffcc33;
 }
 
 .platform-closing p {
-  max-width: 650px;
+  max-width: 700px;
 
-  margin: 0 auto;
+  margin: 30px auto 0;
 
-  color: #8f9bb8;
+  color: #9db1d0;
 
+  font-size: 17px;
   line-height: 1.8;
 }
 
 
-/* =========================================
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.platform-footer {
+  width: 100%;
+
+  padding: 35px 40px;
+
+  border-top: 1px solid rgba(148, 163, 184, 0.16);
+
+  color: #64748b;
+
+  font-size: 13px;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   LEGACY SUPPORT
+   ========================================================= */
+
+/*
+   These selectors are kept only so older JSX does not break.
+   They are intentionally neutral and do not interfere with
+   the current Platform architecture.
+*/
+
+.platform-page .logic-steps {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+
+  margin-top: 70px;
+
+  border: 1px solid rgba(148, 163, 184, 0.16);
+}
+
+.platform-page .logic-step {
+  min-height: 190px;
+  padding: 30px;
+
+  border-right: 1px solid rgba(148, 163, 184, 0.16);
+}
+
+.platform-page .logic-step:last-child {
+  border-right: none;
+}
+
+.platform-page .logic-step-number {
+  display: block;
+
+  margin-bottom: 35px;
+
+  color: #ffcc33;
+
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+}
+
+.platform-page .logic-step h3 {
+  margin: 0;
+
+  color: #f8fafc;
+
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.platform-page .logic-step p {
+  margin-top: 12px;
+
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.platform-page .big-statement {
+  padding-top: 170px !important;
+  padding-bottom: 170px !important;
+
+  border-top: 1px solid rgba(148, 163, 184, 0.16);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.16);
+}
+
+.platform-page .big-statement h2 {
+  max-width: 1000px;
+}
+
+
+/* =========================================================
    RESPONSIVE
-========================================= */
+   ========================================================= */
 
-@media (max-width: 900px) {
+@media (max-width: 1100px) {
 
-  .platform-hero {
-    min-height: 650px;
+  .platform-page > section:not(.platform-hero) {
+    padding: 120px 32px;
   }
 
-  .architecture-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .section-heading {
+    grid-template-columns: 70px 1fr;
+    gap: 35px;
+  }
+
+  .architecture-card {
+    min-height: 280px;
+  }
+
+  .architecture-card .card-number {
+    margin-bottom: 55px;
   }
 
   .system-flow {
-    flex-wrap: wrap;
-
-    gap: 15px;
+    grid-template-columns:
+      1fr
+      40px
+      1fr
+      40px
+      1fr
+      40px
+      1fr
+      40px
+      1fr;
   }
 
   .flow-line {
-    width: 35px;
+    width: 40px;
   }
 
 }
 
 
-@media (max-width: 650px) {
+/* =========================================================
+   TABLET
+   ========================================================= */
 
-  .platform-hero-inner {
-    padding-top: 70px;
+@media (max-width: 900px) {
+
+  .platform-page > section:not(.platform-hero) {
+    padding: 100px 28px;
   }
 
-  .platform-hero h1 {
-    font-size: clamp(3.2rem, 15vw, 5rem);
-  }
-
-  .architecture-section {
-    padding: 100px 0;
+  .platform-page h2 {
+    font-size: clamp(42px, 9vw, 64px);
   }
 
   .section-heading {
     grid-template-columns: 1fr;
+    gap: 20px;
+  }
 
-    gap: 10px;
+  .section-heading > span {
+    padding-top: 0;
   }
 
   .architecture-grid {
@@ -479,31 +649,118 @@
   }
 
   .architecture-card {
-    min-height: 230px;
-  }
-
-  .system-section {
-    padding: 100px 5%;
+    min-height: 260px;
   }
 
   .system-flow {
-    flex-direction: column;
+    grid-template-columns: 1fr;
   }
 
   .flow-line {
-    width: 1px;
-    height: 45px;
-
-    background:
-      linear-gradient(
-        180deg,
-        rgba(255, 213, 74, 0.15),
-        rgba(255, 213, 74, 0.7)
-      );
+    width: 100%;
+    height: 1px;
   }
 
-  .platform-closing {
-    padding: 120px 0;
+  .flow-node {
+    min-height: 140px;
+  }
+
+  .platform-hero {
+    min-height: auto;
+
+    padding: 100px 28px 110px;
+  }
+
+  .platform-hero h1 {
+    font-size: clamp(52px, 9vw, 78px);
+  }
+
+  .platform-page .logic-steps {
+    grid-template-columns: 1fr;
+  }
+
+  .platform-page .logic-step {
+    border-right: none;
+    border-bottom: 1px solid rgba(148, 163, 184, 0.16);
+  }
+
+  .platform-page .logic-step:last-child {
+    border-bottom: none;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  .platform-page > section:not(.platform-hero) {
+    padding: 80px 20px;
+  }
+
+  .platform-page .section-heading h2,
+  .platform-page .system-content h2,
+  .platform-page .platform-closing h2 {
+    font-size: 44px;
+  }
+
+  .platform-page p {
+    font-size: 15px;
+  }
+
+  .section-heading {
+    margin-bottom: 50px;
+  }
+
+  .architecture-card {
+    min-height: auto;
+    padding: 26px;
+  }
+
+  .architecture-card .card-number {
+    margin-bottom: 45px;
+  }
+
+  .system-content p,
+  .platform-closing p {
+    font-size: 15px;
+  }
+
+  .flow-node {
+    min-height: 125px;
+    padding: 24px;
+  }
+
+  .flow-node span {
+    font-size: 20px;
+  }
+
+  .platform-hero {
+    padding: 80px 20px 90px;
+  }
+
+  .platform-eyebrow {
+    margin-bottom: 30px;
+
+    font-size: 9px;
+    letter-spacing: 0.18em;
+  }
+
+  .platform-hero h1 {
+    font-size: 46px;
+    line-height: 0.98;
+  }
+
+  .platform-hero p {
+    margin-top: 26px;
+    font-size: 14px;
+  }
+
+  .platform-footer {
+    padding: 28px 20px;
   }
 
 }
