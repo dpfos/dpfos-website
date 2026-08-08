@@ -1,5 +1,5 @@
-import LibraryComponent from "../components/library/Library";
+import Library from "../components/library/Library";
 
-export default function Library() {
-  return <LibraryComponent />;
+export default function LibraryPage() {
+  return <Library />;
 }

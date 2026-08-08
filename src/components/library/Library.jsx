@@ -1,5 +1,191 @@
 import "./Library.css";
 
+const books = [
+  {
+    number: "01",
+    title: "The DPF Constitution",
+    description:
+      "The foundational charter defining the identity, principles and governing logic of the DPF Operating System.",
+    meta: "FOUNDATION · v1.0 · FINAL",
+    status: "final",
+  },
+  {
+    number: "02",
+    title: "The DPF Way",
+    description:
+      "The philosophy, mindset and way of thinking that guide the DPF football environment.",
+    meta: "FOUNDATION · v1.0 · FINAL",
+    status: "final",
+  },
+  {
+    number: "03",
+    title: "DPF Blueprint",
+    description:
+      "The structural blueprint for translating DPF principles into a coherent football operating framework.",
+    meta: "DESIGN · v1.0 · FINAL",
+    status: "final",
+  },
+  {
+    number: "04",
+    title: "DPF Architectural Principles",
+    description:
+      "The principles governing structure, relationships, space, organization and system behavior.",
+    meta: "DESIGN · v1.0 · FINAL",
+    status: "final",
+  },
+  {
+    number: "05",
+    title: "DPF Institutional Framework",
+    description:
+      "The organizational architecture required to establish, operate and sustain DPF within football institutions.",
+    meta: "INSTITUTION · v1.0 · FINAL",
+    status: "final",
+  },
+  {
+    number: "06",
+    title: "The Game Model",
+    description:
+      "The football logic translating DPF principles into collective behavior, interaction and action.",
+    meta: "FOOTBALL SYSTEM · IN PROCESS",
+    status: "process",
+  },
+  {
+    number: "07",
+    title: "The Playbook",
+    description:
+      "The practical framework translating the DPF Game Model into implementation and coaching practice.",
+    meta: "FOOTBALL SYSTEM · IN PROCESS",
+    status: "process",
+  },
+  {
+    number: "08",
+    title: "DPF Role Atlas",
+    description:
+      "The functional role architecture defining positional responsibilities, behaviors and player requirements.",
+    meta: "PLAYER ROLES · IN PROCESS",
+    status: "process",
+  },
+  {
+    number: "09",
+    title: "DPF Business Model",
+    description:
+      "The commercial blueprint of the DPF ecosystem, covering products, education, technology, licensing, intellectual property and long-term growth.",
+    meta: "BUSINESS & STRATEGY · v1.0 · FINAL",
+    status: "final",
+  },
+  {
+    number: "10",
+    title: "DPF OS",
+    description:
+      "The integrated operating system connecting DPF knowledge, frameworks, methodologies, technology and organizational implementation.",
+    meta: "OPERATING SYSTEM · v1.0 · FINAL",
+    status: "final",
+  },
+];
+
+const operationalBooks = [
+  {
+    title: "Coaching Manual",
+    description:
+      "The operational framework for coaching, implementation, practice design and DPF development environments.",
+    meta: "OPERATIONS · IN PROCESS",
+  },
+  {
+    title: "Academy & Youth",
+    description:
+      "The DPF framework for academy structures, youth development and long-term player pathways.",
+    meta: "OPERATIONS · IN PROCESS",
+  },
+  {
+    title: "Scouting",
+    description:
+      "The DPF approach to scouting intelligence, player evaluation and recruitment.",
+    meta: "OPERATIONS · IN PROCESS",
+  },
+  {
+    title: "Player Development",
+    description:
+      "The framework for structured individual and collective player development.",
+    meta: "OPERATIONS · IN PROCESS",
+  },
+  {
+    title: "Performance Labs",
+    description:
+      "The performance framework connecting physical, technical, tactical and analytical development.",
+    meta: "PERFORMANCE · IN PROCESS",
+  },
+  {
+    title: "KPI Framework",
+    description:
+      "The measurement framework supporting performance evaluation and continuous improvement.",
+    meta: "PERFORMANCE · IN PROCESS",
+  },
+];
+
+function BookCard({ book }) {
+  const isFinal = book.status === "final";
+
+  return (
+    <article
+      className={`library-card ${
+        !isFinal ? "library-card-soon" : ""
+      }`}
+    >
+      <span>{book.number}</span>
+
+      <h3>{book.title}</h3>
+
+      <p>{book.description}</p>
+
+      <div className="library-card-meta">
+        {book.meta}
+      </div>
+
+      {isFinal ? (
+        <div className="library-card-actions">
+          <button
+            type="button"
+            className="library-button library-button-primary"
+          >
+            View Preview
+          </button>
+
+          <button
+            type="button"
+            className="library-button library-button-secondary"
+          >
+            Full Edition
+          </button>
+        </div>
+      ) : (
+        <div className="library-process-status">
+          IN PROCESS
+        </div>
+      )}
+    </article>
+  );
+}
+
+function ProcessCard({ book }) {
+  return (
+    <article className="library-card library-card-soon">
+      <span>—</span>
+
+      <h3>{book.title}</h3>
+
+      <p>{book.description}</p>
+
+      <div className="library-card-meta">
+        {book.meta}
+      </div>
+
+      <div className="library-process-status">
+        IN PROCESS
+      </div>
+    </article>
+  );
+}
+
 export default function Library() {
   return (
     <main className="library-page">
@@ -31,7 +217,7 @@ export default function Library() {
 
 
       {/* ================================
-          LIBRARY INTRO
+          INTRO
       ================================= */}
 
       <section className="library-intro">
@@ -40,7 +226,6 @@ export default function Library() {
           <div className="library-intro-grid">
 
             <div className="library-intro-title">
-
               <span>DPF OS LIBRARY</span>
 
               <h2>
@@ -48,18 +233,15 @@ export default function Library() {
                 <br />
                 <strong>organized.</strong>
               </h2>
-
             </div>
 
             <div className="library-intro-text">
-
               <p>
                 The DPF OS Knowledge Library brings together the principles,
                 frameworks, methodologies, operational knowledge and strategic
                 thinking that form the intellectual foundation of the DPF
                 Operating System.
               </p>
-
             </div>
 
           </div>
@@ -75,38 +257,12 @@ export default function Library() {
           </div>
 
           <div className="library-grid">
-
-            <article className="library-card">
-              <span>01</span>
-
-              <h3>The Constitution</h3>
-
-              <p>
-                The foundational principles, identity and governing logic
-                of the DPF Operating System.
-              </p>
-
-              <div className="library-card-meta">
-                FOUNDATION · FINAL
-              </div>
-            </article>
-
-
-            <article className="library-card">
-              <span>02</span>
-
-              <h3>The Way</h3>
-
-              <p>
-                The philosophy and way of thinking that guide the DPF
-                football environment.
-              </p>
-
-              <div className="library-card-meta">
-                FOUNDATION · FINAL
-              </div>
-            </article>
-
+            {books.slice(0, 2).map((book) => (
+              <BookCard
+                key={book.number}
+                book={book}
+              />
+            ))}
           </div>
 
 
@@ -120,54 +276,12 @@ export default function Library() {
           </div>
 
           <div className="library-grid">
-
-            <article className="library-card">
-              <span>03</span>
-
-              <h3>The Blueprint</h3>
-
-              <p>
-                The structural framework for designing and implementing
-                the DPF system.
-              </p>
-
-              <div className="library-card-meta">
-                DESIGN · FINAL
-              </div>
-            </article>
-
-
-            <article className="library-card">
-              <span>04</span>
-
-              <h3>Architectural Principles</h3>
-
-              <p>
-                The principles governing relationships, structure,
-                space and system behavior.
-              </p>
-
-              <div className="library-card-meta">
-                DESIGN · FINAL
-              </div>
-            </article>
-
-
-            <article className="library-card">
-              <span>05</span>
-
-              <h3>Institutional Framework</h3>
-
-              <p>
-                The organizational architecture required to operate DPF
-                within football institutions.
-              </p>
-
-              <div className="library-card-meta">
-                INSTITUTION · FINAL
-              </div>
-            </article>
-
+            {books.slice(2, 5).map((book) => (
+              <BookCard
+                key={book.number}
+                book={book}
+              />
+            ))}
           </div>
 
 
@@ -181,54 +295,12 @@ export default function Library() {
           </div>
 
           <div className="library-grid">
-
-            <article className="library-card">
-              <span>06</span>
-
-              <h3>The Game Model</h3>
-
-              <p>
-                The football logic translating DPF principles into
-                collective behavior and action.
-              </p>
-
-              <div className="library-card-meta">
-                FOOTBALL SYSTEM · FINAL
-              </div>
-            </article>
-
-
-            <article className="library-card">
-              <span>07</span>
-
-              <h3>The Playbook</h3>
-
-              <p>
-                The practical football framework translating the DPF
-                Game Model into implementation and coaching practice.
-              </p>
-
-              <div className="library-card-meta">
-                FOOTBALL SYSTEM · FINAL
-              </div>
-            </article>
-
-
-            <article className="library-card">
-              <span>08</span>
-
-              <h3>DPF Role Atlas</h3>
-
-              <p>
-                Positional responsibilities, functional behaviors,
-                player profiles and role-specific requirements.
-              </p>
-
-              <div className="library-card-meta">
-                PLAYER ROLES · FINAL
-              </div>
-            </article>
-
+            {books.slice(5, 8).map((book) => (
+              <BookCard
+                key={book.number}
+                book={book}
+              />
+            ))}
           </div>
 
 
@@ -242,102 +314,12 @@ export default function Library() {
           </div>
 
           <div className="library-grid">
-
-            <article className="library-card library-card-soon">
-              <span>09</span>
-
-              <h3>Coaching Manual</h3>
-
-              <p>
-                The operational framework for coaching, implementation,
-                practice design and DPF development environments.
-              </p>
-
-              <div className="library-card-meta">
-                SOON
-              </div>
-            </article>
-
-
-            <article className="library-card library-card-soon">
-              <span>10</span>
-
-              <h3>Academy & Youth</h3>
-
-              <p>
-                The DPF framework for academy structures, youth development
-                and long-term player pathways.
-              </p>
-
-              <div className="library-card-meta">
-                SOON
-              </div>
-            </article>
-
-
-            <article className="library-card library-card-soon">
-              <span>11</span>
-
-              <h3>Scouting</h3>
-
-              <p>
-                The DPF approach to scouting intelligence, player evaluation
-                and recruitment within the operating system.
-              </p>
-
-              <div className="library-card-meta">
-                SOON
-              </div>
-            </article>
-
-
-            <article className="library-card library-card-soon">
-              <span>12</span>
-
-              <h3>Player Development</h3>
-
-              <p>
-                The framework for developing players through structured
-                individual and collective development pathways.
-              </p>
-
-              <div className="library-card-meta">
-                SOON
-              </div>
-            </article>
-
-
-            <article className="library-card library-card-soon">
-              <span>13</span>
-
-              <h3>Performance Labs</h3>
-
-              <p>
-                The performance framework connecting physical, technical,
-                tactical and analytical development.
-              </p>
-
-              <div className="library-card-meta">
-                SOON
-              </div>
-            </article>
-
-
-            <article className="library-card library-card-soon">
-              <span>14</span>
-
-              <h3>KPI Framework</h3>
-
-              <p>
-                Performance indicators and measurement systems designed
-                to support continuous organizational improvement.
-              </p>
-
-              <div className="library-card-meta">
-                SOON
-              </div>
-            </article>
-
+            {operationalBooks.map((book) => (
+              <ProcessCard
+                key={book.title}
+                book={book}
+              />
+            ))}
           </div>
 
 
@@ -352,29 +334,15 @@ export default function Library() {
 
           <div className="library-grid">
 
-            <article className="library-card">
-
-              <span>BM</span>
-
-              <h3>DPF Business Model</h3>
-
-              <p>
-                The commercial blueprint of the DPF ecosystem, covering
-                products, education, technology, licensing, intellectual
-                property and long-term growth.
-              </p>
-
-              <div className="library-card-meta">
-                BUSINESS & STRATEGY · v1.0
-              </div>
-
-            </article>
+            <BookCard
+              book={books[8]}
+            />
 
           </div>
 
 
           {/* ================================
-              DPF OS
+              OPERATING SYSTEM
           ================================= */}
 
           <div className="library-section-heading">
@@ -384,23 +352,9 @@ export default function Library() {
 
           <div className="library-grid">
 
-            <article className="library-card library-card-soon">
-
-              <span>OS</span>
-
-              <h3>DPF OS</h3>
-
-              <p>
-                The integrated operating system that connects DPF knowledge,
-                frameworks, methodologies, technology and organizational
-                implementation.
-              </p>
-
-              <div className="library-card-meta">
-                SOON
-              </div>
-
-            </article>
+            <BookCard
+              book={books[9]}
+            />
 
           </div>
 
