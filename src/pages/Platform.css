@@ -1,0 +1,509 @@
+/* =========================================
+   DPF OS PLATFORM
+========================================= */
+
+.platform-page {
+  width: 100%;
+  min-height: 100vh;
+
+  background:
+    radial-gradient(
+      circle at 15% 15%,
+      rgba(21, 73, 170, 0.28),
+      transparent 32%
+    ),
+    #030817;
+
+  color: #ffffff;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.platform-hero {
+  position: relative;
+
+  min-height: 760px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(3, 8, 23, 0.25),
+      rgba(3, 8, 23, 0.85)
+    );
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.platform-hero::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background-image:
+    linear-gradient(
+      rgba(255, 255, 255, 0.035) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.035) 1px,
+      transparent 1px
+    );
+
+  background-size: 58px 58px;
+
+  mask-image: linear-gradient(
+    to bottom,
+    black,
+    transparent
+  );
+
+  pointer-events: none;
+}
+
+.platform-hero-inner {
+  position: relative;
+
+  width: min(1100px, 90%);
+
+  margin: 0 auto;
+
+  text-align: center;
+
+  padding-top: 90px;
+}
+
+.platform-eyebrow,
+.section-eyebrow,
+.closing-eyebrow {
+  color: #ffd54a;
+
+  font-size: 0.72rem;
+  font-weight: 700;
+
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+}
+
+.platform-hero h1 {
+  margin: 28px 0 30px;
+
+  font-size: clamp(4rem, 8vw, 7.4rem);
+
+  line-height: 0.94;
+
+  letter-spacing: -0.065em;
+
+  font-weight: 800;
+}
+
+.platform-hero h1 span {
+  color: #ffd54a;
+}
+
+.platform-hero p {
+  max-width: 760px;
+
+  margin: 0 auto;
+
+  color: #aeb7d0;
+
+  font-size: 1.05rem;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================
+   ARCHITECTURE
+========================================= */
+
+.architecture-section {
+  width: min(1200px, 90%);
+
+  margin: 0 auto;
+
+  padding: 150px 0;
+}
+
+.section-heading {
+  display: grid;
+
+  grid-template-columns: 80px 1fr;
+
+  gap: 35px;
+
+  margin-bottom: 80px;
+}
+
+.section-heading > span {
+  color: #ffd54a;
+
+  font-size: 0.8rem;
+  font-weight: 700;
+
+  letter-spacing: 0.15em;
+
+  padding-top: 10px;
+}
+
+.section-heading h2 {
+  max-width: 850px;
+
+  margin: 18px 0 22px;
+
+  font-size: clamp(2.8rem, 5vw, 5rem);
+
+  line-height: 0.98;
+
+  letter-spacing: -0.055em;
+}
+
+.section-heading p {
+  max-width: 720px;
+
+  margin: 0;
+
+  color: #8f9bb8;
+
+  font-size: 1rem;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================
+   ARCHITECTURE GRID
+========================================= */
+
+.architecture-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 18px;
+}
+
+.architecture-card {
+  position: relative;
+
+  min-height: 260px;
+
+  padding: 34px;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 18px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.045),
+      rgba(255, 255, 255, 0.015)
+    );
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    background 0.3s ease;
+}
+
+.architecture-card:hover {
+  transform: translateY(-6px);
+
+  border-color: rgba(255, 213, 74, 0.35);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 213, 74, 0.08),
+      rgba(255, 255, 255, 0.02)
+    );
+}
+
+.architecture-card.featured {
+  border-color: rgba(255, 213, 74, 0.3);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 213, 74, 0.1),
+      rgba(255, 255, 255, 0.02)
+    );
+}
+
+.card-number {
+  display: block;
+
+  margin-bottom: 55px;
+
+  color: #ffd54a;
+
+  font-size: 0.72rem;
+  font-weight: 700;
+
+  letter-spacing: 0.16em;
+}
+
+.architecture-card h3 {
+  margin: 0 0 14px;
+
+  font-size: 1.45rem;
+
+  letter-spacing: -0.03em;
+}
+
+.architecture-card p {
+  margin: 0;
+
+  color: #8f9bb8;
+
+  font-size: 0.92rem;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================
+   SYSTEM LOGIC
+========================================= */
+
+.system-section {
+  position: relative;
+
+  padding: 150px 5%;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+
+  background:
+    radial-gradient(
+      circle at 50% 50%,
+      rgba(21, 73, 170, 0.18),
+      transparent 45%
+    );
+}
+
+.system-content {
+  width: min(900px, 100%);
+
+  margin: 0 auto 90px;
+
+  text-align: center;
+}
+
+.system-content h2 {
+  margin: 22px 0 25px;
+
+  font-size: clamp(2.6rem, 5vw, 4.8rem);
+
+  line-height: 1;
+
+  letter-spacing: -0.055em;
+}
+
+.system-content p {
+  max-width: 760px;
+
+  margin: 0 auto;
+
+  color: #8f9bb8;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================
+   SYSTEM FLOW
+========================================= */
+
+.system-flow {
+  width: min(1200px, 100%);
+
+  margin: 0 auto;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.flow-node {
+  width: 150px;
+  height: 150px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  border-radius: 50%;
+
+  background: rgba(4, 8, 27, 0.8);
+
+  box-shadow:
+    0 0 50px rgba(21, 73, 170, 0.12);
+}
+
+.flow-node strong {
+  color: #ffd54a;
+
+  font-size: 0.72rem;
+
+  letter-spacing: 0.15em;
+}
+
+.flow-node span {
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.flow-line {
+  width: 70px;
+  height: 1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255, 213, 74, 0.15),
+      rgba(255, 213, 74, 0.7)
+    );
+}
+
+
+/* =========================================
+   CLOSING
+========================================= */
+
+.platform-closing {
+  width: min(950px, 90%);
+
+  margin: 0 auto;
+
+  padding: 180px 0;
+
+  text-align: center;
+}
+
+.platform-closing h2 {
+  margin: 25px 0;
+
+  font-size: clamp(3rem, 6vw, 6rem);
+
+  line-height: 0.96;
+
+  letter-spacing: -0.06em;
+}
+
+.platform-closing h2 span {
+  color: #ffd54a;
+}
+
+.platform-closing p {
+  max-width: 650px;
+
+  margin: 0 auto;
+
+  color: #8f9bb8;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+
+  .platform-hero {
+    min-height: 650px;
+  }
+
+  .architecture-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .system-flow {
+    flex-wrap: wrap;
+
+    gap: 15px;
+  }
+
+  .flow-line {
+    width: 35px;
+  }
+
+}
+
+
+@media (max-width: 650px) {
+
+  .platform-hero-inner {
+    padding-top: 70px;
+  }
+
+  .platform-hero h1 {
+    font-size: clamp(3.2rem, 15vw, 5rem);
+  }
+
+  .architecture-section {
+    padding: 100px 0;
+  }
+
+  .section-heading {
+    grid-template-columns: 1fr;
+
+    gap: 10px;
+  }
+
+  .architecture-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .architecture-card {
+    min-height: 230px;
+  }
+
+  .system-section {
+    padding: 100px 5%;
+  }
+
+  .system-flow {
+    flex-direction: column;
+  }
+
+  .flow-line {
+    width: 1px;
+    height: 45px;
+
+    background:
+      linear-gradient(
+        180deg,
+        rgba(255, 213, 74, 0.15),
+        rgba(255, 213, 74, 0.7)
+      );
+  }
+
+  .platform-closing {
+    padding: 120px 0;
+  }
+
+}
