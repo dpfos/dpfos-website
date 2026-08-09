@@ -1,262 +1,1631 @@
-/* =========================
-   HERO
-========================= */
+/* =========================================================
+   DPF OS — HOME HERO
+   CLEAN REFERENCE BUILD
+   ---------------------------------------------------------
+   JSX-aligned with:
+   Hero.jsx
+   HeroContent.jsx
+   HeroActions.jsx
+   HeroStats.jsx
+   HeroVisual.jsx
+   ========================================================= */
+
+
+/* =========================================================
+   HERO ROOT
+   ========================================================= */
 
 .hero {
   position: relative;
+  width: 100%;
+  min-height: calc(100vh - 80px);
 
-  min-height: 100vh;
+  overflow: hidden;
 
-  display: flex;
+  color: #ffffff;
 
-  align-items: center;
+  background:
+    radial-gradient(
+      circle at 78% 58%,
+      rgba(0, 130, 190, 0.055),
+      transparent 34%
+    ),
+    #020813;
+}
 
-  padding-top: 120px;
 
-  background: #04081b;
+/* =========================================================
+   BACKGROUND
+   ========================================================= */
+
+.hero-background {
+  position: absolute;
+  inset: 0;
+
+  z-index: 0;
+
+  pointer-events: none;
 
   overflow: hidden;
 }
 
+.hero-background::before {
+  content: "";
 
-/* =========================
-   HERO CONTAINER
-========================= */
+  position: absolute;
+  inset: 0;
 
-.hero-container {
-  width: min(1400px, 90%);
+  background-image:
+    linear-gradient(
+      rgba(0, 180, 230, 0.022) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(0, 180, 230, 0.022) 1px,
+      transparent 1px
+    );
 
-  margin: auto;
+  background-size: 80px 80px;
+
+  mask-image:
+    linear-gradient(
+      to bottom,
+      transparent,
+      black 18%,
+      black 78%,
+      transparent
+    );
+}
+
+.hero-background::after {
+  content: "";
+
+  position: absolute;
+
+  width: 900px;
+  height: 900px;
+
+  left: 73%;
+  top: 52%;
+
+  transform: translate(-50%, -50%);
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(0, 170, 230, 0.055),
+      transparent 68%
+    );
+
+  filter: blur(15px);
+}
+
+
+/* =========================================================
+   MAIN CONTAINER
+   ========================================================= */
+
+.hero__container {
+  position: relative;
+
+  z-index: 10;
+
+  width: 100%;
+  max-width: 1600px;
+
+  min-height: calc(100vh - 80px);
+
+  margin: 0 auto;
+
+  padding:
+    58px
+    70px
+    80px;
+
+  box-sizing: border-box;
 
   display: grid;
 
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns:
+    minmax(560px, 0.88fr)
+    minmax(700px, 1.12fr);
 
   align-items: center;
 
-  gap: 80px;
+  column-gap: 0;
+}
 
+
+/* =========================================================
+   LEFT SIDE
+   ========================================================= */
+
+.hero__content {
   position: relative;
 
-  z-index: 2;
+  z-index: 100;
+
+  width: 100%;
+  max-width: 700px;
+
+  align-self: center;
+
+  padding-top: 20px;
 }
 
 
-/* =========================
-   HERO LEFT
-========================= */
+/* =========================================================
+   EYEBROW
+   ========================================================= */
 
-.hero-left {
-  display: flex;
+.hero-eyebrow {
+  position: relative;
 
-  flex-direction: column;
-
-  gap: 32px;
-}
-
-
-/* =========================
-   HERO RIGHT
-========================= */
-
-.hero-right {
-  display: flex;
-
-  justify-content: center;
-
-  align-items: center;
-}
-
-
-/* =========================
-   HERO BADGE
-========================= */
-
-.hero-badge {
   display: inline-flex;
 
-  width: fit-content;
+  align-items: center;
 
-  padding: 10px 20px;
+  gap: 9px;
+
+  min-height: 29px;
+
+  padding:
+    6px
+    12px;
+
+  box-sizing: border-box;
+
+  border:
+    1px solid
+    rgba(0, 210, 255, 0.26);
 
   border-radius: 999px;
 
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  background:
+    rgba(3, 16, 28, 0.58);
 
-  background: rgba(255, 255, 255, 0.05);
+  box-shadow:
+    0 0 22px
+    rgba(0, 180, 255, 0.035);
+}
 
-  color: #ffd54a;
+.hero-eyebrow__indicator {
+  width: 6px;
+  height: 6px;
 
-  font-size: 0.9rem;
+  flex: 0 0 6px;
 
-  letter-spacing: 2px;
+  border-radius: 50%;
 
-  text-transform: uppercase;
+  background: #00d9ff;
+
+  box-shadow:
+    0 0 8px
+    rgba(0, 217, 255, 0.9);
+}
+
+.hero-eyebrow__text {
+  color:
+    rgba(190, 225, 238, 0.82);
+
+  font-size: 9px;
+
+  font-weight: 600;
+
+  line-height: 1;
+
+  letter-spacing: 1.45px;
+
+  white-space: nowrap;
 }
 
 
-/* =========================
-   HERO TITLE
-========================= */
+/* =========================================================
+   TITLE
+   ---------------------------------------------------------
+   JSX has 4 spans.
+
+   We deliberately compose them into:
+   
+   The Operating
+   System for Football
+
+   without changing HeroContent.jsx.
+   ========================================================= */
 
 .hero-title {
-  font-size: clamp(4rem, 8vw, 7rem);
+  width: 820px;
+  max-width: none;
+
+  margin: 27px 0 0;
+  padding: 0;
+
+  color: #f5f7fa;
+
+  font-family:
+    Inter,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  font-size: 78px;
+  font-weight: 700;
 
   line-height: 0.95;
-
-  font-weight: 800;
-
-  color: white;
+  letter-spacing: -3.6px;
 }
 
 
-/* =========================
-   HERO DESCRIPTION
-========================= */
+/* Keep the JSX spans inline */
+.hero-title__line {
+  display: inline;
+  white-space: nowrap;
+}
+
+
+/* Space between the JSX spans */
+.hero-title__line::after {
+  content: " ";
+}
+
+
+/* Start the second visual line */
+.hero-title__line:nth-child(3) {
+  display: block;
+}
+
+
+/* Football continues on the same line */
+.hero-title__line--accent {
+  display: inline;
+}
+
+/* =========================================================
+   DESCRIPTION
+   ========================================================= */
 
 .hero-description {
-  max-width: 650px;
+  max-width: 620px;
 
-  color: #9fa8c6;
+  margin:
+    25px
+    0
+    0;
 
-  font-size: 1.15rem;
+  color:
+    rgba(224, 233, 240, 0.76);
 
-  line-height: 1.8;
+  font-size: 15px;
+
+  font-weight: 400;
+
+  line-height: 1.72;
 }
 
 
-/* =========================
-   HERO ACTIONS
-========================= */
+/* =========================================================
+   ACTIONS
+   ---------------------------------------------------------
+   IMPORTANT:
+   These are the real HeroActions.jsx classes.
+   ========================================================= */
 
-.hero-actions {
+.hero-button {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-height: 46px;
+
+  padding:
+    0
+    20px;
+
+  box-sizing: border-box;
+
+  border-radius: 4px;
+
+  text-decoration: none;
+
+  font-size: 11px;
+
+  font-weight: 650;
+
+  letter-spacing: 0.2px;
+
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    background 180ms ease,
+    box-shadow 180ms ease;
+}
+
+
+/* if buttons sit directly after content */
+
+.hero__content > .hero-button,
+.hero__content > div:has(.hero-button) {
+  margin-top: 29px;
+}
+
+
+/* primary */
+
+.hero-button--primary {
+  color: #07101a;
+
+  background: #d4af37;
+
+  border:
+    1px solid
+    #d4af37;
+
+  box-shadow:
+    0 8px 28px
+    rgba(212, 175, 55, 0.11);
+}
+
+
+/* secondary */
+
+.hero-button--secondary {
+  margin-left: 8px;
+
+  color:
+    rgba(235, 242, 247, 0.88);
+
+  background:
+    rgba(5, 15, 27, 0.52);
+
+  border:
+    1px solid
+    rgba(95, 135, 155, 0.30);
+}
+
+
+/* labels */
+
+.hero-button__label {
+  display: inline-flex;
+  align-items: center;
+}
+
+
+/* arrow */
+
+.hero-button__arrow {
+  margin-left: 11px;
+
+  font-size: 15px;
+
+  line-height: 1;
+
+  transition:
+    transform 180ms ease;
+}
+
+
+/* hover */
+
+.hero-button:hover {
+  transform:
+    translateY(-2px);
+}
+
+.hero-button--primary:hover {
+  box-shadow:
+    0 12px 32px
+    rgba(212, 175, 55, 0.17);
+}
+
+.hero-button--secondary:hover {
+  border-color:
+    rgba(0, 210, 255, 0.36);
+
+  background:
+    rgba(8, 22, 36, 0.72);
+}
+
+.hero-button:hover
+.hero-button__arrow {
+  transform:
+    translateX(3px);
+}
+
+
+/* =========================================================
+   STATS
+   ---------------------------------------------------------
+   REAL HeroStats.jsx STRUCTURE
+   ========================================================= */
+
+.hero-stats {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  width: 100%;
+
+  margin-top: 43px;
+
+  border-top:
+    1px solid
+    rgba(80, 125, 145, 0.20);
+
+  border-bottom:
+    1px solid
+    rgba(80, 125, 145, 0.14);
+}
+
+
+/* individual stat */
+
+.hero-stat {
+  min-width: 0;
+  min-height: 70px;
+
   display: flex;
 
   align-items: center;
 
-  gap: 20px;
+  gap: 11px;
 
-  flex-wrap: wrap;
+  padding:
+    14px
+    18px;
+
+  box-sizing: border-box;
+
+  border-right:
+    1px solid
+    rgba(80, 125, 145, 0.15);
+}
+
+.hero-stat:last-child {
+  border-right: none;
 }
 
 
-/* =========================
-   HERO STATS
-========================= */
+/* =========================================================
+   STAT ICON
+   ========================================================= */
 
-.hero-stats {
-  display: flex;
+.hero-stat svg {
+  width: 17px;
+  height: 17px;
 
-  gap: 50px;
+  flex: 0 0 17px;
 
-  margin-top: 30px;
-
-  flex-wrap: wrap;
+  overflow: visible;
 }
 
-.hero-stat {
+
+/* gold */
+
+.hero-stat--gold {
+  color: #d4af37;
+}
+
+
+/* cyan */
+
+.hero-stat--cyan {
+  color: #00d9ff;
+}
+
+
+/* =========================================================
+   STAT CONTENT
+   ========================================================= */
+
+.hero-stat__content {
+  min-width: 0;
+
   display: flex;
 
   flex-direction: column;
 
-  gap: 8px;
+  justify-content: center;
 }
 
-.hero-stat h3 {
-  color: white;
 
-  font-size: 2rem;
+/* number */
+
+.hero-stat__value {
+  display: inline-block;
+
+  margin-right: 5px;
+
+  color:
+    rgba(245, 247, 250, 0.95);
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  line-height: 1.05;
+}
+
+
+/* labels */
+
+.hero-stat__label {
+  display: block;
+
+  color:
+    rgba(220, 231, 238, 0.82);
+
+  font-size: 9px;
+
+  font-weight: 600;
+
+  line-height: 1.25;
+
+  letter-spacing: 0.25px;
+}
+
+
+/* =========================================================
+   RIGHT VISUAL
+   ========================================================= */
+
+.hero__visual {
+  position: relative;
+
+  width: 100%;
+  height: 700px;
+
+  align-self: center;
+
+  z-index: 20;
+
+  overflow: visible;
+
+  transform:
+    translateX(70px);
+}
+
+
+/* =========================================================
+   VISUAL ROOT
+   ========================================================= */
+
+.dpf-hero-visual {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+
+  overflow: visible;
+}
+
+
+/* =========================================================
+   STARS
+   ========================================================= */
+
+.dpf-hero-stars {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 0;
+
+  pointer-events: none;
+}
+
+.dpf-hero-stars i {
+  position: absolute;
+
+  display: block;
+
+  border-radius: 50%;
+
+  background:
+    rgba(190, 235, 255, 0.72);
+
+  animation:
+    dpfStarPulse 4s ease-in-out infinite;
+}
+
+@keyframes dpfStarPulse {
+  0%,
+  100% {
+    opacity: 0.25;
+  }
+
+  50% {
+    opacity: 0.85;
+  }
+}
+
+
+/* =========================================================
+   SYSTEM
+   ========================================================= */
+
+.dpf-system {
+  position: absolute;
+
+  left: 50%;
+  top: 18px;
+
+  width: 720px;
+  height: 650px;
+
+  transform:
+    translateX(-50%);
+
+  z-index: 10;
+}
+
+
+/* =========================================================
+   AXIS
+   ========================================================= */
+
+.dpf-system__axis {
+  position: absolute;
+
+  top: 0;
+  bottom: 0;
+
+  left: 50%;
+
+  width: 1px;
+
+  transform:
+    translateX(-50%);
+
+  background:
+    linear-gradient(
+      to bottom,
+      transparent,
+      rgba(0, 217, 255, 0.28) 15%,
+      rgba(0, 217, 255, 0.48) 52%,
+      rgba(212, 175, 55, 0.28) 78%,
+      transparent
+    );
+
+  z-index: 3;
+}
+
+
+/* =========================================================
+   LAYERS
+   ========================================================= */
+
+.dpf-system__layers {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 8;
+}
+
+
+/* each layer */
+
+.dpf-system-layer {
+  position: absolute;
+
+  width: var(--layer-width);
+
+  height: 50px;
+
+  left: 50%;
+
+  top: var(--layer-y);
+
+  transform:
+    translateX(-50%);
+
+  box-sizing: border-box;
+
+  z-index:
+    calc(20 - var(--layer-depth));
+}
+
+
+/* =========================================================
+   PITCH SVG
+   ========================================================= */
+
+.dpf-pitch {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  overflow: visible;
+}
+
+
+/* grid */
+
+.dpf-pitch__grid {
+  fill: none;
+
+  stroke:
+    rgba(100, 220, 255, 0.10);
+
+  stroke-width: 0.35;
+}
+
+
+/* markings */
+
+.dpf-pitch__markings {
+  fill: none;
+
+  stroke:
+    currentColor;
+
+  stroke-width: 0.55;
+
+  opacity: 0.60;
+}
+
+
+/* zones */
+
+.dpf-pitch__zones {
+  fill: none;
+
+  stroke:
+    currentColor;
+
+  stroke-width: 0.35;
+
+  opacity: 0.50;
+}
+
+
+/* nodes */
+
+.dpf-pitch__nodes {
+  fill:
+    currentColor;
+
+  opacity: 0.78;
+}
+
+
+/* tones */
+
+.dpf-pitch--cyan {
+  color: #00d9ff;
+}
+
+.dpf-pitch--blue {
+  color: #1bbce6;
+}
+
+.dpf-pitch--gold {
+  color: #d4af37;
+}
+
+
+/* =========================================================
+   LAYER EDGES
+   ========================================================= */
+
+.dpf-system-layer__edge {
+  position: absolute;
+
+  left: 0;
+  right: 0;
+
+  height: 1px;
+
+  pointer-events: none;
+
+  opacity: 0.30;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      currentColor 20%,
+      currentColor 80%,
+      transparent
+    );
+}
+
+.dpf-system-layer__edge--front {
+  bottom: -3px;
+}
+
+.dpf-system-layer__edge--back {
+  top: -2px;
+}
+
+
+/* =========================================================
+   BEAM
+   ========================================================= */
+
+.dpf-system-layer__beam {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  width: 190px;
+  height: 1px;
+
+  transform:
+    translate(-50%, -50%);
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      currentColor,
+      transparent
+    );
+
+  opacity: 0.06;
+}
+
+
+/* index hidden */
+
+.dpf-system-layer__index {
+  display: none;
+}
+
+
+/* =========================================================
+   CORE ENGINE
+   ========================================================= */
+
+.dpf-core-engine {
+  position: absolute;
+
+  left: 50%;
+  bottom: 28px;
+
+  width: 180px;
+  height: 85px;
+
+  transform:
+    translateX(-50%);
+
+  z-index: 30;
+}
+
+
+/* rings */
+
+.dpf-core-engine__rings {
+  position: absolute;
+
+  left: 50%;
+  top: 18px;
+
+  width: 180px;
+  height: 42px;
+
+  transform:
+    translateX(-50%);
+}
+
+.dpf-core-engine__rings span {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  border:
+    1px solid
+    rgba(0, 210, 255, 0.22);
+
+  border-radius: 50%;
+
+  transform:
+    translate(-50%, -50%);
+}
+
+.dpf-core-engine__rings span:nth-child(1) {
+  width: 105px;
+  height: 23px;
+}
+
+.dpf-core-engine__rings span:nth-child(2) {
+  width: 140px;
+  height: 30px;
+
+  opacity: 0.65;
+}
+
+.dpf-core-engine__rings span:nth-child(3) {
+  width: 175px;
+  height: 38px;
+
+  opacity: 0.38;
+}
+
+
+/* platform */
+
+.dpf-core-engine__platform {
+  position: absolute;
+
+  left: 50%;
+  top: 18px;
+
+  width: 100px;
+  height: 36px;
+
+  transform:
+    translateX(-50%);
+
+  border:
+    1px solid
+    rgba(0, 210, 255, 0.42);
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      ellipse at center,
+      rgba(0, 217, 255, 0.22),
+      transparent 70%
+    );
+
+  box-shadow:
+    0 0 25px
+    rgba(0, 200, 255, 0.18);
+}
+
+
+/* inner ring */
+
+.dpf-core-engine__inner-ring {
+  position: absolute;
+
+  inset: 7px 14px;
+
+  border:
+    1px solid
+    rgba(0, 217, 255, 0.34);
+
+  border-radius: 50%;
+}
+
+
+/* energy */
+
+.dpf-core-engine__energy {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  width: 18px;
+  height: 18px;
+
+  transform:
+    translate(-50%, -50%);
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      #ffffff,
+      #00d9ff 30%,
+      rgba(0, 217, 255, 0.15) 65%,
+      transparent 75%
+    );
+
+  box-shadow:
+    0 0 14px
+    rgba(0, 217, 255, 0.70);
+}
+
+.dpf-core-engine__energy span {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  width: 34px;
+  height: 34px;
+
+  transform:
+    translate(-50%, -50%);
+
+  border:
+    1px solid
+    rgba(0, 217, 255, 0.15);
+
+  border-radius: 50%;
+
+  animation:
+    dpfCorePulse 3.5s ease-in-out infinite;
+}
+
+.dpf-core-engine__energy span:nth-child(2) {
+  width: 52px;
+  height: 52px;
+
+  animation-delay: -1s;
+}
+
+.dpf-core-engine__energy span:nth-child(3) {
+  width: 70px;
+  height: 70px;
+
+  animation-delay: -2s;
+}
+
+@keyframes dpfCorePulse {
+  0%,
+  100% {
+    opacity: 0.30;
+    transform:
+      translate(-50%, -50%)
+      scale(0.94);
+  }
+
+  50% {
+    opacity: 0.80;
+    transform:
+      translate(-50%, -50%)
+      scale(1);
+  }
+}
+
+
+/* core label */
+
+.dpf-core-engine__label {
+  position: absolute;
+
+  left: 50%;
+  top: 61px;
+
+  transform:
+    translateX(-50%);
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  white-space: nowrap;
+}
+
+.dpf-core-engine__label strong {
+  color:
+    rgba(235, 247, 252, 0.92);
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: 3px;
+}
+
+.dpf-core-engine__label small {
+  margin-top: 3px;
+
+  color: #d4af37;
+
+  font-size: 5px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.8px;
+}
+
+
+/* beam */
+
+.dpf-core-engine__beam {
+  position: absolute;
+
+  left: 50%;
+  top: -430px;
+
+  width: 1px;
+  height: 430px;
+
+  transform:
+    translateX(-50%);
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(0, 217, 255, 0.32),
+      transparent
+    );
+}
+
+
+/* =========================================================
+   EARTH HORIZON
+   ========================================================= */
+
+.dpf-earth {
+  position: absolute;
+
+  left: 50%;
+  bottom: -350px;
+
+  width: 1000px;
+  height: 480px;
+
+  transform:
+    translateX(-50%);
+
+  z-index: 1;
+
+  pointer-events: none;
+}
+
+.dpf-earth__surface {
+  position: absolute;
+
+  inset: 0;
+
+  border:
+    1px solid
+    rgba(0, 210, 255, 0.32);
+
+  border-radius:
+    50% 50% 0 0 / 22% 22% 0 0;
+
+  background:
+    radial-gradient(
+      ellipse at 50% 0%,
+      rgba(0, 170, 220, 0.17),
+      rgba(0, 80, 120, 0.05) 60%,
+      transparent 76%
+    );
+}
+
+
+/* earth grid */
+
+.dpf-earth__grid {
+  position: absolute;
+
+  left: 10%;
+  right: 10%;
+
+  top: 20px;
+
+  height: 260px;
+
+  border:
+    1px solid
+    rgba(0, 200, 255, 0.07);
+
+  border-radius: 50%;
+
+  transform:
+    perspective(600px)
+    rotateX(62deg);
+
+  opacity: 0.55;
+}
+
+.dpf-earth__grid--two {
+  left: 20%;
+  right: 20%;
+
+  top: 45px;
+
+  opacity: 0.30;
+}
+
+
+/* earth lights */
+
+.dpf-earth__lights {
+  position: absolute;
+
+  inset: 0;
+}
+
+.dpf-earth__lights span {
+  position: absolute;
+
+  width: 3px;
+  height: 3px;
+
+  border-radius: 50%;
+
+  background: #d4af37;
+
+  box-shadow:
+    0 0 8px
+    rgba(212, 175, 55, 0.55);
+}
+
+.dpf-earth__lights span:nth-child(1) {
+  left: 24%;
+  top: 32%;
+}
+
+.dpf-earth__lights span:nth-child(2) {
+  left: 38%;
+  top: 22%;
+}
+
+.dpf-earth__lights span:nth-child(3) {
+  left: 52%;
+  top: 31%;
+}
+
+.dpf-earth__lights span:nth-child(4) {
+  left: 67%;
+  top: 25%;
+}
+
+.dpf-earth__lights span:nth-child(5) {
+  left: 76%;
+  top: 40%;
+}
+
+.dpf-earth__lights span:nth-child(6) {
+  left: 31%;
+  top: 49%;
+}
+
+.dpf-earth__lights span:nth-child(7) {
+  left: 58%;
+  top: 47%;
+}
+
+.dpf-earth__lights span:nth-child(8) {
+  left: 70%;
+  top: 58%;
+}
+
+
+/* =========================================================
+   RIGHT LABELS
+   ========================================================= */
+
+.dpf-layer-labels {
+  position: absolute;
+
+  top: 38px;
+  right: -5px;
+
+  width: 205px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  z-index: 60;
+}
+
+.dpf-layer-label {
+  min-height: 56px;
+
+  display: grid;
+
+  grid-template-columns: 30px 1fr;
+
+  align-items: center;
+
+  padding:
+    7px
+    0
+    7px
+    10px;
+
+  box-sizing: border-box;
+
+  border-left:
+    1px solid
+    rgba(0, 217, 255, 0.24);
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(3, 17, 29, 0.28),
+      transparent
+    );
+}
+
+.dpf-layer-label > span {
+  color: #00d9ff;
+
+  font-size: 8px;
 
   font-weight: 700;
 }
 
-.hero-stat span {
-  color: #8f98b2;
+.dpf-layer-label strong {
+  display: block;
 
-  font-size: 0.9rem;
+  color:
+    rgba(242, 247, 250, 0.92);
+
+  font-size: 9px;
+
+  font-weight: 700;
 
   letter-spacing: 1px;
+}
 
-  text-transform: uppercase;
+.dpf-layer-label small {
+  display: block;
+
+  margin-top: 4px;
+
+  color:
+    rgba(150, 180, 195, 0.58);
+
+  font-size: 5px;
+
+  line-height: 1.2;
+
+  white-space: nowrap;
+}
+
+.dpf-layer-label--gold {
+  border-left-color:
+    rgba(212, 175, 55, 0.40);
+}
+
+.dpf-layer-label--gold > span {
+  color: #d4af37;
 }
 
 
-/* =========================
-   TABLET
-========================= */
+/* =========================================================
+   SCROLL
+   ========================================================= */
 
-@media (max-width: 1000px) {
+.hero__scroll {
+  position: absolute;
 
-  .hero {
-    padding-top: 80px;
+  left: 50%;
+  bottom: 20px;
+
+  transform:
+    translateX(-50%);
+
+  z-index: 120;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: 6px;
+}
+
+.hero__scroll-label {
+  color:
+    rgba(225, 235, 241, 0.68);
+
+  font-size: 9px;
+
+  font-weight: 600;
+
+  letter-spacing: 1.4px;
+
+  white-space: nowrap;
+}
+
+.hero__scroll-arrow {
+  color:
+    rgba(0, 217, 255, 0.72);
+
+  font-size: 13px;
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+   ========================================================= */
+
+@media (min-width: 1500px) {
+
+  .hero__container {
+    max-width: 1680px;
+
+    padding-left: 80px;
+    padding-right: 80px;
   }
 
-  .hero-container {
-    grid-template-columns: 1fr;
-
-    gap: 60px;
-  }
-
-  .hero-right {
-    min-height: 400px;
+  .hero__visual {
+    transform:
+      translateX(85px);
   }
 }
 
 
-@media (max-width: 600px) {
+/* =========================================================
+   LAPTOP
+   ========================================================= */
 
-  .hero {
-    min-height: auto;
+@media (max-width: 1300px) {
 
-    display: block;
+  .hero__container {
+    grid-template-columns:
+      minmax(500px, 0.9fr)
+      minmax(640px, 1.1fr);
 
-    padding-top: 24px;
-    padding-bottom: 80px;
+    padding:
+      55px
+      35px
+      70px;
   }
 
-  .hero-container {
-    width: 90%;
-
-    margin: 0 auto;
-
-    grid-template-columns: 1fr;
-
-    gap: 50px;
-  }
-
-  .hero-left {
-    gap: 26px;
+  .hero__visual {
+    transform:
+      translateX(35px);
   }
 
   .hero-title {
-    font-size: clamp(3.2rem, 15vw, 5rem);
+    font-size: 72px;
+
+    letter-spacing: -3.4px;
+  }
+
+  .dpf-system {
+    transform:
+      translateX(-50%)
+      scale(0.90);
+  }
+
+  .dpf-layer-labels {
+    right: -25px;
+  }
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+  .hero__container {
+    min-height: auto;
+
+    grid-template-columns: 1fr;
+
+    row-gap: 10px;
+
+    padding:
+      50px
+      30px
+      70px;
+  }
+
+  .hero__content {
+    max-width: 720px;
+
+    margin: 0 auto;
+  }
+
+  .hero__visual {
+    height: 640px;
+
+    transform: none;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+  .hero__container {
+    padding:
+      35px
+      18px
+      60px;
+  }
+
+  .hero-title {
+    font-size:
+      clamp(
+        48px,
+        13vw,
+        70px
+      );
+
+    letter-spacing: -2.5px;
   }
 
   .hero-description {
-    font-size: 1rem;
+    font-size: 14px;
+  }
 
-    line-height: 1.8;
+  .hero-button {
+    min-height: 44px;
   }
 
   .hero-stats {
-    gap: 30px;
+    grid-template-columns: 1fr;
+  }
+
+  .hero-stat {
+    border-right: none;
+
+    border-bottom:
+      1px solid
+      rgba(80, 125, 145, 0.15);
+  }
+
+  .hero-stat:last-child {
+    border-bottom: none;
+  }
+
+  .hero__visual {
+    height: 540px;
+  }
+
+  .dpf-system {
+    transform:
+      translateX(-50%)
+      scale(0.68);
+  }
+
+  .dpf-layer-labels {
+    display: none;
   }
 }
 
-/* =========================
-   REMOVE SPACE ABOVE HERO
-   ========================= */
 
-.hero {
-  margin-top: 0 !important;
-  padding-top: 0 !important;
-}
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
 
-main {
-  margin-top: 0 !important;
-  padding-top: 0 !important;
-}
+@media (max-width: 480px) {
 
-.hero-container {
-  margin-top: 0 !important;
+  .hero__container {
+    padding:
+      28px
+      14px
+      50px;
+  }
+
+  .hero-title {
+    font-size: 46px;
+
+    letter-spacing: -2px;
+  }
+
+  .hero-button {
+    width: 100%;
+  }
+
+  .hero-button--secondary {
+    margin-left: 0;
+    margin-top: 8px;
+  }
+
+  .hero__visual {
+    height: 480px;
+  }
+
+  .dpf-system {
+    transform:
+      translateX(-50%)
+      scale(0.55);
+  }
 }
