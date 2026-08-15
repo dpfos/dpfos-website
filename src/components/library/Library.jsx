@@ -1,129 +1,8 @@
 import "./Library.css";
-
-const books = [
-  {
-    number: "01",
-    title: "The DPF Constitution",
-    description:
-      "The foundational charter defining the identity, principles and governing logic of the DPF Operating System.",
-    meta: "FOUNDATION · v1.0 · FINAL",
-    status: "final",
-  },
-  {
-    number: "02",
-    title: "The DPF Way",
-    description:
-      "The philosophy, mindset and way of thinking that guide the DPF football environment.",
-    meta: "FOUNDATION · v1.0 · FINAL",
-    status: "final",
-  },
-  {
-    number: "03",
-    title: "DPF Blueprint",
-    description:
-      "The structural blueprint for translating DPF principles into a coherent football operating framework.",
-    meta: "DESIGN · v1.0 · FINAL",
-    status: "final",
-  },
-  {
-    number: "04",
-    title: "DPF Architectural Principles",
-    description:
-      "The principles governing structure, relationships, space, organization and system behavior.",
-    meta: "DESIGN · v1.0 · FINAL",
-    status: "final",
-  },
-  {
-    number: "05",
-    title: "DPF Institutional Framework",
-    description:
-      "The organizational architecture required to establish, operate and sustain DPF within football institutions.",
-    meta: "INSTITUTION · v1.0 · FINAL",
-    status: "final",
-  },
-  {
-    number: "06",
-    title: "The Game Model",
-    description:
-      "The football logic translating DPF principles into collective behavior, interaction and action.",
-    meta: "FOOTBALL SYSTEM · IN PROCESS",
-    status: "process",
-  },
-  {
-    number: "07",
-    title: "The Playbook",
-    description:
-      "The practical framework translating the DPF Game Model into implementation and coaching practice.",
-    meta: "FOOTBALL SYSTEM · IN PROCESS",
-    status: "process",
-  },
-  {
-    number: "08",
-    title: "DPF Role Atlas",
-    description:
-      "The functional role architecture defining positional responsibilities, behaviors and player requirements.",
-    meta: "PLAYER ROLES · IN PROCESS",
-    status: "process",
-  },
-  {
-    number: "09",
-    title: "DPF Business Model",
-    description:
-      "The commercial blueprint of the DPF ecosystem, covering products, education, technology, licensing, intellectual property and long-term growth.",
-    meta: "BUSINESS & STRATEGY · v1.0 · FINAL",
-    status: "final",
-  },
-  {
-    number: "10",
-    title: "DPF OS",
-    description:
-      "The integrated operating system connecting DPF knowledge, frameworks, methodologies, technology and organizational implementation.",
-    meta: "OPERATING SYSTEM · v1.0 · FINAL",
-    status: "final",
-  },
-];
-
-const operationalBooks = [
-  {
-    title: "Coaching Manual",
-    description:
-      "The operational framework for coaching, implementation, practice design and DPF development environments.",
-    meta: "OPERATIONS · IN PROCESS",
-  },
-  {
-    title: "Academy & Youth",
-    description:
-      "The DPF framework for academy structures, youth development and long-term player pathways.",
-    meta: "OPERATIONS · IN PROCESS",
-  },
-  {
-    title: "Scouting",
-    description:
-      "The DPF approach to scouting intelligence, player evaluation and recruitment.",
-    meta: "OPERATIONS · IN PROCESS",
-  },
-  {
-    title: "Player Development",
-    description:
-      "The framework for structured individual and collective player development.",
-    meta: "OPERATIONS · IN PROCESS",
-  },
-  {
-    title: "Performance Labs",
-    description:
-      "The performance framework connecting physical, technical, tactical and analytical development.",
-    meta: "PERFORMANCE · IN PROCESS",
-  },
-  {
-    title: "KPI Framework",
-    description:
-      "The measurement framework supporting performance evaluation and continuous improvement.",
-    meta: "PERFORMANCE · IN PROCESS",
-  },
-];
+import books from "../../data/books";
 
 function BookCard({ book }) {
-  const isFinal = book.status === "final";
+  const isFinal = book.status === "FINAL";
 
   return (
     <article
@@ -133,12 +12,22 @@ function BookCard({ book }) {
     >
       <span>{book.number}</span>
 
+      <div className="library-card-cover">
+        <img
+          src={book.cover}
+          alt={`${book.title} cover`}
+          loading="lazy"
+        />
+      </div>
+
       <h3>{book.title}</h3>
 
       <p>{book.description}</p>
 
       <div className="library-card-meta">
-        {book.meta}
+        {book.category} ·{" "}
+        {book.version ? `${book.version} · ` : ""}
+        {book.status}
       </div>
 
       {isFinal ? (
@@ -159,44 +48,60 @@ function BookCard({ book }) {
         </div>
       ) : (
         <div className="library-process-status">
-          IN PROCESS
+          IN DEVELOPMENT
         </div>
       )}
     </article>
   );
 }
 
-function ProcessCard({ book }) {
+function getBooks(numbers) {
+  return numbers
+    .map((number) =>
+      books.find((book) => book.number === number)
+    )
+    .filter(Boolean);
+}
+
+function LibrarySection({
+  number,
+  label,
+  title,
+  bookNumbers,
+}) {
+  const sectionBooks = getBooks(bookNumbers);
+
   return (
-    <article className="library-card library-card-soon">
-      <span>—</span>
+    <>
+      <div className="library-section-heading">
+        <span>
+          {number} — {label}
+        </span>
 
-      <h3>{book.title}</h3>
-
-      <p>{book.description}</p>
-
-      <div className="library-card-meta">
-        {book.meta}
+        <h3>{title}</h3>
       </div>
 
-      <div className="library-process-status">
-        IN PROCESS
+      <div className="library-grid">
+        {sectionBooks.map((book) => (
+          <BookCard
+            key={book.number}
+            book={book}
+          />
+        ))}
       </div>
-    </article>
+    </>
   );
 }
 
 export default function Library() {
   return (
     <main className="library-page">
-
       {/* ================================
           HERO
       ================================= */}
 
       <section className="library-hero">
         <div className="library-container">
-
           <div className="library-hero-label">
             DPF OS KNOWLEDGE LIBRARY
           </div>
@@ -211,10 +116,8 @@ export default function Library() {
             The intellectual foundation of the Dynamic Positional Football
             Operating System.
           </p>
-
         </div>
       </section>
-
 
       {/* ================================
           INTRO
@@ -222,9 +125,7 @@ export default function Library() {
 
       <section className="library-intro">
         <div className="library-container">
-
           <div className="library-intro-grid">
-
             <div className="library-intro-title">
               <span>DPF OS LIBRARY</span>
 
@@ -243,124 +144,75 @@ export default function Library() {
                 Operating System.
               </p>
             </div>
-
           </div>
-
 
           {/* ================================
-              FOUNDATION
+              01 — FOUNDATION
           ================================= */}
 
-          <div className="library-section-heading">
-            <span>01 — FOUNDATION</span>
-            <h3>Foundational Knowledge</h3>
-          </div>
-
-          <div className="library-grid">
-            {books.slice(0, 2).map((book) => (
-              <BookCard
-                key={book.number}
-                book={book}
-              />
-            ))}
-          </div>
-
+          <LibrarySection
+            number="01"
+            label="FOUNDATION"
+            title="Foundational Knowledge"
+            bookNumbers={["01", "02"]}
+          />
 
           {/* ================================
-              DESIGN & INSTITUTION
+              02 — DESIGN & INSTITUTION
           ================================= */}
 
-          <div className="library-section-heading">
-            <span>02 — DESIGN & INSTITUTION</span>
-            <h3>System Architecture</h3>
-          </div>
-
-          <div className="library-grid">
-            {books.slice(2, 5).map((book) => (
-              <BookCard
-                key={book.number}
-                book={book}
-              />
-            ))}
-          </div>
-
+          <LibrarySection
+            number="02"
+            label="DESIGN & INSTITUTION"
+            title="System Architecture"
+            bookNumbers={["03", "04", "05"]}
+          />
 
           {/* ================================
-              FOOTBALL SYSTEM
+              03 — FOOTBALL SYSTEM
           ================================= */}
 
-          <div className="library-section-heading">
-            <span>03 — FOOTBALL SYSTEM</span>
-            <h3>The Football Knowledge Layer</h3>
-          </div>
-
-          <div className="library-grid">
-            {books.slice(5, 8).map((book) => (
-              <BookCard
-                key={book.number}
-                book={book}
-              />
-            ))}
-          </div>
-
+          <LibrarySection
+            number="03"
+            label="FOOTBALL SYSTEM"
+            title="The Football Knowledge Layer"
+            bookNumbers={["06", "07", "08", "09"]}
+          />
 
           {/* ================================
-              OPERATIONAL KNOWLEDGE
+              04 — OPERATIONAL KNOWLEDGE
           ================================= */}
 
-          <div className="library-section-heading">
-            <span>04 — OPERATIONAL KNOWLEDGE</span>
-            <h3>Implementation Library</h3>
-          </div>
-
-          <div className="library-grid">
-            {operationalBooks.map((book) => (
-              <ProcessCard
-                key={book.title}
-                book={book}
-              />
-            ))}
-          </div>
-
+          <LibrarySection
+            number="04"
+            label="OPERATIONAL KNOWLEDGE"
+            title="Implementation Library"
+            bookNumbers={["10", "11", "12", "13", "14"]}
+          />
 
           {/* ================================
-              BUSINESS & STRATEGY
+              05 — RESEARCH & INTELLIGENCE
           ================================= */}
 
-          <div className="library-section-heading">
-            <span>05 — BUSINESS & STRATEGY</span>
-            <h3>Ecosystem Strategy</h3>
-          </div>
-
-          <div className="library-grid">
-
-            <BookCard
-              book={books[8]}
-            />
-
-          </div>
-
+          <LibrarySection
+            number="05"
+            label="RESEARCH & INTELLIGENCE"
+            title="Research & Intelligence"
+            bookNumbers={["15", "16"]}
+          />
 
           {/* ================================
-              OPERATING SYSTEM
+              06 — OPERATING SYSTEM
           ================================= */}
 
-          <div className="library-section-heading">
-            <span>06 — OPERATING SYSTEM</span>
-            <h3>DPF OS</h3>
-          </div>
-
-          <div className="library-grid">
-
-            <BookCard
-              book={books[9]}
-            />
-
-          </div>
-
+          <LibrarySection
+            number="06"
+            label="OPERATING SYSTEM"
+            title="DPF OS"
+            bookNumbers={["17", "18"]}
+          />
         </div>
       </section>
-
     </main>
   );
 }

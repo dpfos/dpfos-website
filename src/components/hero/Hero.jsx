@@ -1,4 +1,5 @@
 import "./Hero.css";
+import HeroVisual from "./HeroVisual";
 
 export default function Hero() {
   return (
@@ -6,24 +7,24 @@ export default function Hero() {
 
       <div className="hero-container">
 
-        {/* =========================
-            HERO LEFT
-        ========================= */}
+        {/* =========================================
+            LEFT
+        ========================================= */}
 
         <div className="hero-left">
 
           <div className="hero-badge">
-            Dynamic Positional Football Operating System
+            <span className="hero-badge__dot" />
+            DYNAMIC Test 999
           </div>
 
           <h1 className="hero-title">
-            The
-            <br />
-            Operating
-            <br />
-            System for
-            <br />
-            Football
+            <span>The</span>
+            <span>Operating</span>
+            <span>System for</span>
+            <span className="hero-title__accent">
+              Football
+            </span>
           </h1>
 
           <p className="hero-description">
@@ -36,14 +37,15 @@ export default function Hero() {
 
             <a
               href="/platform"
-              className="hero-button hero-button-primary"
+              className="hero-button hero-button--primary"
             >
-              Explore Platform
+              <span>Explore Platform</span>
+              <span>→</span>
             </a>
 
             <a
               href="/library"
-              className="hero-button hero-button-secondary"
+              className="hero-button hero-button--secondary"
             >
               DPF Library
             </a>
@@ -53,18 +55,21 @@ export default function Hero() {
           <div className="hero-stats">
 
             <div className="hero-stat">
-              <h3>10+</h3>
-              <span>Knowledge Volumes</span>
+              <strong>10+</strong>
+              <span>KNOWLEDGE</span>
+              <span>VOLUMES</span>
             </div>
 
             <div className="hero-stat">
-              <h3>100+</h3>
-              <span>Frameworks &amp; Concepts</span>
+              <strong>100+</strong>
+              <span>FRAMEWORKS &amp;</span>
+              <span>CONCEPTS</span>
             </div>
 
             <div className="hero-stat">
-              <h3>∞</h3>
-              <span>System Evolution</span>
+              <strong>∞</strong>
+              <span>SYSTEM</span>
+              <span>EVOLUTION</span>
             </div>
 
           </div>
@@ -72,92 +77,25 @@ export default function Hero() {
         </div>
 
 
-        {/* =========================
-            HERO RIGHT
-        ========================= */}
+        {/* =========================================
+            RIGHT
+        ========================================= */}
 
         <div className="hero-right">
-
-          <div className="football-system">
-
-            {/* =========================
-                FOOTBALL PITCH
-            ========================= */}
-
-            <div className="pitch-grid">
-
-              <div className="pitch-line pitch-horizontal pitch-top" />
-              <div className="pitch-line pitch-horizontal pitch-middle" />
-              <div className="pitch-line pitch-horizontal pitch-bottom" />
-
-              <div className="pitch-line pitch-vertical pitch-left" />
-              <div className="pitch-line pitch-vertical pitch-center" />
-              <div className="pitch-line pitch-vertical pitch-right" />
-
-              <div className="center-circle" />
-              <div className="center-point" />
-
-              <div className="penalty-box penalty-left" />
-              <div className="penalty-box penalty-right" />
-
-            </div>
-
-
-            {/* =========================
-                ORBITAL SYSTEM
-            ========================= */}
-
-            <div className="orbit orbit-one" />
-            <div className="orbit orbit-two" />
-            <div className="orbit orbit-three" />
-
-
-            {/* =========================
-                DPF CORE
-            ========================= */}
-
-            <div className="dpf-core">
-
-              <div className="core-glow" />
-
-              <span className="core-label">
-                DPF OS
-              </span>
-
-              <span className="core-subtitle">
-                FOOTBALL OPERATING SYSTEM
-              </span>
-
-            </div>
-
-
-            {/* =========================
-                FOOTBALL
-            ========================= */}
-
-            <div className="football-node">
-
-              <div className="football-ball">
-                ⚽
-              </div>
-
-            </div>
-
-
-            {/* =========================
-                POSITIONAL NODES
-            ========================= */}
-
-            <div className="position-node node-one" />
-            <div className="position-node node-two" />
-            <div className="position-node node-three" />
-            <div className="position-node node-four" />
-            <div className="position-node node-five" />
-
-          </div>
-
+          <HeroVisual />
         </div>
 
+      </div>
+
+
+      {/* =========================================
+          SYSTEM STATUS
+      ========================================= */}
+
+      <div className="hero-status">
+        <span className="hero-status__dot" />
+        <span>SYSTEM ONLINE</span>
+        <small>ALL MODULES SYNCHRONIZED</small>
       </div>
 
     </section>

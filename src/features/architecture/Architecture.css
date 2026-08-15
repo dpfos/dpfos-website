@@ -1,18 +1,28 @@
+/* =========================================================
+   DPF OS
+   ARCHITECTURE
+   ========================================================= */
+
 .architecture {
   position: relative;
 
-  padding: 160px 0;
+  padding: 150px 0 150px;
 
   background:
     radial-gradient(
-      circle at 80% 35%,
-      rgba(20, 62, 140, 0.16),
-      transparent 38%
+      circle at 50% 48%,
+      rgba(18, 67, 150, 0.12),
+      transparent 34%
     ),
-    #04081b;
+    #03071a;
 
   overflow: hidden;
 }
+
+
+/* =========================================================
+   TECHNICAL GRID
+   ========================================================= */
 
 .architecture::before {
   content: "";
@@ -23,48 +33,92 @@
 
   background-image:
     linear-gradient(
-      rgba(255, 255, 255, 0.018) 1px,
+      rgba(255, 255, 255, 0.022) 1px,
       transparent 1px
     ),
     linear-gradient(
       90deg,
-      rgba(255, 255, 255, 0.018) 1px,
+      rgba(255, 255, 255, 0.022) 1px,
       transparent 1px
     );
 
-  background-size: 72px 72px;
+  background-size: 64px 64px;
 
   pointer-events: none;
 }
 
+
+/* =========================================================
+   EDGE GLOW
+   ========================================================= */
+
+.architecture::after {
+  content: "";
+
+  position: absolute;
+
+  width: 760px;
+  height: 760px;
+
+  left: 50%;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(0, 170, 255, 0.045),
+      transparent 68%
+    );
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   CONTAINER
+   ========================================================= */
+
 .architecture-container {
   position: relative;
 
-  width: min(1400px, 90%);
+  width: min(1540px, 93%);
 
   margin: 0 auto;
+
+  z-index: 2;
 }
 
-/* HEADER */
+
+/* =========================================================
+   HEADER
+   ========================================================= */
 
 .architecture-header {
   display: grid;
 
-  grid-template-columns: 0.7fr 1.3fr;
+  grid-template-columns: 0.65fr 1.35fr;
 
-  gap: 80px;
+  gap: 110px;
 
-  padding-bottom: 100px;
+  padding-bottom: 110px;
 
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
 }
 
-.architecture-label {
-  width: fit-content;
 
+.architecture-label {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  width: fit-content;
   height: fit-content;
 
-  padding: 8px 16px;
+  padding: 9px 15px;
 
   border: 1px solid rgba(255, 213, 74, 0.2);
 
@@ -72,271 +126,1464 @@
 
   color: #ffd54a;
 
-  font-size: 0.75rem;
+  font-size: 0.68rem;
 
   font-weight: 600;
 
-  letter-spacing: 2px;
+  letter-spacing: 1.8px;
 
   text-transform: uppercase;
 }
+
+
+.architecture-label span:nth-child(2) {
+  opacity: 0.4;
+}
+
+
+.architecture-heading {
+  max-width: 900px;
+}
+
 
 .architecture-heading h2 {
   margin: 0;
 
   color: #ffffff;
 
-  font-size: clamp(3rem, 6vw, 6rem);
+  font-size: clamp(3.8rem, 7vw, 7rem);
 
-  line-height: 0.95;
+  line-height: 0.91;
 
   font-weight: 800;
 
-  letter-spacing: -0.04em;
+  letter-spacing: -0.055em;
 }
 
+
 .architecture-heading p {
-  max-width: 620px;
+  max-width: 650px;
 
-  margin: 40px 0 0;
+  margin: 48px 0 0;
 
-  color: #9fa8c6;
+  color: #8f9abd;
 
   font-size: 1rem;
 
-  line-height: 1.8;
+  line-height: 1.85;
 }
 
-/* FLOW */
 
-.architecture-flow {
-  display: grid;
+/* =========================================================
+   SYSTEM FIELD
+   ========================================================= */
 
-  grid-template-columns: 260px 80px 1fr;
+.architecture-system {
+  position: relative;
 
-  align-items: stretch;
+  min-height: 1160px;
 
-  margin-top: 100px;
+  margin-top: 90px;
+
+  border: 1px solid rgba(255, 255, 255, 0.045);
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(7, 14, 38, 0.3),
+      rgba(3, 7, 26, 0.06)
+    );
+
+  overflow: hidden;
 }
+
+
+/* =========================================================
+   SYSTEM META
+   ========================================================= */
+
+.architecture-system-meta {
+  position: absolute;
+
+  top: 30px;
+  left: 34px;
+  right: 34px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+
+  color: #60709a;
+
+  font-size: 0.62rem;
+
+  font-weight: 600;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+
+  z-index: 8;
+}
+
+
+.architecture-meta-line {
+  flex: 1;
+
+  height: 1px;
+
+  background: rgba(255, 255, 255, 0.055);
+}
+
+
+/* =========================================================
+   CORE WRAPPER
+   ========================================================= */
+
+.architecture-core-wrapper {
+  position: absolute;
+
+  top: 510px;
+  left: 50%;
+
+  width: 421px;
+  height: 421px;
+
+  transform: translate(-50%, -50%);
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  z-index: 5;
+}
+
+
+/* =========================================================
+   CORE GLOW
+   ========================================================= */
+
+.architecture-core-glow {
+  position: absolute;
+
+  width: 250px;
+  height: 250px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(0, 174, 255, 0.15),
+      rgba(0, 90, 180, 0.055) 45%,
+      transparent 70%
+    );
+
+  filter: blur(14px);
+
+  animation: architecture-pulse 6s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   ORBITS
+   ========================================================= */
+
+.architecture-orbit {
+  position: absolute;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(0, 176, 255, 0.13);
+
+  transform: rotate(-18deg);
+}
+
+
+.orbit-outer {
+  width: 350px;
+  height: 350px;
+
+  border-color: rgba(255, 213, 74, 0.1);
+
+  animation: architecture-orbit 20s linear infinite;
+}
+
+
+.orbit-middle {
+  width: 270px;
+  height: 270px;
+
+  border-color: rgba(0, 170, 255, 0.15);
+
+  animation: architecture-orbit-reverse 16s linear infinite;
+}
+
+
+.orbit-inner {
+  width: 202px;
+  height: 202px;
+
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+
+/* =========================================================
+   CORE
+   ========================================================= */
 
 .architecture-core {
-  min-height: 260px;
+  position: relative;
+
+  width: 158px;
+  height: 158px;
+
+  border-radius: 50%;
 
   display: flex;
 
   flex-direction: column;
 
+  align-items: center;
   justify-content: center;
 
-  align-items: center;
-
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  text-align: center;
 
   background:
     radial-gradient(
-      circle,
-      rgba(255, 213, 74, 0.14),
-      rgba(15, 111, 255, 0.05)
+      circle at 50% 35%,
+      #172c55,
+      #071027 68%,
+      #04091d
     );
 
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
   box-shadow:
-    0 0 80px rgba(15, 111, 255, 0.12);
+    0 0 0 8px rgba(4, 10, 29, 0.68),
+    0 0 36px rgba(0, 150, 255, 0.12),
+    inset 0 0 28px rgba(0, 150, 255, 0.07);
 
-  text-align: center;
+  z-index: 5;
 }
 
-.architecture-core span {
-  color: #8f98b2;
 
-  font-size: 0.65rem;
+.architecture-core-label {
+  margin-bottom: 7px;
 
-  letter-spacing: 3px;
+  color: #6e83ad;
+
+  font-size: 0.48rem;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
 }
+
 
 .architecture-core strong {
-  margin: 12px 0;
-
   color: #ffffff;
 
-  font-size: 2.4rem;
+  font-size: 1.55rem;
 
-  letter-spacing: 2px;
+  line-height: 1;
+
+  letter-spacing: -0.04em;
 }
 
-.architecture-core small {
+
+.architecture-core-subtitle {
+  margin-top: 8px;
+
   color: #ffd54a;
 
-  font-size: 0.6rem;
+  font-size: 0.42rem;
 
-  letter-spacing: 2px;
+  font-weight: 700;
+
+  letter-spacing: 1.7px;
 }
 
-.architecture-line {
-  position: relative;
 
-  align-self: center;
+/* =========================================================
+   CONNECTOR FIELD
+   ========================================================= */
+
+.architecture-connectors {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 3;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   BASE CONNECTOR
+   ========================================================= */
+
+.connector {
+  position: absolute;
 
   height: 1px;
 
-  background: rgba(255, 213, 74, 0.35);
+  transform-origin: left center;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0, 180, 255, 0.08),
+      rgba(0, 180, 255, 0.42),
+      rgba(255, 213, 74, 0.12)
+    );
+
+  opacity: 0.78;
 }
 
-.architecture-line::after {
+
+/* =========================================================
+   TERMINAL NODE
+   ========================================================= */
+
+.connector::after {
   content: "";
 
   position: absolute;
 
-  right: 0;
+  right: -3px;
+  top: -2px;
 
-  top: 50%;
+  width: 5px;
+  height: 5px;
 
-  width: 7px;
+  border-radius: 50%;
 
-  height: 7px;
+  background: #00b8ff;
 
-  border-top: 1px solid #ffd54a;
-
-  border-right: 1px solid #ffd54a;
-
-  transform: translateY(-50%) rotate(45deg);
+  box-shadow:
+    0 0 7px rgba(0, 184, 255, 0.7),
+    0 0 15px rgba(0, 184, 255, 0.22);
 }
 
-/* LAYERS */
 
-.architecture-layers {
-  display: grid;
+/* =========================================================
+   LEFT SIDE CONNECTORS
+   ========================================================= */
 
-  grid-template-columns: 1fr 1fr;
 
-  gap: 1px;
+/* Philosophy → Core */
 
-  background: rgba(255, 255, 255, 0.08);
+.connector-1 {
+  width: 275px;
 
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  left: calc(50% - 455px);
+  top: 300px;
+
+  transform: rotate(29deg);
 }
 
-.architecture-layer {
-  position: relative;
 
-  min-height: 220px;
+/* Game Model → Core */
 
-  padding: 30px;
+.connector-3 {
+  width: 265px;
 
-  background: rgba(4, 8, 27, 0.94);
+  left: calc(50% - 455px);
+  top: 510px;
+
+  transform: rotate(0deg);
+}
+
+
+/* Development → Core */
+
+.connector-5 {
+  width: 280px;
+
+  left: calc(50% - 455px);
+  top: 770px;
+
+  transform: rotate(-27deg);
+}
+
+
+/* =========================================================
+   RIGHT SIDE CONNECTORS
+   ========================================================= */
+
+
+/* Methodology → Core */
+
+.connector-2 {
+  width: 275px;
+
+  left: calc(50% + 455px);
+  top: 300px;
+
+  transform: rotate(151deg);
+}
+
+
+/* Performance → Core */
+
+.connector-4 {
+  width: 265px;
+
+  left: calc(50% + 455px);
+  top: 510px;
+
+  transform: rotate(180deg);
+}
+
+
+/* Research → Core */
+
+.connector-6 {
+  width: 280px;
+
+  left: calc(50% + 455px);
+  top: 770px;
+
+  transform: rotate(-153deg);
+}
+
+
+/* =========================================================
+   DIMENSIONS
+   ========================================================= */
+
+.architecture-dimensions {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 6;
+}
+
+
+.architecture-dimension {
+  position: absolute;
+
+  width: 300px;
+  min-height: 188px;
+
+  padding: 27px;
+
+  border: 1px solid rgba(255, 255, 255, 0.075);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(10, 22, 50, 0.84),
+      rgba(3, 8, 25, 0.92)
+    );
 
   transition:
-    background 0.3s ease,
-    transform 0.3s ease;
+    transform 0.35s ease,
+    border-color 0.35s ease,
+    background 0.35s ease;
+
+  backdrop-filter: blur(10px);
 }
 
-.architecture-layer:hover {
-  background: rgba(14, 27, 59, 0.96);
 
-  transform: translateY(-4px);
+.architecture-dimension:hover {
+  border-color: rgba(255, 213, 74, 0.24);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(15, 34, 68, 0.94),
+      rgba(4, 10, 29, 0.97)
+    );
+
+  transform: translateY(-5px);
 }
 
-.architecture-number {
-  display: block;
 
-  margin-bottom: 55px;
+/* =========================================================
+   DIMENSION POSITIONS
+   ========================================================= */
 
+.architecture-dimension-01 {
+  left: 38px;
+  top: 145px;
+}
+
+
+.architecture-dimension-02 {
+  right: 38px;
+  top: 145px;
+}
+
+
+.architecture-dimension-03 {
+  left: 38px;
+  top: 445px;
+}
+
+
+.architecture-dimension-04 {
+  right: 38px;
+  top: 445px;
+}
+
+
+.architecture-dimension-05 {
+  left: 38px;
+  top: 745px;
+}
+
+
+.architecture-dimension-06 {
+  right: 38px;
+  top: 745px;
+}
+
+
+/* =========================================================
+   DIMENSION CONTENT
+   ========================================================= */
+
+.dimension-top {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  padding-bottom: 18px;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+
+.dimension-number {
   color: #ffd54a;
 
-  font-size: 0.75rem;
+  font-size: 0.65rem;
 
-  font-weight: 600;
+  font-weight: 700;
 
   letter-spacing: 2px;
 }
 
-.architecture-layer h3 {
-  margin: 0 0 14px;
+
+.dimension-category {
+  color: #536384;
+
+  font-size: 0.52rem;
+
+  font-weight: 600;
+
+  letter-spacing: 1.6px;
+}
+
+
+.dimension-content {
+  padding-top: 27px;
+}
+
+
+.dimension-content h3 {
+  margin: 0 0 12px;
 
   color: #ffffff;
 
   font-size: 1.25rem;
+
+  font-weight: 700;
+
+  letter-spacing: -0.025em;
 }
 
-.architecture-layer p {
-  max-width: 360px;
 
+.dimension-content p {
   margin: 0;
 
-  color: #8993b1;
+  color: #7f8baa;
 
-  font-size: 0.88rem;
+  font-size: 0.77rem;
 
   line-height: 1.7;
 }
 
-.architecture-arrow {
-  position: absolute;
 
-  right: 26px;
+.dimension-footer {
+  display: flex;
 
-  bottom: 24px;
+  align-items: center;
 
+  gap: 10px;
+
+  margin-top: 22px;
+}
+
+
+.dimension-line {
+  width: 40px;
+
+  height: 2px;
+
+  background: #ffd54a;
+}
+
+
+.dimension-index {
+  color: #445273;
+
+  font-size: 0.5rem;
+
+  letter-spacing: 1px;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.architecture-footer {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  margin-top: 34px;
+
+  color: #566481;
+
+  font-size: 0.58rem;
+
+  font-weight: 600;
+
+  letter-spacing: 1.8px;
+
+  text-transform: uppercase;
+}
+
+
+.architecture-footer-status {
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+}
+
+
+.status-dot {
+  width: 5px;
+  height: 5px;
+
+  border-radius: 50%;
+
+  background: #00c8ff;
+
+  box-shadow:
+    0 0 8px rgba(0, 200, 255, 0.75);
+}
+
+
+.architecture-footer-path {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+}
+
+
+.architecture-footer-path span:nth-child(even) {
   color: #ffd54a;
 
-  font-size: 1.3rem;
-
-  transition: transform 0.3s ease;
+  opacity: 0.7;
 }
 
-.architecture-layer:hover .architecture-arrow {
-  transform: translateX(6px);
-}
 
-/* RESPONSIVE */
+/* =========================================================
+   ANIMATION
+   ========================================================= */
 
-@media (max-width: 1000px) {
-  .architecture-header {
-    grid-template-columns: 1fr;
+@keyframes architecture-pulse {
+  0%,
+  100% {
+    opacity: 0.65;
 
-    gap: 40px;
+    transform: scale(0.97);
   }
 
-  .architecture-flow {
-    grid-template-columns: 1fr;
+  50% {
+    opacity: 0.9;
 
-    gap: 40px;
-  }
-
-  .architecture-line {
-    width: 1px;
-
-    height: 50px;
-
-    justify-self: center;
-  }
-
-  .architecture-line::after {
-    top: auto;
-
-    bottom: 0;
-
-    right: 50%;
-
-    transform: translateX(50%) rotate(135deg);
+    transform: scale(1.03);
   }
 }
 
-@media (max-width: 600px) {
+
+@keyframes architecture-orbit {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+@keyframes architecture-orbit-reverse {
+  from {
+    transform: rotate(360deg);
+  }
+
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1200px) {
+
+  .architecture-container {
+    width: min(1400px, 94%);
+  }
+
+  .architecture-system {
+    min-height: 1060px;
+  }
+
+  .architecture-dimension {
+    width: 260px;
+  }
+
+  .architecture-dimension-01,
+  .architecture-dimension-03,
+  .architecture-dimension-05 {
+    left: 42px;
+  }
+
+  .architecture-dimension-02,
+  .architecture-dimension-04,
+  .architecture-dimension-06 {
+    right: 42px;
+  }
+
+  .connector-1,
+  .connector-2,
+  .connector-5,
+  .connector-6 {
+    width: 250px;
+  }
+
+  .connector-3,
+  .connector-4 {
+    width: 245px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 760px) {
+
   .architecture {
-    padding: 100px 0;
+    padding: 105px 0 85px;
   }
+
+
+  .architecture-container {
+    width: min(92%, 600px);
+  }
+
 
   .architecture-header {
-    padding-bottom: 70px;
+    display: block;
+
+    padding-bottom: 65px;
   }
 
-  .architecture-layers {
-    grid-template-columns: 1fr;
+
+  .architecture-heading {
+    margin-top: 48px;
   }
 
-  .architecture-layer {
+
+  .architecture-heading h2 {
+    font-size: clamp(3rem, 14vw, 5rem);
+
+    line-height: 0.94;
+  }
+
+
+  .architecture-heading p {
+    margin-top: 30px;
+
+    font-size: 0.9rem;
+
+    line-height: 1.8;
+  }
+
+
+  /* =====================================================
+     SYSTEM
+     ===================================================== */
+
+  .architecture-system {
     min-height: auto;
 
-    padding: 28px;
+    margin-top: 60px;
+
+    padding: 95px 20px 40px;
   }
+
+
+  .architecture-system-meta {
+    left: 20px;
+    right: 20px;
+
+    font-size: 0.52rem;
+  }
+
+
+  /* =====================================================
+     CORE
+     ===================================================== */
+
+  .architecture-core-wrapper {
+    position: relative;
+
+    top: auto;
+    left: auto;
+
+    width: 275px;
+    height: 275px;
+
+    margin: 55px auto 85px;
+
+    transform: none;
+  }
+
+
+  .orbit-outer {
+    width: 270px;
+    height: 270px;
+  }
+
+
+  .orbit-middle {
+    width: 215px;
+    height: 215px;
+  }
+
+
+  .orbit-inner {
+    width: 160px;
+    height: 160px;
+  }
+
+
+  .architecture-core {
+    width: 128px;
+    height: 128px;
+  }
+
+
+  .architecture-core strong {
+    font-size: 1.35rem;
+  }
+
+
+  /* =====================================================
+     CONNECTORS
+     ===================================================== */
+
+  .architecture-connectors {
+    display: none;
+  }
+
+
+  /* =====================================================
+     DIMENSIONS
+     ===================================================== */
+
+  .architecture-dimensions {
+    position: relative;
+
+    inset: auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    gap: 14px;
+  }
+
+
+  .architecture-dimension {
+    position: relative !important;
+
+    inset: auto !important;
+
+    width: auto;
+
+    min-height: 0;
+
+    padding: 23px;
+  }
+
+
+  .architecture-dimension:hover {
+    transform: none;
+  }
+
+
+  .dimension-content {
+    padding-top: 22px;
+  }
+
+
+  .dimension-content h3 {
+    font-size: 1.15rem;
+  }
+
+
+  .dimension-content p {
+    font-size: 0.8rem;
+
+    line-height: 1.7;
+  }
+
+
+  /* =====================================================
+     FOOTER
+     ===================================================== */
+
+  .architecture-footer {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 18px;
+
+    margin-top: 24px;
+  }
+
+
+  .architecture-footer-path {
+    flex-wrap: wrap;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 420px) {
+
+  .architecture-heading h2 {
+    font-size: 2.8rem;
+  }
+
+
+  .architecture-label {
+    font-size: 0.58rem;
+  }
+
+
+  .architecture-system {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+
+  .architecture-core-wrapper {
+    width: 235px;
+    height: 235px;
+  }
+
+
+  .orbit-outer {
+    width: 230px;
+    height: 230px;
+  }
+
+
+  .orbit-middle {
+    width: 185px;
+    height: 185px;
+  }
+
+
+  .orbit-inner {
+    width: 142px;
+    height: 142px;
+  }
+
+
+  .architecture-core {
+    width: 112px;
+    height: 112px;
+  }
+}
+
+
+
+
+/* =========================================================
+   PREMIUM REFINEMENT
+   ========================================================= */
+
+.architecture-system {
+  isolation: isolate;
+  box-shadow:
+    0 30px 90px rgba(0, 0, 0, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.018);
+}
+
+.architecture-system::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  pointer-events: none;
+  background:
+    radial-gradient(
+      circle at 50% 47%,
+      rgba(0, 142, 255, 0.055),
+      transparent 24%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.012),
+      transparent 22%,
+      transparent 78%,
+      rgba(255, 213, 74, 0.008)
+    );
+  z-index: 0;
+}
+
+.architecture-dimension {
+  box-shadow:
+    0 18px 45px rgba(0, 0, 0, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.018);
+}
+
+.architecture-dimension::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border: 1px solid rgba(255, 255, 255, 0.012);
+  opacity: 0.8;
+}
+
+.architecture-core {
+  box-shadow:
+    0 0 0 8px rgba(4, 10, 29, 0.68),
+    0 0 46px rgba(0, 150, 255, 0.14),
+    0 20px 55px rgba(0, 0, 0, 0.2),
+    inset 0 0 32px rgba(0, 150, 255, 0.08);
+}
+
+.connector {
+  opacity: 0.62;
+}
+
+.architecture-footer {
+  opacity: 0.72;
+}
+
+
+/* =========================================================
+   BREATHING REFINEMENT v2
+   ========================================================= */
+
+.architecture-system {
+  padding-left: 22px;
+  padding-right: 22px;
+}
+
+.architecture-system::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 560px;
+  height: 560px;
+  transform: translate(-50%, -50%);
+  border: 1px solid rgba(20, 95, 160, 0.035);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.architecture-core,
+.architecture-dimension,
+.connector {
+  z-index: 2;
+}
+
+.architecture-dimension {
+  transition:
+    transform 240ms ease,
+    border-color 240ms ease,
+    box-shadow 240ms ease;
+}
+
+.architecture-dimension:hover {
+  transform: translateY(-3px);
+  border-color: rgba(255, 210, 65, 0.18);
+  box-shadow:
+    0 24px 55px rgba(0, 0, 0, 0.16),
+    inset 0 1px 0 rgba(255, 255, 255, 0.022);
+}
+
+.connector {
+  opacity: 0.46;
+}
+
+.connector-dot {
+  opacity: 0.72;
+}
+
+@media (max-width: 1100px) {
+  .architecture-system::after {
+    width: 430px;
+    height: 430px;
+  }
+}
+
+@media (max-width: 760px) {
+  .architecture-system::after {
+    display: none;
+  }
+}
+
+
+/* =========================================================
+   CORE HIERARCHY REFINEMENT v4
+   Safe scale refinement: size only, no positioning transform.
+   ========================================================= */
+
+.architecture-core {
+  filter: drop-shadow(0 0 20px rgba(24, 92, 160, 0.07));
+}
+
+.architecture-core::before {
+  opacity: 0.80;
+}
+
+.architecture-core::after {
+  opacity: 0.52;
+}
+
+@media (max-width: 1100px) {
+  .architecture-core {
+    filter: drop-shadow(0 0 16px rgba(24, 92, 160, 0.06));
+  }
+}
+
+@media (max-width: 760px) {
+  .architecture-core {
+    filter: none;
+  }
+}
+
+
+/* =========================================================
+   FINAL BREATHING PASS
+   More negative space without changing the architecture.
+   ========================================================= */
+
+.architecture-system {
+  min-height: 1220px;
+  padding-top: 28px;
+  padding-bottom: 28px;
+}
+
+.architecture-dimension-01,
+.architecture-dimension-02 {
+  top: 110px;
+}
+
+.architecture-dimension-03,
+.architecture-dimension-04 {
+  top: 455px;
+}
+
+.architecture-dimension-05,
+.architecture-dimension-06 {
+  top: 800px;
+}
+
+.architecture-core-wrapper {
+  top: 555px;
+}
+
+.connector {
+  opacity: 0.40;
+}
+
+.connector-dot {
+  opacity: 0.62;
+}
+
+.architecture-system::before {
+  background:
+    radial-gradient(
+      circle at 50% 50%,
+      rgba(0, 142, 255, 0.042),
+      transparent 25%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.010),
+      transparent 24%,
+      transparent 76%,
+      rgba(255, 213, 74, 0.006)
+    );
+}
+
+@media (max-width: 1100px) {
+  .architecture-system {
+    min-height: 1160px;
+  }
+
+  .architecture-dimension-01,
+  .architecture-dimension-02 {
+    top: 125px;
+  }
+
+  .architecture-dimension-03,
+  .architecture-dimension-04 {
+    top: 455px;
+  }
+
+  .architecture-dimension-05,
+  .architecture-dimension-06 {
+    top: 785px;
+  }
+
+  .architecture-core-wrapper {
+    top: 545px;
+  }
+}
+
+@media (max-width: 760px) {
+  .architecture-system {
+    min-height: auto;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .architecture-core-wrapper {
+    top: auto;
+  }
+
+  .connector {
+    opacity: 0.46;
+  }
+}
+
+
+/* =========================================================
+   BREATHING BALANCE REFINEMENT v6
+   Preserve the open composition, tighten vertical rhythm.
+   ========================================================= */
+
+.architecture-system {
+  min-height: 1060px;
+}
+
+.architecture-dimension:nth-of-type(1),
+.architecture-dimension:nth-of-type(2) {
+  top: 132px;
+}
+
+.architecture-dimension:nth-of-type(3),
+.architecture-dimension:nth-of-type(4) {
+  top: 430px;
+}
+
+.architecture-dimension:nth-of-type(5),
+.architecture-dimension:nth-of-type(6) {
+  top: 700px;
+}
+
+@media (max-width: 1100px) {
+  .architecture-system {
+    min-height: 980px;
+  }
+}
+
+@media (max-width: 760px) {
+  .architecture-system {
+    min-height: auto;
+  }
+
+  .architecture-dimension:nth-of-type(1),
+  .architecture-dimension:nth-of-type(2),
+  .architecture-dimension:nth-of-type(3),
+  .architecture-dimension:nth-of-type(4),
+  .architecture-dimension:nth-of-type(5),
+  .architecture-dimension:nth-of-type(6) {
+    top: auto;
+  }
+}
+
+
+/* =========================================================
+   FINAL BREATHING PASS v7
+   More space. Same architecture.
+   ========================================================= */
+
+.architecture-system {
+  min-height: 1140px;
+  padding-left: 28px;
+  padding-right: 28px;
+}
+
+/* ---------------------------------------------------------
+   DIMENSION SPACING
+   --------------------------------------------------------- */
+
+.architecture-dimension-01,
+.architecture-dimension-02 {
+  top: 118px;
+}
+
+.architecture-dimension-03,
+.architecture-dimension-04 {
+  top: 455px;
+}
+
+.architecture-dimension-05,
+.architecture-dimension-06 {
+  top: 792px;
+}
+
+/* Slightly narrower cards create more visual air */
+.architecture-dimension {
+  width: 292px;
+  min-height: 188px;
+}
+
+/* ---------------------------------------------------------
+   CORE POSITION
+   --------------------------------------------------------- */
+
+.architecture-core-wrapper {
+  top: 555px;
+}
+
+/* ---------------------------------------------------------
+   CONNECTORS
+   --------------------------------------------------------- */
+
+.connector {
+  opacity: 0.34;
+}
+
+.connector-dot {
+  opacity: 0.58;
+}
+
+/* ---------------------------------------------------------
+   CENTRAL ATMOSPHERE
+   --------------------------------------------------------- */
+
+.architecture-system::after {
+  width: 590px;
+  height: 590px;
+  opacity: 0.8;
+}
+
+/* ---------------------------------------------------------
+   DESKTOP BALANCE
+   --------------------------------------------------------- */
+
+@media (max-width: 1200px) {
+  .architecture-system {
+    min-height: 1080px;
+  }
+
+  .architecture-dimension {
+    width: 270px;
+  }
+
+  .architecture-dimension-01,
+  .architecture-dimension-02 {
+    top: 125px;
+  }
+
+  .architecture-dimension-03,
+  .architecture-dimension-04 {
+    top: 445px;
+  }
+
+  .architecture-dimension-05,
+  .architecture-dimension-06 {
+    top: 765px;
+  }
+
+  .architecture-core-wrapper {
+    top: 535px;
+  }
+}
+
+/* ---------------------------------------------------------
+   MOBILE
+   --------------------------------------------------------- */
+
+@media (max-width: 760px) {
+  .architecture-system {
+    min-height: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .architecture-dimension {
+    width: auto;
+  }
+
+  .architecture-system::after {
+    display: none;
+  }
+}
+
+
+/* =========================================================
+   MOBILE GAP FIX
+   Remove unused core space on mobile
+   ========================================================= */
+
+@media (max-width: 760px) {
+
+  .architecture-core-wrapper {
+    display: none;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE SPACING FIX
+   ========================================= */
+
+@media (max-width: 768px) {
+
+  .architecture-dimensions {
+    margin-top: 24px;
+  }
+
 }

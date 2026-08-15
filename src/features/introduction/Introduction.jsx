@@ -1,9 +1,11 @@
 import "./Introduction.css";
+import { useTranslation } from "react-i18next";
 
 export default function Introduction() {
+  const { t } = useTranslation();
+
   return (
     <section className="introduction">
-
       <div className="introduction-container">
 
         {/* HEADER */}
@@ -11,15 +13,15 @@ export default function Introduction() {
         <div className="introduction-header">
 
           <span className="introduction-label">
-            DPF OS / SYSTEM OVERVIEW
+            {t("home.introduction.label")}
           </span>
 
           <h2>
-            One System.
+            {t("home.introduction.title.line1")}
             <br />
-            One Football
+            {t("home.introduction.title.line2")}
             <br />
-            Architecture.
+            {t("home.introduction.title.line3")}
           </h2>
 
         </div>
@@ -29,31 +31,89 @@ export default function Introduction() {
         <div className="introduction-content">
 
           <div className="introduction-lead">
-
             <p>
-              DPF OS is a unified operating system designed to structure,
-              connect and continuously evolve every dimension of modern
-              football.
+              {t("home.introduction.lead")}
             </p>
-
           </div>
 
           <div className="introduction-description">
 
             <p>
-              From football philosophy and methodology to coaching,
-              performance, research, analytics and player development,
-              DPF OS creates a common architecture where knowledge,
-              processes and decisions operate as one integrated system.
+              {t("home.introduction.description.paragraph1")}
             </p>
 
             <p>
-              Instead of treating football as disconnected departments,
-              DPF OS establishes a coherent operating model that allows
-              every part of the football environment to communicate,
-              evolve and perform within the same framework.
+              {t("home.introduction.description.paragraph2")}
             </p>
 
+          </div>
+
+        </div>
+
+        {/* SYSTEM FLOW */}
+
+        <div className="introduction-flow">
+
+          <div className="introduction-flow-item">
+            <span className="introduction-flow-number">01</span>
+
+            <div>
+              <strong>
+                {t("home.introduction.flow.understand.title")}
+              </strong>
+
+              <small>
+                {t("home.introduction.flow.understand.subtitle")}
+              </small>
+            </div>
+          </div>
+
+          <div className="introduction-flow-line" />
+
+          <div className="introduction-flow-item">
+            <span className="introduction-flow-number">02</span>
+
+            <div>
+              <strong>
+                {t("home.introduction.flow.design.title")}
+              </strong>
+
+              <small>
+                {t("home.introduction.flow.design.subtitle")}
+              </small>
+            </div>
+          </div>
+
+          <div className="introduction-flow-line" />
+
+          <div className="introduction-flow-item">
+            <span className="introduction-flow-number">03</span>
+
+            <div>
+              <strong>
+                {t("home.introduction.flow.perform.title")}
+              </strong>
+
+              <small>
+                {t("home.introduction.flow.perform.subtitle")}
+              </small>
+            </div>
+          </div>
+
+          <div className="introduction-flow-line" />
+
+          <div className="introduction-flow-item">
+            <span className="introduction-flow-number">04</span>
+
+            <div>
+              <strong>
+                {t("home.introduction.flow.evolve.title")}
+              </strong>
+
+              <small>
+                {t("home.introduction.flow.evolve.subtitle")}
+              </small>
+            </div>
           </div>
 
         </div>
@@ -63,77 +123,90 @@ export default function Introduction() {
         <div className="introduction-grid">
 
           <div className="introduction-card">
-
-            <span className="introduction-number">
-              01
-            </span>
+            <span className="introduction-number">01</span>
 
             <h3>
-              Philosophy
+              {t("home.introduction.pillars.philosophy.title")}
             </h3>
 
             <p>
-              The principles that define how the game is understood,
-              designed and played.
+              {t("home.introduction.pillars.philosophy.description")}
             </p>
-
           </div>
 
           <div className="introduction-card">
-
-            <span className="introduction-number">
-              02
-            </span>
+            <span className="introduction-number">02</span>
 
             <h3>
-              Methodology
+              {t("home.introduction.pillars.methodology.title")}
             </h3>
 
             <p>
-              The structures and processes that transform principles
-              into repeatable football practice.
+              {t("home.introduction.pillars.methodology.description")}
             </p>
-
           </div>
 
           <div className="introduction-card">
-
-            <span className="introduction-number">
-              03
-            </span>
+            <span className="introduction-number">03</span>
 
             <h3>
-              Performance
+              {t("home.introduction.pillars.performance.title")}
             </h3>
 
             <p>
-              The systems that connect development, performance,
-              analysis and continuous improvement.
+              {t("home.introduction.pillars.performance.description")}
             </p>
-
           </div>
 
           <div className="introduction-card">
-
-            <span className="introduction-number">
-              04
-            </span>
+            <span className="introduction-number">04</span>
 
             <h3>
-              Knowledge
+              {t("home.introduction.pillars.knowledge.title")}
             </h3>
 
             <p>
-              A continuously evolving knowledge architecture connecting
-              research, education and football intelligence.
+              {t("home.introduction.pillars.knowledge.description")}
             </p>
+          </div>
 
+        </div>
+
+        {/* FOOTER */}
+
+        <div className="introduction-footer">
+
+          <span>
+            {t("home.introduction.footer.status")}
+          </span>
+
+          <div>
+            <span>
+              {t("home.introduction.footer.understand")}
+            </span>
+
+            <span>→</span>
+
+            <span>
+              {t("home.introduction.footer.design")}
+            </span>
+
+            <span>→</span>
+
+            <span>
+              {t("home.introduction.footer.perform")}
+            </span>
+
+            <span>→</span>
+
+            <span>
+              {t("home.introduction.footer.evolve")}
+            </span>
           </div>
 
         </div>
 
       </div>
-
     </section>
   );
 }

@@ -53,3 +53,36 @@ ul{
 list-style:none;
 
 }
+
+/* =========================================
+   DPF OS INTERNATIONAL DIRECTION
+   ========================================= */
+
+html[dir="rtl"] {
+  direction: rtl;
+}
+
+html[dir="ltr"] {
+  direction: ltr;
+}
+
+
+/* Keep technical / brand elements stable */
+
+.logo,
+.language-trigger,
+.language-option-code,
+.cta {
+  direction: ltr;
+}
+
+
+/* Arabic typography adjustment */
+
+html[lang="ar"] body {
+  font-family:
+    "Noto Sans Arabic",
+    "Segoe UI",
+    Arial,
+    sans-serif;
+}

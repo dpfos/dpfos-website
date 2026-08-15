@@ -1,18 +1,32 @@
+/* =========================================================
+   DPF OS — INTRODUCTION / SYSTEM OVERVIEW
+========================================================= */
+
 .introduction {
   position: relative;
 
-  padding: 140px 0;
+  padding: 150px 0 120px;
 
   background:
     radial-gradient(
-      circle at 15% 20%,
-      rgba(20, 62, 140, 0.18),
-      transparent 35%
+      circle at 12% 18%,
+      rgba(20, 62, 140, 0.16),
+      transparent 34%
+    ),
+    radial-gradient(
+      circle at 82% 72%,
+      rgba(0, 174, 239, 0.055),
+      transparent 30%
     ),
     #04081b;
 
   overflow: hidden;
 }
+
+
+/* =========================================================
+   ARCHITECTURAL GRID
+========================================================= */
 
 .introduction::before {
   content: "";
@@ -35,9 +49,18 @@
   background-size: 64px 64px;
 
   pointer-events: none;
+
+  mask-image: linear-gradient(
+    to bottom,
+    black,
+    rgba(0, 0, 0, 0.35)
+  );
 }
 
-/* CONTAINER */
+
+/* =========================================================
+   CONTAINER
+========================================================= */
 
 .introduction-container {
   position: relative;
@@ -45,9 +68,14 @@
   width: min(1400px, 90%);
 
   margin: 0 auto;
+
+  z-index: 1;
 }
 
-/* HEADER */
+
+/* =========================================================
+   HEADER
+========================================================= */
 
 .introduction-header {
   display: grid;
@@ -58,32 +86,48 @@
 
   gap: 80px;
 
-  padding-bottom: 80px;
+  padding-bottom: 90px;
 
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+
+/* HEADER LABEL */
+
+.introduction-header-label {
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+}
+
+.introduction-label-line {
+  width: 28px;
+
+  height: 1px;
+
+  background: #ffd54a;
+
+  opacity: 0.8;
 }
 
 .introduction-label {
-  display: inline-flex;
-
-  width: fit-content;
-
-  padding: 8px 16px;
-
-  border: 1px solid rgba(255, 213, 74, 0.2);
-
-  border-radius: 999px;
-
   color: #ffd54a;
 
-  font-size: 0.75rem;
+  font-size: 0.72rem;
 
   font-weight: 600;
 
-  letter-spacing: 2px;
+  letter-spacing: 2.5px;
 
   text-transform: uppercase;
+
+  white-space: nowrap;
 }
+
+
+/* HEADER TITLE */
 
 .introduction-header h2 {
   margin: 0;
@@ -92,40 +136,53 @@
 
   font-size: clamp(3rem, 6vw, 6rem);
 
-  line-height: 0.95;
+  line-height: 0.94;
 
   font-weight: 800;
 
-  letter-spacing: -0.04em;
+  letter-spacing: -0.055em;
 }
 
-/* CONTENT */
+.introduction-header h2 span {
+  color: #ffd54a;
+}
+
+
+/* =========================================================
+   SYSTEM DEFINITION
+========================================================= */
 
 .introduction-content {
   display: grid;
 
   grid-template-columns: 1fr 1fr;
 
-  gap: 100px;
+  gap: 110px;
 
-  padding: 90px 0;
+  padding: 100px 0;
 }
+
+
+/* LEAD */
 
 .introduction-lead p {
   margin: 0;
 
-  max-width: 600px;
+  max-width: 650px;
 
   color: #ffffff;
 
-  font-size: clamp(1.5rem, 2.5vw, 2.3rem);
+  font-size: clamp(1.6rem, 2.5vw, 2.35rem);
 
-  line-height: 1.25;
+  line-height: 1.23;
 
   font-weight: 500;
 
-  letter-spacing: -0.02em;
+  letter-spacing: -0.025em;
 }
+
+
+/* DESCRIPTION */
 
 .introduction-description {
   display: flex;
@@ -133,6 +190,8 @@
   flex-direction: column;
 
   gap: 28px;
+
+  padding-top: 6px;
 }
 
 .introduction-description p {
@@ -147,7 +206,132 @@
   line-height: 1.9;
 }
 
-/* SYSTEM CARDS */
+
+/* =========================================================
+   SYSTEM FLOW
+========================================================= */
+
+.introduction-flow {
+  display: flex;
+
+  align-items: center;
+
+  width: 100%;
+
+  margin-bottom: 70px;
+
+  padding: 26px 30px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.015),
+      rgba(0, 174, 239, 0.035),
+      rgba(255, 255, 255, 0.015)
+    );
+}
+
+
+/* FLOW ITEM */
+
+.introduction-flow-item {
+  display: grid;
+
+  grid-template-columns: auto 1fr;
+
+  grid-template-rows: auto auto;
+
+  column-gap: 14px;
+
+  min-width: 150px;
+}
+
+.introduction-flow-number {
+  grid-row: 1 / 3;
+
+  align-self: center;
+
+  color: #ffd54a;
+
+  font-size: 0.68rem;
+
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+}
+
+.introduction-flow-title {
+  color: #ffffff;
+
+  font-size: 0.95rem;
+
+  font-weight: 700;
+
+  letter-spacing: 0.02em;
+
+  text-transform: uppercase;
+}
+
+.introduction-flow-subtitle {
+  margin-top: 3px;
+
+  color: #687594;
+
+  font-size: 0.68rem;
+
+  letter-spacing: 0.8px;
+
+  text-transform: uppercase;
+}
+
+
+/* CONNECTOR */
+
+.introduction-flow-connector {
+  flex: 1;
+
+  height: 1px;
+
+  margin: 0 28px;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255, 213, 74, 0.35),
+      rgba(0, 196, 255, 0.25)
+    );
+
+  position: relative;
+}
+
+.introduction-flow-connector::after {
+  content: "";
+
+  position: absolute;
+
+  right: 0;
+
+  top: -2px;
+
+  width: 5px;
+
+  height: 5px;
+
+  border-radius: 50%;
+
+  background: #00c6ff;
+
+  box-shadow: 0 0 10px rgba(0, 198, 255, 0.65);
+}
+
+
+/* =========================================================
+   SYSTEM PILLARS
+========================================================= */
 
 .introduction-grid {
   display: grid;
@@ -161,38 +345,78 @@
   border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
+
+/* CARD */
+
 .introduction-card {
   position: relative;
 
-  min-height: 260px;
+  min-height: 285px;
 
-  padding: 32px;
+  padding: 30px 30px 34px;
 
-  background: rgba(4, 8, 27, 0.92);
+  background: rgba(4, 8, 27, 0.94);
 
   transition:
-    background 0.3s ease,
-    transform 0.3s ease;
+    background 0.35s ease,
+    transform 0.35s ease;
 }
 
 .introduction-card:hover {
-  background: rgba(14, 27, 59, 0.95);
+  background:
+    linear-gradient(
+      145deg,
+      rgba(12, 29, 60, 0.98),
+      rgba(4, 12, 30, 0.98)
+    );
 
   transform: translateY(-4px);
+
+  z-index: 2;
+}
+
+
+/* CARD TOP */
+
+.introduction-card-top {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding-bottom: 22px;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 .introduction-number {
-  display: block;
-
-  margin-bottom: 70px;
-
   color: #ffd54a;
 
-  font-size: 0.75rem;
+  font-size: 0.7rem;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+.introduction-card-index {
+  color: #506080;
+
+  font-size: 0.58rem;
 
   font-weight: 600;
 
-  letter-spacing: 2px;
+  letter-spacing: 1.5px;
+
+  text-transform: uppercase;
+}
+
+
+/* CARD BODY */
+
+.introduction-card-body {
+  padding-top: 65px;
 }
 
 .introduction-card h3 {
@@ -200,9 +424,11 @@
 
   color: #ffffff;
 
-  font-size: 1.35rem;
+  font-size: 1.4rem;
 
   font-weight: 700;
+
+  letter-spacing: -0.02em;
 }
 
 .introduction-card p {
@@ -210,42 +436,247 @@
 
   color: #8993b1;
 
-  font-size: 0.9rem;
+  font-size: 0.88rem;
 
-  line-height: 1.7;
+  line-height: 1.75;
+
+  max-width: 270px;
 }
 
-/* RESPONSIVE */
 
-@media (max-width: 1000px) {
+/* CARD BOTTOM LINE */
+
+.introduction-card-line {
+  position: absolute;
+
+  left: 30px;
+
+  bottom: 0;
+
+  width: 34px;
+
+  height: 2px;
+
+  background: #ffd54a;
+
+  opacity: 0.55;
+
+  transition:
+    width 0.35s ease,
+    opacity 0.35s ease;
+}
+
+.introduction-card:hover .introduction-card-line {
+  width: 75px;
+
+  opacity: 1;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.introduction-footer {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 30px;
+
+  margin-top: 42px;
+
+  padding-top: 24px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+
+/* STATUS */
+
+.introduction-footer-status {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  color: #52617e;
+
+  font-size: 0.62rem;
+
+  font-weight: 600;
+
+  letter-spacing: 2px;
+}
+
+.introduction-status-dot {
+  width: 6px;
+
+  height: 6px;
+
+  border-radius: 50%;
+
+  background: #00c6ff;
+
+  box-shadow:
+    0 0 10px rgba(0, 198, 255, 0.8);
+}
+
+
+/* FOOTER FLOW */
+
+.introduction-footer-text {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  color: #46536f;
+
+  font-size: 0.58rem;
+
+  font-weight: 600;
+
+  letter-spacing: 1.5px;
+}
+
+.introduction-footer-text span:nth-child(even) {
+  color: #ffd54a;
+
+  opacity: 0.7;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1100px) {
+
   .introduction-header {
     grid-template-columns: 1fr;
 
-    gap: 40px;
+    gap: 45px;
   }
 
   .introduction-content {
     grid-template-columns: 1fr;
 
-    gap: 50px;
+    gap: 55px;
   }
 
   .introduction-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .introduction-flow {
+    flex-wrap: wrap;
+
+    gap: 24px;
+  }
+
+  .introduction-flow-connector {
+    flex: 1 1 80px;
+
+    margin: 0;
+  }
+
 }
 
-@media (max-width: 600px) {
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 760px) {
+
   .introduction {
-    padding: 100px 0;
+    padding: 110px 0 90px;
+  }
+
+  .introduction-container {
+    width: min(92%, 680px);
   }
 
   .introduction-header {
-    padding-bottom: 60px;
+    padding-bottom: 65px;
   }
 
   .introduction-content {
     padding: 70px 0;
+  }
+
+  .introduction-flow {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    padding: 25px;
+
+    gap: 24px;
+  }
+
+  .introduction-flow-connector {
+    display: none;
+  }
+
+  .introduction-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .introduction-footer {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 520px) {
+
+  .introduction {
+    padding: 90px 0 70px;
+  }
+
+  .introduction-header {
+    gap: 30px;
+
+    padding-bottom: 50px;
+  }
+
+  .introduction-header h2 {
+    font-size: clamp(2.8rem, 13vw, 4.5rem);
+  }
+
+  .introduction-content {
+    padding: 60px 0;
+
+    gap: 40px;
+  }
+
+  .introduction-lead p {
+    font-size: 1.55rem;
+  }
+
+  .introduction-description p {
+    font-size: 0.92rem;
+
+    line-height: 1.8;
+  }
+
+  .introduction-flow {
+    grid-template-columns: 1fr;
+
+    margin-bottom: 50px;
   }
 
   .introduction-grid {
@@ -253,12 +684,238 @@
   }
 
   .introduction-card {
-    min-height: auto;
+    min-height: 250px;
 
-    padding: 28px;
+    padding: 26px;
   }
 
-  .introduction-number {
-    margin-bottom: 45px;
+  .introduction-card-body {
+    padding-top: 50px;
   }
+
+  .introduction-footer-text {
+    flex-wrap: wrap;
+
+    line-height: 1.8;
+  }
+
+}
+
+
+/* =========================================================
+   RTL SUPPORT
+========================================================= */
+
+html[dir="rtl"] .introduction {
+  direction: rtl;
+}
+
+html[dir="rtl"] .introduction-header {
+  text-align: right;
+}
+
+html[dir="rtl"] .introduction-header-label {
+  flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .introduction-content {
+  direction: rtl;
+}
+
+html[dir="rtl"] .introduction-lead,
+html[dir="rtl"] .introduction-description {
+  text-align: right;
+}
+
+html[dir="rtl"] .introduction-flow {
+  direction: rtl;
+}
+
+html[dir="rtl"] .introduction-flow-connector::after {
+  right: auto;
+  left: 0;
+}
+
+html[dir="rtl"] .introduction-card {
+  text-align: right;
+}
+
+html[dir="rtl"] .introduction-card-top {
+  direction: rtl;
+}
+
+html[dir="rtl"] .introduction-card-line {
+  left: auto;
+  right: 30px;
+}
+
+html[dir="rtl"] .introduction-footer {
+  direction: rtl;
+}
+
+html[dir="rtl"] .introduction-footer-text {
+  direction: rtl;
+}
+
+
+/* SYSTEM FLOW */
+
+.introduction-flow {
+  display: flex;
+
+  align-items: center;
+
+  gap: 24px;
+
+  margin-bottom: 56px;
+
+  padding: 22px 28px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+
+  background: rgba(4, 8, 27, 0.45);
+}
+
+.introduction-flow-item {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  flex: 1;
+}
+
+.introduction-flow-number {
+  color: #ffd54a;
+
+  font-size: 0.7rem;
+
+  font-weight: 700;
+
+  letter-spacing: 1px;
+}
+
+.introduction-flow-item div {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 3px;
+}
+
+.introduction-flow-item strong {
+  color: #ffffff;
+
+  font-size: 0.8rem;
+
+  font-weight: 700;
+
+  letter-spacing: 0.4px;
+}
+
+.introduction-flow-item small {
+  color: #61729b;
+
+  font-size: 0.65rem;
+
+  text-transform: uppercase;
+
+  letter-spacing: 1px;
+}
+
+.introduction-flow-line {
+  flex: 1;
+
+  height: 1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255, 213, 74, 0.15),
+      rgba(0, 210, 255, 0.5)
+    );
+}
+
+/* FOOTER */
+
+.introduction-footer {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  padding-top: 20px;
+
+  color: #4d6088;
+
+  font-size: 0.65rem;
+
+  letter-spacing: 1.5px;
+
+  text-transform: uppercase;
+}
+
+.introduction-footer > div {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+}
+
+.introduction-footer span {
+  white-space: nowrap;
+}
+
+.introduction-footer > div span:nth-child(even) {
+  color: #ffd54a;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1000px) {
+
+  .introduction-flow {
+    flex-wrap: wrap;
+
+    gap: 20px;
+  }
+
+  .introduction-flow-line {
+    display: none;
+  }
+
+  .introduction-flow-item {
+    flex: 1 1 45%;
+  }
+
+  .introduction-footer {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 14px;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .introduction-flow {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+  .introduction-flow-item {
+    width: 100%;
+  }
+
+  .introduction-footer > div {
+    flex-wrap: wrap;
+  }
+
 }

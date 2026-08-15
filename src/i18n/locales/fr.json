@@ -1,0 +1,304 @@
+{
+  "navigation": {
+    "platform": "Plateforme",
+    "ecosystem": "Écosystème",
+    "library": "Bibliothèque",
+    "research": "Recherche",
+    "technology": "Technologie",
+    "contact": "Contact",
+    "signIn": "Se connecter",
+    "getStarted": "Commencer"
+  },
+  "home": {
+    "hero": {
+      "brand": "DPF OS",
+      "subtitle": "Football Positionnel Dynamique",
+      "title": "Un Système d’Exploitation Complet",
+      "highlight": "pour le Football.",
+      "description": "Un système d’exploitation unifié pour le football intégrant philosophie, méthodologie, entraînement, développement des joueurs, performance, recherche, analyse, éducation et technologie.",
+      "explorePlatform": "Explorer la Plateforme",
+      "library": "Bibliothèque DPF",
+      "stats": {
+        "knowledge": "Connaissance",
+        "volumes": "Volumes",
+        "frameworks": "Cadres",
+        "concepts": "Concepts",
+        "system": "Système",
+        "evolution": "Évolution Continue"
+      },
+      "core": {
+        "engine": "MOTEUR CENTRAL",
+        "label": "Système d’Exploitation DPF"
+      },
+      "nodes": {
+        "clubs": {
+          "title": "CLUBS",
+          "subtitle": "Organisations"
+        },
+        "academies": {
+          "title": "ACADÉMIES",
+          "subtitle": "Développement"
+        },
+        "players": {
+          "title": "JOUEURS",
+          "subtitle": "Développement"
+        },
+        "federations": {
+          "title": "FÉDÉRATIONS",
+          "subtitle": "Systèmes de Football"
+        }
+      },
+      "layers": {
+        "pitch": "TERRAIN",
+        "data": "DONNÉES",
+        "infrastructure": "INFRASTRUCTURE"
+      },
+      "modules": {
+        "game": {
+          "title": "MODÈLE DE JEU",
+          "subtitle": "Philosophie de Jeu"
+        },
+        "tactical": {
+          "title": "TACTIQUE",
+          "subtitle": "Intelligence du Jeu"
+        },
+        "player": {
+          "title": "JOUEUR",
+          "subtitle": "Développement du Joueur"
+        },
+        "coaching": {
+          "title": "COACHING",
+          "subtitle": "Méthodologie d’Entraînement"
+        },
+        "performance": {
+          "title": "PERFORMANCE",
+          "subtitle": "Sciences de la Performance"
+        },
+        "intelligence": {
+          "title": "INTELLIGENCE",
+          "subtitle": "Recrutement et Analyse"
+        },
+        "knowledge": {
+          "title": "CONNAISSANCE",
+          "subtitle": "Recherche et Éducation"
+        },
+        "technology": {
+          "title": "TECHNOLOGIE",
+          "subtitle": "Infrastructure Numérique"
+        }
+      },
+      "status": {
+        "online": "SYSTÈME EN LIGNE",
+        "synchronized": "TOUS LES SYSTÈMES SYNCHRONISÉS"
+      }
+    },
+    "introduction": {
+      "label": "DPF OS / VUE D’ENSEMBLE DU SYSTÈME",
+      "title": {
+        "line1": "Un Système.",
+        "line2": "Une Architecture",
+        "line3": "pour le Football."
+      },
+      "lead": "DPF OS est un système d’exploitation unifié conçu pour structurer, connecter et faire évoluer en permanence chaque dimension du football moderne.",
+      "description": {
+        "paragraph1": "De la philosophie et de la méthodologie du football au coaching, à la performance, à la recherche, à l’analyse et au développement des joueurs, DPF OS crée une architecture commune où les connaissances, les processus et les décisions fonctionnent comme un système intégré.",
+        "paragraph2": "Au lieu de traiter le football comme un ensemble de départements isolés, DPF OS établit un modèle opérationnel cohérent permettant à chaque partie de l’environnement footballistique de communiquer, d’évoluer et de fonctionner dans le même cadre."
+      },
+      "flow": {
+        "understand": {
+          "title": "COMPRENDRE",
+          "subtitle": "PHILOSOPHIE"
+        },
+        "design": {
+          "title": "CONCEVOIR",
+          "subtitle": "MÉTHODOLOGIE"
+        },
+        "perform": {
+          "title": "PERFORMER",
+          "subtitle": "PERFORMANCE"
+        },
+        "evolve": {
+          "title": "ÉVOLUER",
+          "subtitle": "CONNAISSANCE"
+        }
+      },
+      "pillars": {
+        "philosophy": {
+          "title": "Philosophie",
+          "description": "Définit comment le football est compris, interprété et conçu au sein du système."
+        },
+        "methodology": {
+          "title": "Méthodologie",
+          "description": "Transforme les principes et les cadres en une pratique footballistique structurée et reproductible."
+        },
+        "performance": {
+          "title": "Performance",
+          "description": "Relie le développement, la mesure, l’analyse et l’amélioration continue dans l’environnement footballistique."
+        },
+        "knowledge": {
+          "title": "Connaissance",
+          "description": "Intègre la recherche, l’apprentissage et l’intelligence footballistique afin de faire évoluer continuellement le système."
+        }
+      },
+      "footer": {
+        "status": "ARCHITECTURE DU SYSTÈME",
+        "understand": "COMPRENDRE",
+        "design": "CONCEVOIR",
+        "perform": "PERFORMER",
+        "evolve": "ÉVOLUER"
+      }
+    }
+  },
+  "architecture": {
+    "label": "DPF OS / SYSTÈME CENTRAL",
+    "title": {
+      "line1": "Une Architecture.",
+      "line2": "Plusieurs Dimensions."
+    },
+    "description": "DPF OS relie les dimensions fondamentales du football au sein d’une architecture opérationnelle cohérente.",
+    "systemMeta": {
+      "label": "ARCHITECTURE DU SYSTÈME",
+      "index": "DPF / 01"
+    },
+    "core": {
+      "label": "SYSTÈME D’EXPLOITATION",
+      "name": "DPF OS",
+      "subtitle": "ARCHITECTURE DU FOOTBALL"
+    },
+    "dimensionLabel": "DIMENSION DU SYSTÈME",
+    "dimensions": {
+      "philosophy": {
+        "number": "01",
+        "title": "Philosophie",
+        "description": "Définit comment le football est compris, interprété et conçu au sein du système."
+      },
+      "methodology": {
+        "number": "02",
+        "title": "Méthodologie",
+        "description": "Transforme les principes et les cadres en une pratique footballistique structurée et reproductible."
+      },
+      "gameModel": {
+        "number": "03",
+        "title": "Modèle de Jeu",
+        "description": "Traduit la logique footballistique du système en un modèle de jeu cohérent."
+      },
+      "performance": {
+        "number": "04",
+        "title": "Performance",
+        "description": "Relie le développement, la mesure, l’analyse et l’amélioration continue."
+      },
+      "development": {
+        "number": "05",
+        "title": "Développement",
+        "description": "Construit les parcours par lesquels les joueurs, les entraîneurs et les environnements évoluent."
+      },
+      "research": {
+        "number": "06",
+        "title": "Recherche",
+        "description": "Intègre les données probantes, l’apprentissage, l’analyse et l’intelligence dans une évolution continue."
+      }
+    },
+    "footer": {
+      "status": "ARCHITECTURE DPF OS",
+      "core": "CŒUR",
+      "dimensions": "DIMENSIONS",
+      "integration": "INTÉGRATION",
+      "evolution": "ÉVOLUTION"
+    }
+  },
+  "ecosystem": {
+    "label": "DPF OS / ÉCOSYSTÈME",
+    "title": {
+      "line1": "Un seul système.",
+      "line2": "De multiples dimensions."
+    },
+    "description": "DPF OS relie les principales dimensions du football au sein d’un écosystème intégré où les connaissances, la méthodologie, la performance et le développement fonctionnent ensemble.",
+    "core": {
+      "label": "NOYAU",
+      "subtitle": "ÉCOSYSTÈME DU FOOTBALL"
+    },
+    "dimensions": {
+      "philosophy": {
+        "title": "Philosophie",
+        "stage": "COMPRENDRE",
+        "description": "Les principes qui définissent la manière dont le football est compris, conçu et pratiqué dans le cadre DPF."
+      },
+      "methodology": {
+        "title": "Méthodologie",
+        "stage": "CONCEVOIR",
+        "description": "Les structures, processus et cadres qui transforment les principes du football en une pratique structurée et reproductible."
+      },
+      "gameModel": {
+        "title": "Modèle de Jeu",
+        "stage": "TRADUIRE",
+        "description": "L’architecture tactique qui traduit la philosophie et la méthodologie DPF en comportements collectifs de jeu."
+      },
+      "coaching": {
+        "title": "Coaching",
+        "stage": "APPLIQUER",
+        "description": "Le système de coaching qui relie le modèle de jeu, l’environnement d’entraînement, l’apprentissage et la pratique quotidienne."
+      },
+      "performance": {
+        "title": "Performance",
+        "stage": "MESURER",
+        "description": "Les systèmes qui développent, mesurent et améliorent continuellement la performance individuelle et collective dans le football."
+      },
+      "research": {
+        "title": "Recherche",
+        "stage": "APPRENDRE",
+        "description": "La couche de connaissances qui relie les données probantes, l’expérimentation, l’analyse et l’évolution continue."
+      },
+      "development": {
+        "title": "Développement",
+        "stage": "ÉVOLUER",
+        "description": "Le parcours qui relie le développement des joueurs, la formation des entraîneurs, les structures des académies et la croissance à long terme."
+      },
+      "knowledge": {
+        "title": "Connaissance",
+        "stage": "CONNECTER",
+        "description": "Une architecture de connaissances en évolution continue qui relie la recherche, l’éducation, l’intelligence et la pratique du football."
+      }
+    }
+  },
+  "intelligence": {
+    "label": "DPF OS / COUCHE D’INTELLIGENCE",
+    "hero": {
+      "eyebrow": "LA COUCHE D’INTELLIGENCE",
+      "title": {
+        "line1": "La connaissance devient",
+        "highlight": "intelligence."
+      },
+      "description": "DPF OS transforme la recherche, les preuves, l’observation et l’analyse en intelligence footballistique qui améliore la prise de décision.",
+      "secondary": "L’intelligence est l’espace où le système relie ce qu’il sait à ce qu’il doit décider. Elle transforme l’information en compréhension, la compréhension en décisions et les décisions en action."
+    },
+    "process": {
+      "evidence": {
+        "number": "01",
+        "title": "PREUVE",
+        "subtitle": "Recherche · Observation"
+      },
+      "insight": {
+        "number": "02",
+        "title": "COMPRÉHENSION",
+        "subtitle": "Analyse · Interprétation"
+      },
+      "decision": {
+        "number": "03",
+        "title": "DÉCISION",
+        "subtitle": "Stratégie · Choix"
+      },
+      "action": {
+        "number": "04",
+        "title": "ACTION",
+        "subtitle": "Application · Évolution"
+      }
+    },
+    "flow": {
+      "knowledge": "CONNAISSANCE",
+      "intelligence": "INTELLIGENCE",
+      "decision": "DÉCISION",
+      "action": "ACTION",
+      "evolution": "ÉVOLUTION"
+    }
+  }
+}

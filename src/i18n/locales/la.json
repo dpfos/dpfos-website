@@ -1,0 +1,304 @@
+{
+  "navigation": {
+    "platform": "Platforma",
+    "ecosystem": "Oecosystem",
+    "library": "Bibliotheca",
+    "research": "Investigatio",
+    "technology": "Technologia",
+    "contact": "Contactus",
+    "signIn": "Intra",
+    "getStarted": "Incipe"
+  },
+  "home": {
+    "hero": {
+      "brand": "DPF OS",
+      "subtitle": "Pediludium Dynamicum Positionale",
+      "title": "Systema Operativum Integrum",
+      "highlight": "pro Pediludio.",
+      "description": "Systema operativum unitum pro pediludio, quod philosophiam, methodologiam, exercitationem, progressionem lusorum, perficiendum, investigationem, analysim, educationem et technologiam coniungit.",
+      "explorePlatform": "Explora Platformam",
+      "library": "Bibliotheca DPF",
+      "stats": {
+        "knowledge": "Scientia",
+        "volumes": "Volumina",
+        "frameworks": "Structurae",
+        "concepts": "Conceptus",
+        "system": "Systema",
+        "evolution": "Evolutio Continua"
+      },
+      "core": {
+        "engine": "MOTOR CENTRALIS",
+        "label": "Systema Operativum DPF"
+      },
+      "nodes": {
+        "clubs": {
+          "title": "CLUBES",
+          "subtitle": "Institutiones"
+        },
+        "academies": {
+          "title": "ACADEMIAE",
+          "subtitle": "Progressio"
+        },
+        "players": {
+          "title": "LUSORES",
+          "subtitle": "Progressio"
+        },
+        "federations": {
+          "title": "FOEDERATIONES",
+          "subtitle": "Systemata Pediludii"
+        }
+      },
+      "layers": {
+        "pitch": "CAMPUS",
+        "data": "DATA",
+        "infrastructure": "INFRASTRUCTURA"
+      },
+      "modules": {
+        "game": {
+          "title": "FORMA LUDI",
+          "subtitle": "Philosophia Ludi"
+        },
+        "tactical": {
+          "title": "TACTICA",
+          "subtitle": "Intelligentia Ludi"
+        },
+        "player": {
+          "title": "LUSOR",
+          "subtitle": "Progressio Lusoris"
+        },
+        "coaching": {
+          "title": "INSTITUTIO",
+          "subtitle": "Methodologia Exercitationis"
+        },
+        "performance": {
+          "title": "PERFECTIO",
+          "subtitle": "Scientia Performance"
+        },
+        "intelligence": {
+          "title": "INTELLIGENTIA",
+          "subtitle": "Exploratio et Analysis"
+        },
+        "knowledge": {
+          "title": "SCIENTIA",
+          "subtitle": "Investigatio et Educatio"
+        },
+        "technology": {
+          "title": "TECHNOLOGIA",
+          "subtitle": "Infrastructura Digitalis"
+        }
+      },
+      "status": {
+        "online": "SYSTEMA ACTUOSUM",
+        "synchronized": "OMNIA SYSTEMATA SYNCHRONIZATA"
+      }
+    },
+    "introduction": {
+      "label": "DPF OS / CONSPECTUS SYSTEMATIS",
+      "title": {
+        "line1": "Unum Systema.",
+        "line2": "Una Architectura",
+        "line3": "pro Pediludio."
+      },
+      "lead": "DPF OS est systema operativum unitum, ad structuram, connexionem et continuam evolutionem omnis dimensionis pediludii hodierni destinatum.",
+      "description": {
+        "paragraph1": "A philosophia et methodologia pediludii ad institutionem, perfectionem, investigationem, analysim et progressionem lusorum, DPF OS architecturam communem creat, in qua scientia, processus et decisiones tamquam unum systema integratum operantur.",
+        "paragraph2": "Loco pediludium tamquam partes separatas tractandi, DPF OS exemplar operativum coherens constituit, quo omnis pars ambitus pediludii communicare, evolvere et operari intra idem compaginem possit."
+      },
+      "flow": {
+        "understand": {
+          "title": "INTELLIGERE",
+          "subtitle": "PHILOSOPHIA"
+        },
+        "design": {
+          "title": "DESIGNARE",
+          "subtitle": "METHODOLOGIA"
+        },
+        "perform": {
+          "title": "PERFORMARE",
+          "subtitle": "PERFECTIO"
+        },
+        "evolve": {
+          "title": "EVOLVERE",
+          "subtitle": "SCIENTIA"
+        }
+      },
+      "pillars": {
+        "philosophy": {
+          "title": "Philosophia",
+          "description": "Definit quomodo pediludium intra systema intellegatur, interpre­tetur et designetur."
+        },
+        "methodology": {
+          "title": "Methodologia",
+          "description": "Principia et structuras in praxim pediludii ordinatam atque repetibilem convertit."
+        },
+        "performance": {
+          "title": "Perfectio",
+          "description": "Progressionem, mensurationem, analysim et continuam improvementem per ambitum pediludii coniungit."
+        },
+        "knowledge": {
+          "title": "Scientia",
+          "description": "Investigationem, doctrinam et intelligentiam pediludii integrat ad continuam systematis evolutionem."
+        }
+      },
+      "footer": {
+        "status": "ARCHITECTURA SYSTEMATIS",
+        "understand": "INTELLIGERE",
+        "design": "DESIGNARE",
+        "perform": "PERFORMARE",
+        "evolve": "EVOLVERE"
+      }
+    }
+  },
+  "architecture": {
+    "label": "DPF OS / SYSTEMA CENTRALE",
+    "title": {
+      "line1": "Una Architectura.",
+      "line2": "Multiplices Dimensiones."
+    },
+    "description": "DPF OS dimensiones fundamentales pediludii intra unam architecturam operativam coherentem coniungit.",
+    "systemMeta": {
+      "label": "ARCHITECTURA SYSTEMATIS",
+      "index": "DPF / 01"
+    },
+    "core": {
+      "label": "SYSTEMA OPERATIVUM",
+      "name": "DPF OS",
+      "subtitle": "ARCHITECTURA PEDILUDII"
+    },
+    "dimensionLabel": "DIMENSIO SYSTEMATIS",
+    "dimensions": {
+      "philosophy": {
+        "number": "01",
+        "title": "Philosophia",
+        "description": "Definit quomodo pediludium intra systema intellegatur, interpre­tetur et designetur."
+      },
+      "methodology": {
+        "number": "02",
+        "title": "Methodologia",
+        "description": "Principia et structuras in praxim pediludii ordinatam atque repetibilem convertit."
+      },
+      "gameModel": {
+        "number": "03",
+        "title": "Forma Ludi",
+        "description": "Logicam pediludii systematis in exemplar ludi coherens convertit."
+      },
+      "performance": {
+        "number": "04",
+        "title": "Perfectio",
+        "description": "Progressionem, mensurationem, analysim et continuam improvementem coniungit."
+      },
+      "development": {
+        "number": "05",
+        "title": "Progressio",
+        "description": "Vias constituit per quas lusores, magistri et ambitus evolvuntur."
+      },
+      "research": {
+        "number": "06",
+        "title": "Investigatio",
+        "description": "Argumenta, doctrinam, analysim et intelligentiam in continuam evolutionem integrat."
+      }
+    },
+    "footer": {
+      "status": "ARCHITECTURA DPF OS",
+      "core": "CENTRUM",
+      "dimensions": "DIMENSIONES",
+      "integration": "INTEGRATIO",
+      "evolution": "EVOLUTIO"
+    }
+  },
+  "ecosystem": {
+    "label": "DPF OS / ECOSISTEMA",
+    "title": {
+      "line1": "Un solo sistema.",
+      "line2": "Múltiples dimensiones."
+    },
+    "description": "DPF OS conecta las principales dimensiones del fútbol en un ecosistema integrado donde el conocimiento, la metodología, el rendimiento y el desarrollo operan en conjunto.",
+    "core": {
+      "label": "NÚCLEO",
+      "subtitle": "ECOSISTEMA DEL FÚTBOL"
+    },
+    "dimensions": {
+      "philosophy": {
+        "title": "Filosofía",
+        "stage": "COMPRENDER",
+        "description": "Los principios que definen cómo se entiende, diseña y juega el fútbol dentro del marco DPF."
+      },
+      "methodology": {
+        "title": "Metodología",
+        "stage": "DISEÑAR",
+        "description": "Las estructuras, procesos y marcos que transforman los principios del fútbol en una práctica estructurada y repetible."
+      },
+      "gameModel": {
+        "title": "Modelo de Juego",
+        "stage": "TRADUCIR",
+        "description": "La arquitectura táctica que traduce la filosofía y metodología DPF en comportamientos colectivos de juego."
+      },
+      "coaching": {
+        "title": "Coaching",
+        "stage": "APLICAR",
+        "description": "El sistema de coaching que conecta el modelo de juego, el entorno de entrenamiento, el aprendizaje y la práctica diaria."
+      },
+      "performance": {
+        "title": "Rendimiento",
+        "stage": "MEDIR",
+        "description": "Los sistemas que desarrollan, miden y mejoran continuamente el rendimiento individual y colectivo en el fútbol."
+      },
+      "research": {
+        "title": "Investigación",
+        "stage": "APRENDER",
+        "description": "La capa de conocimiento que conecta la evidencia, la experimentación, el análisis y la evolución continua."
+      },
+      "development": {
+        "title": "Desarrollo",
+        "stage": "EVOLUCIONAR",
+        "description": "El camino que conecta el desarrollo de jugadores, la formación de entrenadores, las estructuras de las academias y el crecimiento a largo plazo."
+      },
+      "knowledge": {
+        "title": "Conocimiento",
+        "stage": "CONECTAR",
+        "description": "Una arquitectura de conocimiento en evolución continua que conecta investigación, educación, inteligencia y práctica del fútbol."
+      }
+    }
+  },
+  "intelligence": {
+    "label": "DPF OS / STRATUM INTELLIGENTIAE",
+    "hero": {
+      "eyebrow": "STRATUM INTELLIGENTIAE",
+      "title": {
+        "line1": "Cognitio fit",
+        "highlight": "intelligentia."
+      },
+      "description": "DPF OS investigationem, probationes, observationem et analysim in intelligentiam pedifollii transformat quae consilia meliora efficit.",
+      "secondary": "Intelligentia est locus ubi systema coniungit id quod scit cum eo quod decernere debet. Informationem in intellectum, intellectum in consilia, et consilia in actionem convertit."
+    },
+    "process": {
+      "evidence": {
+        "number": "01",
+        "title": "PROBATIO",
+        "subtitle": "Investigatio · Observatio"
+      },
+      "insight": {
+        "number": "02",
+        "title": "INTELLECTUS",
+        "subtitle": "Analysis · Interpretatio"
+      },
+      "decision": {
+        "number": "03",
+        "title": "CONSILIUM",
+        "subtitle": "Strategia · Electio"
+      },
+      "action": {
+        "number": "04",
+        "title": "ACTIO",
+        "subtitle": "Applicatio · Evolutio"
+      }
+    },
+    "flow": {
+      "knowledge": "COGNITIO",
+      "intelligence": "INTELLIGENTIA",
+      "decision": "CONSILIUM",
+      "action": "ACTIO",
+      "evolution": "EVOLUTIO"
+    }
+  }
+}

@@ -1,0 +1,658 @@
+/* =========================================================
+   DPF OS — INTELLIGENCE LAYER
+   FINAL OUTPUT
+   ========================================================= */
+
+.home-intelligence {
+  position: relative;
+
+  width: min(1100px, calc(100% - 80px));
+
+  margin: 0 auto;
+
+  padding: 150px 0 110px;
+
+  overflow: hidden;
+
+  border-top: 1px solid rgba(120, 150, 190, 0.14);
+
+  background:
+    radial-gradient(
+      circle at 50% 45%,
+      rgba(0, 150, 255, 0.055),
+      transparent 42%
+    );
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.home-intelligence__header {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding-bottom: 22px;
+
+  border-bottom: 1px solid rgba(120, 150, 190, 0.10);
+}
+
+
+.home-intelligence__label,
+.home-intelligence__index {
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.28em;
+
+  text-transform: uppercase;
+
+  color: #f4bf24;
+}
+
+
+.home-intelligence__index {
+  color: rgba(180, 205, 230, 0.42);
+}
+
+
+/* =========================================================
+   MAIN
+   ========================================================= */
+
+.home-intelligence__main {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  align-items: center;
+
+  gap: 80px;
+
+  padding: 95px 0 100px;
+}
+
+
+/* =========================================================
+   VISUAL
+   ========================================================= */
+
+.home-intelligence__visual {
+  position: relative;
+
+  width: 480px;
+
+  height: 480px;
+
+  max-width: 100%;
+
+  margin: 0 auto;
+}
+
+
+.intelligence-orbit {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+
+.intelligence-orbit--outer {
+  width: 430px;
+  height: 430px;
+
+  border: 1px solid rgba(244, 191, 36, 0.13);
+
+  animation:
+    intelligenceOrbitOuter
+    24s
+    linear
+    infinite;
+}
+
+
+.intelligence-orbit--middle {
+  width: 330px;
+  height: 330px;
+
+  border: 1px solid rgba(45, 210, 255, 0.14);
+
+  animation:
+    intelligenceOrbitMiddle
+    18s
+    linear
+    infinite
+    reverse;
+}
+
+
+.intelligence-orbit--inner {
+  width: 235px;
+  height: 235px;
+
+  border: 1px solid rgba(45, 210, 255, 0.19);
+
+  animation:
+    intelligenceOrbitInner
+    12s
+    linear
+    infinite;
+}
+
+
+/* =========================================================
+   CORE GLOW
+   ========================================================= */
+
+.intelligence-core-glow {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  width: 210px;
+  height: 210px;
+
+  transform: translate(-50%, -50%);
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(0, 180, 255, 0.20),
+      rgba(0, 120, 255, 0.08) 45%,
+      transparent 72%
+    );
+
+  filter: blur(18px);
+
+  animation:
+    intelligenceGlow
+    5s
+    ease-in-out
+    infinite;
+}
+
+
+/* =========================================================
+   CORE
+   ========================================================= */
+
+.intelligence-core {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  width: 145px;
+  height: 145px;
+
+  transform: translate(-50%, -50%);
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(75, 210, 255, 0.22);
+
+  background:
+    radial-gradient(
+      circle at 50% 35%,
+      rgba(30, 100, 160, 0.25),
+      rgba(5, 12, 30, 0.96)
+    );
+
+  box-shadow:
+    0 0 40px rgba(0, 170, 255, 0.12),
+    inset 0 0 30px rgba(0, 150, 255, 0.08);
+
+  z-index: 3;
+}
+
+
+.intelligence-core__label {
+  margin-bottom: 8px;
+
+  font-size: 7px;
+
+  letter-spacing: 0.30em;
+
+  color: rgba(205, 225, 245, 0.52);
+}
+
+
+.intelligence-core strong {
+  font-size: 27px;
+
+  line-height: 1;
+
+  letter-spacing: -0.04em;
+
+  color: #f7f8fb;
+}
+
+
+.intelligence-core__subtitle {
+  margin-top: 8px;
+
+  font-size: 6px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.18em;
+
+  color: #f4bf24;
+}
+
+
+/* =========================================================
+   CONTENT
+   ========================================================= */
+
+.home-intelligence__content {
+  max-width: 480px;
+}
+
+
+.home-intelligence__eyebrow {
+  display: inline-block;
+
+  padding: 8px 13px;
+
+  border: 1px solid rgba(244, 191, 36, 0.48);
+
+  border-radius: 999px;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.22em;
+
+  color: #f4bf24;
+}
+
+
+.home-intelligence__content h2 {
+  margin: 28px 0;
+
+  font-size: clamp(54px, 5vw, 78px);
+
+  line-height: 0.91;
+
+  letter-spacing: -0.055em;
+
+  color: #f7f8fb;
+}
+
+
+.home-intelligence__content h2 span {
+  color: #f4bf24;
+}
+
+
+.home-intelligence__lead {
+  max-width: 470px;
+
+  margin: 0;
+
+  font-size: 17px;
+
+  line-height: 1.65;
+
+  color: rgba(225, 232, 240, 0.78);
+}
+
+
+.home-intelligence__description {
+  max-width: 470px;
+
+  margin-top: 22px;
+
+  font-size: 14px;
+
+  line-height: 1.75;
+
+  color: rgba(170, 195, 220, 0.62);
+}
+
+
+/* =========================================================
+   FLOW
+   ========================================================= */
+
+.home-intelligence__flow {
+  display: grid;
+
+  grid-template-columns:
+    1fr
+    auto
+    1fr
+    auto
+    1fr
+    auto
+    1fr;
+
+  align-items: stretch;
+
+  border: 1px solid rgba(100, 135, 175, 0.15);
+
+  background: rgba(3, 10, 25, 0.42);
+}
+
+
+.intelligence-step {
+  min-height: 150px;
+
+  padding: 25px 26px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: space-between;
+
+  border-right: 1px solid rgba(100, 135, 175, 0.12);
+}
+
+
+.intelligence-step span {
+  font-size: 8px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.22em;
+
+  color: #f4bf24;
+}
+
+
+.intelligence-step strong {
+  margin-top: 25px;
+
+  font-size: 17px;
+
+  letter-spacing: -0.02em;
+
+  color: #f7f8fb;
+}
+
+
+.intelligence-step small {
+  margin-top: 8px;
+
+  font-size: 9px;
+
+  line-height: 1.5;
+
+  color: rgba(175, 200, 225, 0.55);
+}
+
+
+.intelligence-step--final {
+  background:
+    linear-gradient(
+      135deg,
+      rgba(244, 191, 36, 0.055),
+      rgba(0, 140, 255, 0.045)
+    );
+}
+
+
+.intelligence-arrow {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 42px;
+
+  color: #f4bf24;
+
+  font-size: 16px;
+
+  border-right: 1px solid rgba(100, 135, 175, 0.12);
+}
+
+
+/* =========================================================
+   FOOTER FLOW
+   ========================================================= */
+
+.home-intelligence__footer {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 18px;
+
+  padding-top: 32px;
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.28em;
+
+  color: rgba(170, 195, 220, 0.52);
+}
+
+
+.home-intelligence__footer b {
+  color: #f4bf24;
+}
+
+
+.home-intelligence__footer .is-final {
+  color: #f4bf24;
+}
+
+
+/* =========================================================
+   ANIMATION
+   ========================================================= */
+
+@keyframes intelligenceOrbitOuter {
+
+  from {
+    transform:
+      translate(-50%, -50%)
+      rotate(0deg);
+  }
+
+  to {
+    transform:
+      translate(-50%, -50%)
+      rotate(360deg);
+  }
+
+}
+
+
+@keyframes intelligenceOrbitMiddle {
+
+  from {
+    transform:
+      translate(-50%, -50%)
+      rotate(0deg);
+  }
+
+  to {
+    transform:
+      translate(-50%, -50%)
+      rotate(-360deg);
+  }
+
+}
+
+
+@keyframes intelligenceOrbitInner {
+
+  from {
+    transform:
+      translate(-50%, -50%)
+      rotate(0deg);
+  }
+
+  to {
+    transform:
+      translate(-50%, -50%)
+      rotate(360deg);
+  }
+
+}
+
+
+@keyframes intelligenceGlow {
+
+  0%,
+  100% {
+    opacity: 0.55;
+
+    transform:
+      translate(-50%, -50%)
+      scale(0.95);
+  }
+
+  50% {
+    opacity: 1;
+
+    transform:
+      translate(-50%, -50%)
+      scale(1.08);
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  .home-intelligence {
+    width: min(100% - 32px, 600px);
+
+    padding: 100px 0 70px;
+  }
+
+
+  .home-intelligence__main {
+    grid-template-columns: 1fr;
+
+    gap: 55px;
+
+    padding: 70px 0;
+  }
+
+
+  .home-intelligence__visual {
+    width: 330px;
+    height: 330px;
+  }
+
+
+  .intelligence-orbit--outer {
+    width: 300px;
+    height: 300px;
+  }
+
+
+  .intelligence-orbit--middle {
+    width: 230px;
+    height: 230px;
+  }
+
+
+  .intelligence-orbit--inner {
+    width: 165px;
+    height: 165px;
+  }
+
+
+  .intelligence-core-glow {
+    width: 170px;
+    height: 170px;
+  }
+
+
+  .intelligence-core {
+    width: 118px;
+    height: 118px;
+  }
+
+
+  .intelligence-core strong {
+    font-size: 22px;
+  }
+
+
+  .home-intelligence__content h2 {
+    font-size: clamp(48px, 14vw, 68px);
+  }
+
+
+  .home-intelligence__lead {
+    font-size: 15px;
+  }
+
+
+  .home-intelligence__flow {
+    grid-template-columns: 1fr;
+  }
+
+
+  .intelligence-step {
+    min-height: 125px;
+
+    border-right: 0;
+
+    border-bottom: 1px solid rgba(100, 135, 175, 0.12);
+  }
+
+
+  .intelligence-arrow {
+    width: 100%;
+
+    height: 30px;
+
+    border-right: 0;
+
+    border-bottom: 1px solid rgba(100, 135, 175, 0.12);
+  }
+
+
+  .home-intelligence__footer {
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    font-size: 7px;
+
+    line-height: 1.8;
+  }
+
+}

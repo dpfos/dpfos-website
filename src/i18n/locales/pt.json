@@ -1,0 +1,305 @@
+{
+  "navigation": {
+    "platform": "Plataforma",
+    "ecosystem": "Ecossistema",
+    "library": "Biblioteca",
+    "research": "Pesquisa",
+    "technology": "Tecnologia",
+    "contact": "Contato",
+    "signIn": "Entrar",
+    "getStarted": "Começar"
+  },
+  "home": {
+    "hero": {
+      "brand": "DPF OS",
+      "subtitle": "Futebol Posicional Dinâmico",
+      "title": "Um Sistema Operacional Completo",
+      "highlight": "para o Futebol.",
+      "description": "Um sistema operacional unificado para o futebol que integra filosofia, metodologia, treinamento, desenvolvimento de jogadores, desempenho, pesquisa, análise, educação e tecnologia.",
+      "explorePlatform": "Explorar a Plataforma",
+      "library": "Biblioteca DPF",
+      "stats": {
+        "knowledge": "Conhecimento",
+        "volumes": "Volumes",
+        "frameworks": "Estruturas",
+        "concepts": "Conceitos",
+        "system": "Sistema",
+        "evolution": "Evolução Contínua"
+      },
+      "core": {
+        "engine": "MOTOR CENTRAL",
+        "label": "Sistema Operacional DPF"
+      },
+      "nodes": {
+        "clubs": {
+          "title": "CLUBES",
+          "subtitle": "Organizações"
+        },
+        "academies": {
+          "title": "ACADEMIAS",
+          "subtitle": "Desenvolvimento"
+        },
+        "players": {
+          "title": "JOGADORES",
+          "subtitle": "Desenvolvimento"
+        },
+        "federations": {
+          "title": "FEDERAÇÕES",
+          "subtitle": "Sistemas de Futebol"
+        }
+      },
+      "layers": {
+        "pitch": "CAMPO",
+        "data": "DADOS",
+        "infrastructure": "INFRAESTRUTURA"
+      },
+      "modules": {
+        "game": {
+          "title": "MODELO DE JOGO",
+          "subtitle": "Filosofia de Jogo"
+        },
+        "tactical": {
+          "title": "TÁTICA",
+          "subtitle": "Inteligência de Jogo"
+        },
+        "player": {
+          "title": "JOGADOR",
+          "subtitle": "Desenvolvimento do Jogador"
+        },
+        "coaching": {
+          "title": "TREINAMENTO",
+          "subtitle": "Metodologia de Treinamento"
+        },
+        "performance": {
+          "title": "DESEMPENHO",
+          "subtitle": "Ciência do Desempenho"
+        },
+        "intelligence": {
+          "title": "INTELIGÊNCIA",
+          "subtitle": "Scouting e Análise"
+        },
+        "knowledge": {
+          "title": "CONHECIMENTO",
+          "subtitle": "Pesquisa e Educação"
+        },
+        "technology": {
+          "title": "TECNOLOGIA",
+          "subtitle": "Infraestrutura Digital"
+        }
+      },
+      "status": {
+        "online": "SISTEMA ONLINE",
+        "synchronized": "TODOS OS SISTEMAS SINCRONIZADOS"
+      }
+    },
+    "introduction": {
+      "label": "DPF OS / VISÃO GERAL DO SISTEMA",
+      "title": {
+        "line1": "Um Sistema.",
+        "line2": "Uma Arquitetura",
+        "line3": "para o Futebol."
+      },
+      "lead": "O DPF OS é um sistema operacional unificado projetado para estruturar, conectar e evoluir continuamente cada dimensão do futebol moderno.",
+      "description": {
+        "paragraph1": "Da filosofia e metodologia do futebol ao treinamento, desempenho, pesquisa, análise e desenvolvimento de jogadores, o DPF OS cria uma arquitetura comum onde conhecimento, processos e decisões operam como um único sistema integrado.",
+        "paragraph2": "Em vez de tratar o futebol como departamentos desconectados, o DPF OS estabelece um modelo operacional coerente que permite que cada parte do ambiente futebolístico se comunique, evolua e opere dentro da mesma estrutura."
+      },
+      "flow": {
+        "understand": {
+          "title": "COMPREENDER",
+          "subtitle": "FILOSOFIA"
+        },
+        "design": {
+          "title": "PROJETAR",
+          "subtitle": "METODOLOGIA"
+        },
+        "perform": {
+          "title": "EXECUTAR",
+          "subtitle": "DESEMPENHO"
+        },
+        "evolve": {
+          "title": "EVOLUIR",
+          "subtitle": "CONHECIMENTO"
+        }
+      },
+      "pillars": {
+        "philosophy": {
+          "title": "Filosofia",
+          "description": "Define como o futebol é compreendido, interpretado e projetado dentro do sistema."
+        },
+        "methodology": {
+          "title": "Metodologia",
+          "description": "Transforma princípios e estruturas em uma prática futebolística estruturada e repetível."
+        },
+        "performance": {
+          "title": "Desempenho",
+          "description": "Conecta desenvolvimento, medição, análise e melhoria contínua em todo o ambiente futebolístico."
+        },
+        "knowledge": {
+          "title": "Conhecimento",
+          "description": "Integra pesquisa, aprendizagem e inteligência futebolística para evoluir continuamente o sistema."
+        }
+      },
+      "footer": {
+        "status": "ARQUITETURA DO SISTEMA",
+        "understand": "COMPREENDER",
+        "design": "PROJETAR",
+        "perform": "EXECUTAR",
+        "evolve": "EVOLUIR"
+      }
+    }
+  },
+  "architecture": {
+    "label": "DPF OS / SISTEMA CENTRAL",
+    "title": {
+      "line1": "Uma Arquitetura.",
+      "line2": "Múltiplas Dimensões."
+    },
+    "description": "O DPF OS conecta as dimensões fundamentais do futebol dentro de uma única arquitetura operacional coerente.",
+    "systemMeta": {
+      "label": "ARQUITETURA DO SISTEMA",
+      "index": "DPF / 01"
+    },
+    "core": {
+      "label": "SISTEMA OPERACIONAL",
+      "name": "DPF OS",
+      "subtitle": "ARQUITETURA DO FUTEBOL"
+    },
+    "dimensionLabel": "DIMENSÃO DO SISTEMA",
+    "dimensions": {
+      "philosophy": {
+        "number": "01",
+        "title": "Filosofia",
+        "description": "Define como o futebol é compreendido, interpretado e projetado dentro do sistema."
+      },
+      "methodology": {
+        "number": "02",
+        "title": "Metodologia",
+        "description": "Transforma princípios e estruturas em uma prática futebolística estruturada e repetível."
+      },
+      "gameModel": {
+        "number": "03",
+        "title": "Modelo de Jogo",
+        "description": "Traduz a lógica futebolística do sistema em um modelo de jogo coerente."
+      },
+      "performance": {
+        "number": "04",
+        "title": "Desempenho",
+        "description": "Conecta desenvolvimento, medição, análise e melhoria contínua."
+      },
+      "development": {
+        "number": "05",
+        "title": "Desenvolvimento",
+        "description": "Constrói os caminhos pelos quais jogadores, treinadores e ambientes evoluem."
+      },
+      "research": {
+        "number": "06",
+        "title": "Pesquisa",
+        "description": "Integra evidências, aprendizagem, análise e inteligência em um processo contínuo de evolução."
+      }
+    },
+    "footer": {
+      "status": "ARQUITETURA DPF OS",
+      "core": "NÚCLEO",
+      "dimensions": "DIMENSÕES",
+      "integration": "INTEGRAÇÃO",
+      "evolution": "EVOLUÇÃO"
+    }
+  },
+  "ecosystem": {
+    "label": "DPF OS / ECOSSISTEMA",
+    "title": {
+      "line1": "Um sistema.",
+      "line2": "Múltiplas dimensões."
+    },
+    "description": "O DPF OS conecta as principais dimensões do futebol em um ecossistema integrado, onde conhecimento, metodologia, desempenho e desenvolvimento operam em conjunto.",
+    "core": {
+      "label": "NÚCLEO",
+      "subtitle": "ECOSSISTEMA DO FUTEBOL"
+    },
+    "dimensions": {
+      "philosophy": {
+        "title": "Filosofia",
+        "stage": "COMPREENDER",
+        "description": "Os princípios que definem como o futebol é compreendido, projetado e praticado dentro da estrutura DPF."
+      },
+      "methodology": {
+        "title": "Metodologia",
+        "stage": "PROJETAR",
+        "description": "As estruturas, processos e frameworks que transformam os princípios do futebol em uma prática estruturada e repetível."
+      },
+      "gameModel": {
+        "title": "Modelo de Jogo",
+        "stage": "TRADUZIR",
+        "description": "A arquitetura tática que traduz a filosofia e a metodologia DPF em comportamentos coletivos de jogo."
+      },
+      "coaching": {
+        "title": "Coaching",
+        "stage": "APLICAR",
+        "description": "O sistema de coaching que conecta o modelo de jogo, o ambiente de treinamento, a aprendizagem e a prática diária."
+      },
+      "performance": {
+        "title": "Desempenho",
+        "stage": "MEDIR",
+        "description": "Os sistemas que desenvolvem, medem e melhoram continuamente o desempenho individual e coletivo no futebol."
+      },
+      "research": {
+        "title": "Pesquisa",
+        "stage": "APRENDER",
+        "description": "A camada de conhecimento que conecta evidências, experimentação, análise e evolução contínua."
+      },
+      "development": {
+        "title": "Desenvolvimento",
+        "stage": "EVOLUIR",
+        "description": "O caminho que conecta o desenvolvimento de jogadores, a formação de treinadores, as estruturas das academias e o crescimento a longo prazo."
+      },
+      "knowledge": {
+        "title": "Conhecimento",
+        "stage": "CONECTAR",
+        "description": "Uma arquitetura de conhecimento em evolução contínua que conecta pesquisa, educação, inteligência e prática do futebol."
+      }
+    }
+  },
+  "intelligence": {
+    "label": "DPF OS / CAMADA DE INTELIGÊNCIA",
+    "hero": {
+      "eyebrow": "A CAMADA DE INTELIGÊNCIA",
+      "title": {
+        "line1": "Conhecimento torna-se",
+        "highlight": "inteligência."
+      },
+      "description": "O DPF OS transforma pesquisa, evidências, observação e análise em inteligência futebolística que melhora a tomada de decisões.",
+      "secondary": "A inteligência é onde o sistema conecta aquilo que sabe com aquilo que precisa decidir. Transforma informação em conhecimento, conhecimento em decisões e decisões em ação."
+    },
+    "process": {
+      "evidence": {
+        "number": "01",
+        "title": "EVIDÊNCIA",
+        "subtitle": "Pesquisa · Observação"
+      },
+      "insight": {
+        "number": "02",
+        "title": "INSIGHT",
+        "subtitle": "Análise · Interpretação"
+      },
+      "decision": {
+        "number": "03",
+        "title": "DECISÃO",
+        "subtitle": "Estratégia · Escolha"
+      },
+      "action": {
+        "number": "04",
+        "title": "AÇÃO",
+        "subtitle": "Aplicação · Evolução"
+      }
+    },
+    "flow": {
+      "knowledge": "CONHECIMENTO",
+      "intelligence": "INTELIGÊNCIA",
+      "decision": "DECISÃO",
+      "action": "AÇÃO",
+      "evolution": "EVOLUÇÃO"
+    }
+  }
+}
+
