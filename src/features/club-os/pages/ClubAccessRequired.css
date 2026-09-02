@@ -1,0 +1,169 @@
+.club-access-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 120px 24px 80px;
+  background:
+    radial-gradient(
+      circle at 50% 20%,
+      rgba(212, 175, 55, 0.08),
+      transparent 38%
+    ),
+    var(--color-bg);
+}
+
+.club-access-card {
+  width: min(760px, 100%);
+  padding: 64px 56px;
+  text-align: center;
+  border: 1px solid rgba(212, 175, 55, 0.22);
+  border-radius: 24px;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.025),
+      rgba(255, 255, 255, 0.01)
+    ),
+    var(--color-surface);
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.35),
+    0 0 50px rgba(212, 175, 55, 0.04);
+}
+
+.club-access-kicker {
+  margin-bottom: 28px;
+  color: var(--color-primary);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.club-access-icon {
+  width: 72px;
+  height: 72px;
+  margin: 0 auto 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 50%;
+  background: rgba(212, 175, 55, 0.05);
+}
+
+.club-access-icon span {
+  font-size: 26px;
+}
+
+.club-access-card h1 {
+  margin: 0 0 18px;
+  color: var(--color-text);
+  font-size: clamp(38px, 6vw, 64px);
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+.club-access-lead {
+  max-width: 620px;
+  margin: 0 auto 18px;
+  color: var(--color-text);
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+.club-access-copy {
+  max-width: 600px;
+  margin: 0 auto;
+  color: var(--color-muted);
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.club-access-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 36px;
+  flex-wrap: wrap;
+}
+
+.club-access-actions button {
+  min-height: 48px;
+  padding: 0 24px;
+  border-radius: 999px;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+}
+
+.club-access-actions button:hover {
+  transform: translateY(-2px);
+}
+
+.club-access-primary {
+  border: 1px solid var(--color-primary);
+  background: var(--color-primary);
+  color: #08101a;
+}
+
+.club-access-primary:hover {
+  box-shadow: 0 12px 30px rgba(212, 175, 55, 0.2);
+}
+
+.club-access-secondary {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: transparent;
+  color: var(--color-text);
+}
+
+.club-access-secondary:hover {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.club-access-status {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 32px;
+  color: var(--color-muted);
+  font-size: 12px;
+}
+
+.club-access-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+}
+
+@media (max-width: 640px) {
+  .club-access-page {
+    padding: 100px 16px 50px;
+  }
+
+  .club-access-card {
+    padding: 44px 24px;
+    border-radius: 20px;
+  }
+
+  .club-access-lead {
+    font-size: 17px;
+  }
+
+  .club-access-actions {
+    flex-direction: column;
+  }
+
+  .club-access-actions button {
+    width: 100%;
+  }
+}

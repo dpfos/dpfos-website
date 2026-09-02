@@ -1,0 +1,22 @@
+{
+  "name": "dpf-ai-benchmark",
+  "version": "1.0.0",
+  "description": "DPF AI Benchmark Engine",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "health": "node runners/health-check.js",
+    "gemini:test": "node runners/gemini-test.js",
+    "benchmark:test": "node runners/benchmark-runner.js"
+
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "@google/genai": "^2.18.0",
+    "dotenv": "^17.4.2",
+    "openai": "^7.5.0"
+  }
+}

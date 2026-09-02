@@ -656,3 +656,368 @@
   }
 
 }
+
+
+/* =========================================================
+   LIVE INTELLIGENCE ENGINE
+   ========================================================= */
+
+.home-intelligence__engine {
+  margin-top: 85px;
+
+  padding: 34px;
+
+  border: 1px solid rgba(100, 135, 175, 0.16);
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(4, 13, 30, 0.78),
+      rgba(3, 9, 22, 0.58)
+    );
+
+  box-shadow:
+    inset 0 0 50px rgba(0, 130, 255, 0.025);
+}
+
+
+.home-intelligence__engine-header {
+  display: flex;
+
+  align-items: flex-start;
+
+  justify-content: space-between;
+
+  gap: 30px;
+
+  padding-bottom: 28px;
+
+  border-bottom: 1px solid rgba(100, 135, 175, 0.12);
+}
+
+
+.home-intelligence__engine-label {
+  font-size: 8px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.25em;
+
+  color: #f4bf24;
+}
+
+
+.home-intelligence__engine-header h3 {
+  margin: 12px 0 10px;
+
+  font-size: 27px;
+
+  letter-spacing: -0.035em;
+
+  color: #f7f8fb;
+}
+
+
+.home-intelligence__engine-header p {
+  max-width: 650px;
+
+  margin: 0;
+
+  font-size: 12px;
+
+  line-height: 1.7;
+
+  color: rgba(180, 205, 230, 0.58);
+}
+
+
+.home-intelligence__engine-status {
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  padding: 8px 12px;
+
+  border: 1px solid rgba(80, 210, 170, 0.18);
+
+  font-size: 7px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.2em;
+
+  color: rgba(150, 225, 200, 0.65);
+
+  white-space: nowrap;
+}
+
+
+.home-intelligence__engine-status span {
+  width: 6px;
+
+  height: 6px;
+
+  border-radius: 50%;
+
+  background: #5ee0ae;
+
+  box-shadow: 0 0 10px rgba(94, 224, 174, 0.6);
+}
+
+
+/* =========================================================
+   QUERY
+   ========================================================= */
+
+.home-intelligence__query {
+  display: grid;
+
+  grid-template-columns: 1fr auto;
+
+  gap: 14px;
+
+  margin-top: 25px;
+}
+
+
+.home-intelligence__query textarea {
+  width: 100%;
+
+  min-height: 105px;
+
+  padding: 18px;
+
+  resize: vertical;
+
+  border: 1px solid rgba(100, 135, 175, 0.18);
+
+  outline: none;
+
+  background: rgba(2, 8, 20, 0.78);
+
+  color: #f7f8fb;
+
+  font-family: inherit;
+
+  font-size: 13px;
+
+  line-height: 1.6;
+}
+
+
+.home-intelligence__query textarea::placeholder {
+  color: rgba(170, 195, 220, 0.35);
+}
+
+
+.home-intelligence__query textarea:focus {
+  border-color: rgba(244, 191, 36, 0.42);
+
+  box-shadow:
+    0 0 0 1px rgba(244, 191, 36, 0.06);
+}
+
+
+.home-intelligence__query button {
+  align-self: stretch;
+
+  min-width: 185px;
+
+  padding: 0 22px;
+
+  border: 1px solid rgba(244, 191, 36, 0.5);
+
+  background: rgba(244, 191, 36, 0.06);
+
+  color: #f4bf24;
+
+  font-family: inherit;
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.18em;
+
+  cursor: pointer;
+
+  transition:
+    background 180ms ease,
+    border-color 180ms ease,
+    transform 180ms ease;
+}
+
+
+.home-intelligence__query button:hover:not(:disabled) {
+  background: rgba(244, 191, 36, 0.12);
+
+  border-color: rgba(244, 191, 36, 0.8);
+
+  transform: translateY(-1px);
+}
+
+
+.home-intelligence__query button:disabled {
+  opacity: 0.35;
+
+  cursor: not-allowed;
+}
+
+
+/* =========================================================
+   PROCESSING
+   ========================================================= */
+
+.home-intelligence__processing {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  margin-top: 18px;
+
+  padding: 15px 18px;
+
+  border-left: 2px solid #f4bf24;
+
+  background: rgba(244, 191, 36, 0.025);
+
+  font-size: 7px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.18em;
+
+  color: rgba(190, 210, 230, 0.55);
+}
+
+
+.intelligence-processing-dot {
+  width: 6px;
+
+  height: 6px;
+
+  border-radius: 50%;
+
+  background: #f4bf24;
+
+  animation: intelligenceProcessing 1s ease-in-out infinite;
+}
+
+
+@keyframes intelligenceProcessing {
+
+  0%,
+  100% {
+    opacity: 0.25;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+}
+
+
+/* =========================================================
+   ANSWER
+   ========================================================= */
+
+.home-intelligence__answer {
+  margin-top: 24px;
+
+  border: 1px solid rgba(80, 150, 210, 0.16);
+
+  background: rgba(2, 8, 20, 0.62);
+}
+
+
+.home-intelligence__answer-label {
+  padding: 13px 18px;
+
+  border-bottom: 1px solid rgba(100, 135, 175, 0.12);
+
+  font-size: 7px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.22em;
+
+  color: #f4bf24;
+}
+
+
+.home-intelligence__answer-content {
+  padding: 22px;
+
+  color: rgba(225, 232, 240, 0.82);
+
+  font-size: 14px;
+
+  line-height: 1.75;
+}
+
+
+.home-intelligence__answer-content p {
+  margin: 0 0 10px;
+}
+
+
+.home-intelligence__answer-content p:last-child {
+  margin-bottom: 0;
+}
+
+
+.home-intelligence__error {
+  margin-top: 18px;
+
+  padding: 14px 18px;
+
+  border-left: 2px solid #d96b6b;
+
+  background: rgba(180, 50, 50, 0.045);
+
+  color: rgba(240, 170, 170, 0.8);
+
+  font-size: 11px;
+}
+
+
+/* =========================================================
+   MOBILE ENGINE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  .home-intelligence__engine {
+    margin-top: 60px;
+
+    padding: 22px;
+  }
+
+
+  .home-intelligence__engine-header {
+    flex-direction: column;
+  }
+
+
+  .home-intelligence__query {
+    grid-template-columns: 1fr;
+  }
+
+
+  .home-intelligence__query button {
+    min-height: 54px;
+  }
+
+
+  .home-intelligence__processing {
+    flex-wrap: wrap;
+
+    line-height: 1.8;
+  }
+
+}

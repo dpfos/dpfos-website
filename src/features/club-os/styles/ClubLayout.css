@@ -1,0 +1,124 @@
+﻿.dpf-club-layout {
+  min-height: 100vh;
+  display: flex;
+  background:
+    radial-gradient(circle at 90% 0%, rgba(245,200,76,.045), transparent 28%),
+    #050811;
+  color: #fff;
+}
+
+.dpf-club-main {
+  flex: 1;
+  min-width: 0;
+}
+
+.dpf-club-topbar {
+  height: 70px;
+  padding: 0 32px;
+  box-sizing: border-box;
+  border-bottom: 1px solid rgba(255,255,255,.07);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dpf-club-top-eyebrow {
+  display: block;
+  color: #f5c84c;
+  font-size: 8px;
+  letter-spacing: .16em;
+  margin-bottom: 5px;
+}
+
+.dpf-club-topbar strong {
+  color: #dfe5ef;
+  font-size: 13px;
+}
+
+.dpf-club-top-status {
+  color: #515b6e;
+  font-size: 8px;
+  letter-spacing: .14em;
+}
+
+.dpf-club-content {
+  padding: 32px;
+}
+
+.dpf-club-heading {
+  margin: 0;
+  font-size: 30px;
+  letter-spacing: -.035em;
+}
+
+.dpf-club-description {
+  color: #7e889b;
+  max-width: 720px;
+  line-height: 1.7;
+  font-size: 13px;
+}
+
+.dpf-club-stat-grid {
+  margin-top: 28px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 13px;
+}
+
+.dpf-club-stat {
+  padding: 20px;
+  background: rgba(255,255,255,.025);
+  border: 1px solid rgba(255,255,255,.075);
+  border-radius: 9px;
+}
+
+.dpf-club-stat span {
+  display: block;
+  color: #697386;
+  font-size: 8px;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+}
+
+.dpf-club-stat strong {
+  display: block;
+  margin-top: 9px;
+  font-size: 25px;
+  color: #f1f4f8;
+}
+
+.dpf-module-grid {
+  margin-top: 28px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.dpf-module-card {
+  padding: 21px;
+  border: 1px solid rgba(255,255,255,.075);
+  background: rgba(255,255,255,.022);
+  border-radius: 9px;
+}
+
+.dpf-module-card h3 {
+  margin: 0 0 8px;
+  font-size: 14px;
+}
+
+.dpf-module-card p {
+  margin: 0;
+  color: #747e91;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+@media (max-width: 1000px) {
+  .dpf-club-stat-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .dpf-module-grid {
+    grid-template-columns: 1fr;
+  }
+}

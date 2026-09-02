@@ -1,0 +1,23 @@
+# Environment / Secrets
+.env
+.env.*
+!.env.example
+
+# Dependencies
+node_modules/
+
+# Benchmark Results
+results/
+
+# Runtime / Temporary Files
+.tmp/
+*.tmp
+
+# Generated benchmark artifacts
+gemini-3.6-flash
+TEST-009
+
+# Generated caches
+.cgr-hash-cache.json
+.cgr-parser-fingerprint
+.cgr-dir-mtimes.json

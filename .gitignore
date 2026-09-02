@@ -24,3 +24,12 @@ dist-ssr
 *.sw?
 
 build-log.txt
+
+# Private DPF intellectual property
+private/
+
+# Local search backups
+_search-backup/
+
+# Supabase CLI local state
+supabase/.temp/

@@ -1,0 +1,129 @@
+.club-agreement-page {
+  min-height: 100vh;
+  background: #040816;
+  color: #f5f7fb;
+  padding: 120px 24px 80px;
+}
+
+.club-agreement-container {
+  width: min(920px, 100%);
+  margin: 0 auto;
+}
+
+.club-agreement-hero {
+  padding-bottom: 56px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.club-agreement-eyebrow {
+  margin-bottom: 18px;
+  color: #f4c51c;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+}
+
+.club-agreement-hero h1 {
+  margin: 0 0 20px;
+  font-size: clamp(42px, 6vw, 72px);
+  line-height: 0.98;
+  letter-spacing: -0.04em;
+}
+
+.club-agreement-hero p {
+  max-width: 780px;
+  margin: 0;
+  color: #9aa8c0;
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.club-agreement-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 26px;
+  margin-top: 28px;
+  color: #64748b;
+  font-size: 12px;
+}
+
+.club-agreement-section {
+  padding: 42px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.club-agreement-section h2 {
+  margin: 0 0 20px;
+  color: #f4f6fa;
+  font-size: 24px;
+  letter-spacing: -0.02em;
+}
+
+.club-agreement-section p,
+.club-agreement-section li {
+  color: #aab5c8;
+  font-size: 15px;
+  line-height: 1.85;
+}
+
+.club-agreement-section p {
+  margin: 0 0 16px;
+}
+
+.club-agreement-section strong {
+  color: #eef2f8;
+}
+
+.club-agreement-section ul {
+  margin: 18px 0 0;
+  padding-left: 24px;
+}
+
+.club-agreement-section li {
+  margin-bottom: 10px;
+}
+
+.agreement-placeholder {
+  color: #f4c51c !important;
+}
+
+.club-agreement-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  flex-wrap: wrap;
+  padding-top: 38px;
+  color: #64748b;
+  font-size: 12px;
+}
+
+.club-agreement-footer div {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.club-agreement-footer strong {
+  color: #f4c51c;
+  font-size: 14px;
+  letter-spacing: 0.08em;
+}
+
+@media (max-width: 700px) {
+  .club-agreement-page {
+    padding: 90px 18px 60px;
+  }
+
+  .club-agreement-hero h1 {
+    font-size: 46px;
+  }
+
+  .club-agreement-section {
+    padding: 32px 0;
+  }
+
+  .club-agreement-section p,
+  .club-agreement-section li {
+    font-size: 14px;
+  }
+}

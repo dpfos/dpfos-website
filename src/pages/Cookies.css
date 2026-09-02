@@ -1,0 +1,139 @@
+.cookies-page {
+  min-height: 100vh;
+  background: #040816;
+  color: #f5f7fb;
+  padding: 120px 24px 80px;
+}
+
+.cookies-container {
+  width: min(920px, 100%);
+  margin: 0 auto;
+}
+
+.cookies-hero {
+  padding-bottom: 56px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.cookies-eyebrow {
+  margin-bottom: 18px;
+  color: #f4c51c;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+}
+
+.cookies-hero h1 {
+  margin: 0 0 20px;
+  font-size: clamp(42px, 6vw, 72px);
+  line-height: 0.98;
+  letter-spacing: -0.04em;
+}
+
+.cookies-hero p {
+  max-width: 760px;
+  margin: 0;
+  color: #9aa8c0;
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.cookies-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-top: 28px;
+  color: #64748b;
+  font-size: 12px;
+}
+
+.cookies-section {
+  padding: 42px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.cookies-section h2 {
+  margin: 0 0 20px;
+  font-size: 24px;
+}
+
+.cookies-section p,
+.cookies-section li {
+  color: #aab5c8;
+  font-size: 15px;
+  line-height: 1.85;
+}
+
+.cookies-section p {
+  margin: 0 0 16px;
+}
+
+.cookies-section ul {
+  margin: 18px 0 0;
+  padding-left: 24px;
+}
+
+.cookies-section li {
+  margin-bottom: 10px;
+}
+
+.cookie-card {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  gap: 20px;
+  padding: 24px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.cookie-card > span {
+  color: #f4c51c;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.cookie-card h3 {
+  margin: 0 0 8px;
+  color: #eef2f8;
+  font-size: 17px;
+}
+
+.cookie-card p {
+  margin: 0;
+}
+
+.cookies-placeholder {
+  color: #f4c51c !important;
+}
+
+.cookies-footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px 28px;
+  padding-top: 36px;
+  color: #66748c;
+  font-size: 12px;
+}
+
+.cookies-footer strong {
+  color: #f4c51c;
+  letter-spacing: 0.08em;
+}
+
+@media (max-width: 700px) {
+  .cookies-page {
+    padding: 90px 18px 60px;
+  }
+
+  .cookies-hero h1 {
+    font-size: 46px;
+  }
+
+  .cookies-section {
+    padding: 32px 0;
+  }
+
+  .cookies-section p,
+  .cookies-section li {
+    font-size: 14px;
+  }
+}

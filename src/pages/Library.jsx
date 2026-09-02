@@ -1,378 +1,261 @@
 import { Link } from "react-router-dom";
 import "./Library.css";
-
 import books from "../data/books";
 
+const sections = [
+  {
+    number: "01",
+    eyebrow: "FOUNDATION",
+    title: "Foundational Knowledge",
+    description: "The constitutional and philosophical foundation of DPF OS.",
+    books: ["01", "02"],
+  },
+  {
+    number: "02",
+    eyebrow: "DESIGN & INSTITUTION",
+    title: "System Architecture",
+    description: "The structural and institutional architecture of DPF OS.",
+    books: ["03", "04", "05"],
+  },
+  {
+    number: "03",
+    eyebrow: "FOOTBALL SYSTEM",
+    title: "The Football Knowledge Layer",
+    description: "The football architecture connecting principles, game model and practice.",
+    books: ["06", "07", "08", "09"],
+  },
+  {
+    number: "04",
+    eyebrow: "DEVELOPMENT & PERFORMANCE",
+    title: "Operational Knowledge",
+    description: "The development, performance and implementation layer of DPF OS.",
+    books: ["10", "11", "12", "13", "14", "15"],
+  },
+  {
+    number: "05",
+    eyebrow: "RESEARCH & BUSINESS",
+    title: "Intelligence & Strategy",
+    description: "The knowledge, intelligence and value layer extending the system.",
+    books: ["16", "17"],
+  },
+  {
+    number: "06",
+    eyebrow: "OPERATING SYSTEM",
+    title: "DPF OS",
+    description: "The integrated operating architecture connecting the complete ecosystem.",
+    books: ["18"],
+  },
+];
 
 function BookCard({ book }) {
   const isFinal = book.status === "FINAL";
 
   return (
-    <Link
-      to={`/library/${book.slug}`}
-      className={`library-card ${
-        !isFinal ? "library-card-development" : ""
-      }`}
-    >
-
+    <article className={`library-card ${isFinal ? "is-final" : "is-development"}`}>
       <div className="library-card-top">
+        <span className="library-card-number">{book.number}</span>
 
-        <span className="library-number">
-          {book.number}
-        </span>
-
-        <span className="library-type">
+        <span className="library-card-category">
           {book.category}
         </span>
-
       </div>
 
-
-      {book.cover && (
-        <div className="library-card-cover">
-
-          <img
-            src={book.cover}
-            alt={`${book.title} cover`}
-          />
-
-        </div>
-      )}
-
+      <div className="library-card-cover">
+        <img
+          src={book.cover}
+          alt={`${book.title} cover`}
+          loading="lazy"
+        />
+      </div>
 
       <div className="library-card-content">
-
-        <h3>
-          {book.title}
-        </h3>
-
-        <p>
-          {book.description}
-        </p>
-
-      </div>
-
-
-      <div className="library-card-bottom">
-
-        <span>
-          {book.status}
-        </span>
-
-        <span className="library-arrow">
-          →
-        </span>
-
-      </div>
-
-    </Link>
-  );
-}
-
-
-function LibrarySection({
-  number,
-  label,
-  title,
-  description,
-  books,
-}) {
-  return (
-
-    <section className="library-section">
-
-      <div className="library-section-heading">
-
-        <div>
-
-          <span>
-            {number} — {label}
-          </span>
-
-          <h3>
-            {title}
-          </h3>
-
+        <div className="library-card-status">
+          {isFinal ? "FINAL" : "IN DEVELOPMENT"}
         </div>
 
+        <h3>{book.shortTitle || book.title}</h3>
 
-        {description && (
-          <p>
-            {description}
-          </p>
+        <p>{book.description}</p>
+      </div>
+
+      <div className="library-card-footer">
+        <span>
+          {book.version || "COMING SOON"}
+        </span>
+
+        {isFinal ? (
+          <Link
+            to={`/library/${book.slug}`}
+            className="library-card-link"
+            aria-label={`Open ${book.title}`}
+          >
+            VIEW VOLUME
+            <span>→</span>
+          </Link>
+        ) : (
+          <span className="library-card-link library-card-link--disabled">
+            COMING SOON
+          </span>
         )}
-
       </div>
-
-
-      <div className="library-grid">
-
-        {books.map((book) => (
-
-          <BookCard
-            key={book.slug}
-            book={book}
-          />
-
-        ))}
-
-      </div>
-
-    </section>
-
+    </article>
   );
 }
 
-
-export default function Library() {
-
-  const foundationBooks =
-    books.slice(0, 2);
-
-  const architectureBooks =
-    books.slice(2, 5);
-
-  const footballBooks =
-    books.slice(5, 9);
-
-  const developmentBooks =
-    books.slice(9, 14);
-
-  const intelligenceBooks =
-    books.slice(14, 16);
-
-  const operationsBooks =
-    books.slice(16, 17);
-
-  const operatingSystemBooks =
-    books.slice(17, 18);
-
+function LibrarySection({ section }) {
+  const sectionBooks = section.books
+    .map((number) =>
+      books.find((book) => book.number === number)
+    )
+    .filter(Boolean);
 
   return (
+    <section className="library-section">
+      <div className="library-section-header">
+        <div className="library-section-heading">
+          <span className="library-eyebrow">
+            {section.number} — {section.eyebrow}
+          </span>
 
-    <main className="library">
+          <h2>{section.title}</h2>
+        </div>
 
-      <div className="library-container">
+        <p>{section.description}</p>
+      </div>
 
+      <div className={`library-grid library-grid--${sectionBooks.length}`}>
+        {sectionBooks.map((book) => (
+          <BookCard
+            key={book.number}
+            book={book}
+          />
+        ))}
+      </div>
+    </section>
+  );
+}
 
-        {/* =========================
-            HEADER
-        ========================== */}
+export default function Library() {
+  return (
+    <main className="library-page">
 
-        <header className="library-header">
+      {/* =====================================================
+          HERO
+      ===================================================== */}
 
-          <div className="library-label">
+      <section className="library-hero">
+        <div className="library-hero-grid" />
+
+        <div className="library-container library-hero-inner">
+
+          <span className="library-hero-eyebrow">
             DPF OS / KNOWLEDGE LIBRARY
-          </div>
-
-
-          <div className="library-heading">
-
-            <h2>
-              The Knowledge
-              <br />
-              Behind the System.
-            </h2>
-
-
-            <p>
-              The intellectual foundation of the Dynamic
-              Positional Football Operating System, bringing
-              philosophy, architecture, football methodology,
-              coaching, development, performance, intelligence
-              and strategy into one evolving knowledge system.
-            </p>
-
-          </div>
-
-        </header>
-
-
-
-        {/* =========================
-            FEATURE
-        ========================== */}
-
-        <section className="library-feature">
-
-          <div className="library-feature-mark">
-            DPF
-            <small>OS</small>
-          </div>
-
-
-          <div className="library-feature-content">
-
-            <span>
-              KNOWLEDGE ARCHITECTURE
-            </span>
-
-
-            <h3>
-              One Library.
-              <br />
-              One Operating System.
-            </h3>
-
-
-            <p>
-              Eighteen core volumes form the intellectual
-              architecture of DPF OS, from foundational
-              philosophy through football methodology,
-              coaching, development, performance,
-              intelligence and operations.
-            </p>
-
-          </div>
-
-
-          <div className="library-feature-index">
-
-            <strong>
-              18
-            </strong>
-
-            <span>
-              CORE VOLUMES
-            </span>
-
-          </div>
-
-        </section>
-
-
-
-        {/* =========================
-            01 FOUNDATION
-        ========================== */}
-
-        <LibrarySection
-          number="01"
-          label="FOUNDATION"
-          title="Foundational Knowledge"
-          description="The constitutional and philosophical foundation of the DPF Operating System."
-          books={foundationBooks}
-        />
-
-
-
-        {/* =========================
-            02 ARCHITECTURE
-        ========================== */}
-
-        <LibrarySection
-          number="02"
-          label="DESIGN & INSTITUTION"
-          title="System Architecture"
-          description="The structural and institutional architecture through which DPF OS is designed and implemented."
-          books={architectureBooks}
-        />
-
-
-
-        {/* =========================
-            03 FOOTBALL
-        ========================== */}
-
-        <LibrarySection
-          number="03"
-          label="FOOTBALL SYSTEM"
-          title="The Football Knowledge Layer"
-          description="The football architecture translating DPF philosophy into game behavior, coaching and player roles."
-          books={footballBooks}
-        />
-
-
-
-        {/* =========================
-            04 DEVELOPMENT
-        ========================== */}
-
-        <LibrarySection
-          number="04"
-          label="DEVELOPMENT"
-          title="Player & Performance Development"
-          description="The development layer connecting players, academies, scouting and performance environments."
-          books={developmentBooks}
-        />
-
-
-
-        {/* =========================
-            05 INTELLIGENCE
-        ========================== */}
-
-        <LibrarySection
-          number="05"
-          label="INTELLIGENCE"
-          title="Intelligence"
-          description="The evolving intelligence layer connecting evidence, research, measurement and football knowledge."
-          books={intelligenceBooks}
-        />
-
-
-
-        {/* =========================
-            06 OPERATIONS
-        ========================== */}
-
-        <LibrarySection
-          number="06"
-          label="OPERATIONS"
-          title="Operational Knowledge"
-          description="Practical instruments that help DPF practitioners implement and operate the system."
-          books={operationsBooks}
-        />
-
-
-
-        {/* =========================
-            07 OPERATING SYSTEM
-        ========================== */}
-
-        <LibrarySection
-          number="07"
-          label="OPERATING SYSTEM"
-          title="DPF OS"
-          description="The integrated operating system connecting the complete DPF knowledge architecture."
-          books={operatingSystemBooks}
-        />
-
-
-
-        {/* =========================
-            FOOTER
-        ========================== */}
-
-        <footer className="library-footer">
-
-          <div>
-
-            <span className="library-footer-label">
-              CONTINUOUSLY EVOLVING
-            </span>
-
-
-            <h3>
-              Knowledge becomes
-              <br />
-              infrastructure.
-            </h3>
-
-          </div>
-
+          </span>
+
+          <h1>
+            The Knowledge
+            <br />
+            Behind the
+            <br />
+            System.
+          </h1>
 
           <p>
-            DPF OS is designed as a living knowledge system.
-            New research, frameworks, methodologies and
-            practical insights continuously expand the
-            library and strengthen the operating system.
+            The knowledge architecture behind DPF OS, connecting philosophy,
+            football methodology, development, performance and intelligence.
           </p>
 
-        </footer>
+        </div>
+      </section>
 
 
-      </div>
+      {/* =====================================================
+          KNOWLEDGE ARCHITECTURE
+      ===================================================== */}
+
+      <section className="library-architecture">
+        <div className="library-container">
+
+          <div className="library-architecture-header">
+
+            <div className="library-architecture-label">
+              <span className="library-eyebrow">
+                KNOWLEDGE ARCHITECTURE
+              </span>
+
+              <strong>DPF OS</strong>
+
+              <small>
+                ONE KNOWLEDGE SYSTEM
+              </small>
+            </div>
+
+            <div className="library-architecture-title">
+              <h2>
+                One Library.
+                <br />
+                One Operating System.
+              </h2>
+
+              <p>
+                Eighteen core volumes organize the knowledge architecture
+                of DPF OS.
+              </p>
+            </div>
+
+            <div className="library-volume-count">
+              <strong>18</strong>
+              <span>CORE VOLUMES</span>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+
+      {/* =====================================================
+          VOLUMES
+      ===================================================== */}
+
+      <section className="library-volumes">
+        <div className="library-container">
+
+          {sections.map((section) => (
+            <LibrarySection
+              key={section.number}
+              section={section}
+            />
+          ))}
+
+        </div>
+      </section>
+
+
+      {/* =====================================================
+          FOOTER STATEMENT
+      ===================================================== */}
+
+      <section className="library-closing">
+        <div className="library-container">
+
+          <span className="library-eyebrow">
+            DPF OS / KNOWLEDGE SYSTEM
+          </span>
+
+          <h2>
+            Knowledge becomes
+            <br />
+            architecture.
+          </h2>
+
+          <p>
+            A connected body of knowledge designed to build,
+            operate and continuously evolve the DPF Operating System.
+          </p>
+
+        </div>
+      </section>
 
     </main>
   );
