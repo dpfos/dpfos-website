@@ -1,8 +1,15 @@
 import "./Auth.css";
 import { useState } from "react";
-import { supabase } from "../lib/supabase";
+import { useDPFAuth } from "../core/index.js";
 
 function Auth() {
+  const {
+    signUp,
+    signIn,
+    signInWithOAuth,
+    sendPasswordReset,
+  } = useDPFAuth();
+
   const [mode, setMode] = useState("login");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -19,7 +26,7 @@ function Auth() {
 
     try {
       if (mode === "signup") {
-        const { error } = await supabase.auth.signUp({
+        const { error } = await signUp({
           email,
           password,
         });
@@ -30,7 +37,7 @@ function Auth() {
           "Account created. Please check your email to confirm your account."
         );
       } else {
-        const { error } = await supabase.auth.signInWithPassword({
+        const { error } = await signIn({
           email,
           password,
         });
@@ -57,7 +64,7 @@ function Auth() {
     setError("");
 
     try {
-      const { error } = await supabase.auth.resetPasswordForEmail(email, {
+      const { error } = await sendPasswordReset(email, {
         redirectTo: `${window.location.origin}/reset-password`,
       });
 
@@ -79,7 +86,7 @@ function Auth() {
     setError("");
 
     try {
-      const { error } = await supabase.auth.signInWithOAuth({
+      const { error } = await signInWithOAuth(provider, {
         provider,
         options: {
           redirectTo: `${window.location.origin}/`,
@@ -193,7 +200,7 @@ function Auth() {
             onClick={() => handleSocialLogin("x")}
             disabled={loading}
           >
-            <span className="auth-social-icon">𝕏</span>
+            <span className="auth-social-icon">ð•</span>
             <span>Continue with X</span>
           </button>
         </div>

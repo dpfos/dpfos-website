@@ -1,0 +1,820 @@
+.club-module-page {
+  padding: 42px 30px 70px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.club-module-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+  margin-bottom: 32px;
+}
+
+.club-module-eyebrow {
+  color: #f5c400;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  margin-bottom: 12px;
+}
+
+.club-module-header h1 {
+  margin: 0 0 10px;
+  font-size: 42px;
+  line-height: 1.05;
+  font-weight: 700;
+}
+
+.club-module-header p {
+  margin: 0;
+  max-width: 760px;
+  color: #8d9bb5;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.club-module-status {
+  border: 1px solid #222b3c;
+  padding: 10px 14px;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #8d9bb5;
+  white-space: nowrap;
+}
+
+.status-dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin-right: 8px;
+  border-radius: 50%;
+  background: #f5c400;
+}
+
+.club-module-context {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.club-module-context > div {
+  border: 1px solid #1d2535;
+  background: #090d15;
+  padding: 18px;
+}
+
+.club-module-context span,
+.workspace-meta span {
+  display: block;
+  margin-bottom: 8px;
+  color: #5d6b83;
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.club-module-context strong {
+  color: #eef2f8;
+  font-size: 14px;
+}
+
+.club-module-workspace {
+  min-height: 420px;
+  border: 1px solid #1d2535;
+  background:
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(0, 174, 255, 0.07),
+      transparent 42%
+    ),
+    #070b12;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.workspace-placeholder {
+  width: min(760px, 90%);
+  text-align: center;
+}
+
+.workspace-index {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  margin-bottom: 22px;
+  border: 1px solid #354057;
+  color: #f5c400;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.workspace-placeholder h2 {
+  margin: 0 0 14px;
+  font-size: 28px;
+}
+
+.workspace-placeholder p {
+  margin: 0 auto 30px;
+  max-width: 650px;
+  color: #7f8ca3;
+  line-height: 1.7;
+  font-size: 14px;
+}
+
+.workspace-meta {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid #1d2535;
+  border-bottom: 1px solid #1d2535;
+}
+
+.workspace-meta > div {
+  padding: 18px;
+  border-right: 1px solid #1d2535;
+}
+
+.workspace-meta > div:last-child {
+  border-right: none;
+}
+
+.workspace-meta strong {
+  color: #e9edf5;
+  font-size: 12px;
+}
+
+.club-module-footer {
+  padding-top: 24px;
+}
+
+.club-module-footer a,
+.club-module-empty a {
+  color: #f5c400;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.club-module-empty {
+  padding: 80px 30px;
+  text-align: center;
+}
+
+.club-module-empty span {
+  color: #f5c400;
+  font-size: 10px;
+  letter-spacing: 0.15em;
+}
+
+.club-module-empty h1 {
+  margin: 12px 0;
+}
+
+.club-module-empty p {
+  color: #7f8ca3;
+  margin-bottom: 25px;
+}
+
+@media (max-width: 800px) {
+  .club-module-header {
+    flex-direction: column;
+  }
+
+  .club-module-context {
+    grid-template-columns: 1fr;
+  }
+
+  .workspace-meta {
+    grid-template-columns: 1fr;
+  }
+
+  .workspace-meta > div {
+    border-right: none;
+    border-bottom: 1px solid #1d2535;
+  }
+
+  .workspace-meta > div:last-child {
+    border-bottom: none;
+  }
+}
+
+
+/* =========================================================
+   CLUB AI — INTELLIGENCE CENTER
+   ========================================================= */
+
+.club-ai-page {
+  min-height: 100%;
+}
+
+
+/* =========================================================
+   CONTEXT
+   ========================================================= */
+
+.club-ai-context {
+  display: grid;
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 1px;
+
+  margin-top: 28px;
+
+  border: 1px solid
+    rgba(255, 255, 255, 0.08);
+
+  background:
+    rgba(255, 255, 255, 0.06);
+}
+
+.club-ai-context > div {
+  padding: 18px 20px;
+
+  background:
+    rgba(4, 8, 20, 0.96);
+}
+
+.club-ai-context span {
+  display: block;
+
+  margin-bottom: 7px;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  letter-spacing: 0.16em;
+
+  color: #7e8ca8;
+}
+
+.club-ai-context strong {
+  display: block;
+
+  color: #f4f7ff;
+
+  font-size: 13px;
+}
+
+
+/* =========================================================
+   WORKSPACE
+   ========================================================= */
+
+.club-ai-workspace {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 0.95fr)
+    minmax(0, 1.25fr);
+
+  gap: 18px;
+
+  margin-top: 18px;
+}
+
+
+/* =========================================================
+   PANELS
+   ========================================================= */
+
+.club-ai-panel,
+.club-ai-output {
+  min-height: 520px;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.08);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(10, 15, 29, 0.98),
+      rgba(4, 8, 18, 0.98)
+    );
+
+  box-shadow:
+    0 20px 60px
+    rgba(0, 0, 0, 0.22);
+}
+
+
+/* =========================================================
+   PANEL HEADER
+   ========================================================= */
+
+.club-ai-panel-header,
+.club-ai-output-header {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 22px 24px;
+
+  border-bottom:
+    1px solid
+    rgba(255, 255, 255, 0.07);
+}
+
+.club-ai-panel-header span,
+.club-ai-output-header span {
+  display: block;
+
+  margin-bottom: 7px;
+
+  font-size: 9px;
+  font-weight: 800;
+
+  letter-spacing: 0.17em;
+
+  color: #ffc72c;
+}
+
+.club-ai-panel-header h2,
+.club-ai-output-header h2 {
+  margin: 0;
+
+  color: #f5f7fb;
+
+  font-size: 22px;
+}
+
+
+/* =========================================================
+   LIVE
+   ========================================================= */
+
+.club-ai-live {
+  display: flex !important;
+
+  align-items: center;
+
+  gap: 7px;
+
+  margin: 0 !important;
+
+  color: #8d9ab2 !important;
+}
+
+.club-ai-live span {
+  width: 6px;
+  height: 6px;
+
+  margin: 0 !important;
+
+  border-radius: 50%;
+
+  background: #ffc72c;
+
+  box-shadow:
+    0 0 12px
+    rgba(255, 199, 44, 0.8);
+}
+
+
+/* =========================================================
+   QUICK ACTIONS
+   ========================================================= */
+
+.club-ai-actions {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 8px;
+
+  padding: 18px 24px 4px;
+}
+
+.club-ai-actions button {
+  padding: 9px 12px;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.09);
+
+  background:
+    rgba(255, 255, 255, 0.025);
+
+  color: #aeb9cc;
+
+  font-size: 11px;
+
+  cursor: pointer;
+
+  transition:
+    border-color 0.2s ease,
+    color 0.2s ease,
+    background 0.2s ease;
+}
+
+.club-ai-actions button:hover {
+  border-color:
+    rgba(255, 199, 44, 0.5);
+
+  background:
+    rgba(255, 199, 44, 0.06);
+
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   FORM
+   ========================================================= */
+
+.club-ai-form {
+  display: flex;
+
+  flex-direction: column;
+
+  height: 350px;
+
+  margin: 18px 24px 24px;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.08);
+
+  background:
+    rgba(0, 0, 0, 0.18);
+}
+
+.club-ai-form textarea {
+  flex: 1;
+
+  width: 100%;
+
+  padding: 20px;
+
+  resize: none;
+
+  border: 0;
+
+  outline: none;
+
+  background: transparent;
+
+  color: #eef3fb;
+
+  font-family: inherit;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+.club-ai-form textarea::placeholder {
+  color: #59667e;
+}
+
+.club-ai-form textarea:focus {
+  box-shadow:
+    inset 0 0 0 1px
+    rgba(255, 199, 44, 0.25);
+}
+
+
+/* =========================================================
+   FORM FOOTER
+   ========================================================= */
+
+.club-ai-form-footer {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 12px;
+
+  border-top:
+    1px solid
+    rgba(255, 255, 255, 0.07);
+}
+
+.club-ai-form-footer span {
+  margin: 0;
+
+  color: #69768e;
+
+  font-size: 10px;
+}
+
+.club-ai-form-footer button {
+  padding: 11px 18px;
+
+  border: 0;
+
+  background: #ffc72c;
+
+  color: #080b13;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  letter-spacing: 0.03em;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.club-ai-form-footer button:hover {
+  transform:
+    translateY(-1px);
+}
+
+.club-ai-form-footer button:disabled {
+  opacity: 0.4;
+
+  cursor: not-allowed;
+
+  transform: none;
+}
+
+
+/* =========================================================
+   OUTPUT
+   ========================================================= */
+
+.club-ai-output-body {
+  min-height: 430px;
+
+  padding: 28px;
+}
+
+
+/* =========================================================
+   EMPTY
+   ========================================================= */
+
+.club-ai-empty {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-direction: column;
+
+  min-height: 380px;
+
+  text-align: center;
+}
+
+.club-ai-orbit {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 76px;
+  height: 76px;
+
+  margin-bottom: 22px;
+
+  border:
+    1px solid
+    rgba(255, 199, 44, 0.4);
+
+  border-radius: 50%;
+
+  color: #ffc72c;
+
+  font-size: 17px;
+  font-weight: 800;
+
+  box-shadow:
+    0 0 45px
+    rgba(255, 199, 44, 0.08);
+}
+
+.club-ai-empty h3 {
+  margin: 0 0 8px;
+
+  color: #f4f7fb;
+
+  font-size: 18px;
+}
+
+.club-ai-empty p {
+  max-width: 440px;
+
+  margin: 0;
+
+  color: #71809a;
+
+  font-size: 13px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   LOADING
+   ========================================================= */
+
+.club-ai-loading {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-direction: column;
+
+  min-height: 380px;
+
+  text-align: center;
+}
+
+.club-ai-loader {
+  display: flex;
+
+  gap: 7px;
+
+  margin-bottom: 22px;
+}
+
+.club-ai-loader span {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: #ffc72c;
+
+  animation:
+    clubAiPulse 1.1s
+    infinite ease-in-out;
+}
+
+.club-ai-loader span:nth-child(2) {
+  animation-delay: 0.15s;
+}
+
+.club-ai-loader span:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+@keyframes clubAiPulse {
+  0%,
+  80%,
+  100% {
+    opacity: 0.25;
+
+    transform:
+      translateY(0);
+  }
+
+  40% {
+    opacity: 1;
+
+    transform:
+      translateY(-5px);
+  }
+}
+
+.club-ai-loading strong {
+  color: #eef3fb;
+
+  font-size: 14px;
+}
+
+.club-ai-loading p {
+  margin-top: 8px;
+
+  color: #68758c;
+
+  font-size: 12px;
+}
+
+
+/* =========================================================
+   RESPONSE
+   ========================================================= */
+
+.club-ai-response {
+  color: #dce4f2;
+
+  font-size: 14px;
+
+  line-height: 1.85;
+
+  white-space: pre-wrap;
+
+  overflow-wrap: anywhere;
+}
+
+.club-ai-result-state {
+  margin: 0 !important;
+
+  color: #8d9ab2 !important;
+
+  font-size: 9px !important;
+}
+
+
+/* =========================================================
+   ERROR
+   ========================================================= */
+
+.club-ai-error {
+  display: flex;
+
+  align-items: flex-start;
+
+  flex-direction: column;
+
+  padding: 30px;
+
+  border:
+    1px solid
+    rgba(255, 80, 80, 0.16);
+
+  background:
+    rgba(255, 80, 80, 0.035);
+}
+
+.club-ai-error > span {
+  margin-bottom: 10px;
+
+  color: #ff8585;
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.15em;
+}
+
+.club-ai-error h3 {
+  margin: 0 0 8px;
+
+  color: #f4f7fb;
+
+  font-size: 18px;
+}
+
+.club-ai-error p {
+  margin: 0;
+
+  color: #9b6870;
+
+  font-size: 13px;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .club-ai-context {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .club-ai-workspace {
+    grid-template-columns:
+      1fr;
+  }
+
+}
+
+
+@media (max-width: 560px) {
+
+  .club-ai-context {
+    grid-template-columns:
+      1fr;
+  }
+
+  .club-ai-panel-header,
+  .club-ai-output-header {
+    padding: 18px;
+  }
+
+  .club-ai-actions {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .club-ai-form {
+    margin-left: 18px;
+    margin-right: 18px;
+  }
+
+  .club-ai-output-body {
+    padding: 20px;
+  }
+
+}

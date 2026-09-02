@@ -1,7 +1,9 @@
 import { useState } from "react";
-import { supabase } from "../lib/supabase";
+import { useDPFAuth } from "../core/index.js";
 
 function ResetPassword() {
+  const { updatePassword } = useDPFAuth();
+
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [loading, setLoading] = useState(false);
@@ -22,11 +24,8 @@ function ResetPassword() {
     setLoading(true);
 
     try {
-      const { error } = await supabase.auth.updateUser({
-        password,
-      });
-
-      if (error) throw error;
+      const { error } = await updatePassword(password);
+if (error) throw error;
 
       setMessage("Your password has been updated successfully.");
       setPassword("");

@@ -1,4 +1,3 @@
-import { supabase } from "./lib/supabase";
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
@@ -10,22 +9,34 @@ import "./styles/global.css";
 import "./styles/typography.css";
 import "./styles/animations.css";
 
-import "./i18n";
-
+import "./data/entitlements/testEntitlements";
+import { initializeDemoData } from "./data/seeds/initializeDemoData.js";
 import App from "./App";
+import { DPFAuthProvider } from "./core/index.js";
 
-supabase.auth.getSession().then(({ error }) => {
-  if (error) {
-    console.error("Supabase connection error:", error);
-  } else {
-    console.log("Supabase connection OK");
+async function bootstrap() {
+  if (import.meta.env.DEV) {
+    try {
+      await initializeDemoData();
+      console.log("DPF demo data initialized.");
+    } catch (error) {
+      console.error(
+        "DPF demo data initialization failed:",
+        error
+      );
+    }
   }
-});
+ReactDOM.createRoot(
+    document.getElementById("root")
+  ).render(
+    <React.StrictMode>
+      <DPFAuthProvider>
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
+      </DPFAuthProvider>
+    </React.StrictMode>
+  );
+}
 
-ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
-  </React.StrictMode>
-);
+bootstrap();

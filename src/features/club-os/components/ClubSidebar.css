@@ -1,0 +1,93 @@
+﻿.dpf-club-sidebar {
+  width: 255px;
+  min-height: 100vh;
+  background: #060a14;
+  border-right: 1px solid rgba(255,255,255,.08);
+  padding: 25px 16px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.dpf-club-brand {
+  padding: 5px 12px 25px;
+}
+
+.dpf-club-brand span {
+  color: #f5c84c;
+  display: block;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: .22em;
+}
+
+.dpf-club-brand strong {
+  display: block;
+  color: #737d90;
+  margin-top: 6px;
+  font-size: 8px;
+  letter-spacing: .14em;
+}
+
+.dpf-club-identity {
+  border-top: 1px solid rgba(255,255,255,.07);
+  border-bottom: 1px solid rgba(255,255,255,.07);
+  padding: 17px 12px;
+  margin-bottom: 15px;
+}
+
+.dpf-club-identity span {
+  display: block;
+  color: #f5c84c;
+  font-size: 8px;
+  letter-spacing: .16em;
+  margin-bottom: 7px;
+}
+
+.dpf-club-identity strong {
+  color: #e9edf5;
+  display: block;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.dpf-club-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.dpf-club-nav-item {
+  color: #7d8798;
+  text-decoration: none;
+  font-size: 12px;
+  padding: 10px 12px;
+  border-radius: 6px;
+  transition: .2s ease;
+}
+
+.dpf-club-nav-item:hover {
+  color: #fff;
+  background: rgba(255,255,255,.035);
+}
+
+.dpf-club-nav-item.active {
+  color: #f5c84c;
+  background: rgba(245,200,76,.08);
+  box-shadow: inset 2px 0 #f5c84c;
+}
+
+.dpf-club-footer {
+  margin-top: auto;
+  padding: 17px 12px 3px;
+  border-top: 1px solid rgba(255,255,255,.07);
+  display: flex;
+  justify-content: space-between;
+  font-size: 8px;
+  letter-spacing: .14em;
+  color: #50596b;
+}
+
+.dpf-club-footer strong {
+  color: #f5c84c;
+}
