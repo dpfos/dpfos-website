@@ -217,31 +217,32 @@ function App() {
         }
       />
 
-      <Route
-        path="/terms"
+            <Route
+        path="/club-agreement"
         element={
-      <PublicPage>
-           <Terms />
-        </PublicPage>
-  }
-/>
-      <Route
-        path="/privacy"
-        element={
-      <PublicPage>
-        <Privacy />
-       </PublicPage>
-  }
-/>
+          <PublicPage>
+            <ClubAgreement />
+          </PublicPage>
+        }
+      />
 
-    <Route
-      path="/cookies"
-      element={
-   <PublicPage>
-      <Cookies />
-      </PublicPage>
-  }
-/>
+      <Route
+        path="/data-processing"
+        element={
+          <PublicPage>
+            <DataProcessingTerms />
+          </PublicPage>
+        }
+      />
+
+      <Route
+        path="/sla"
+        element={
+          <PublicPage>
+            <ServiceLevelAgreement />
+          </PublicPage>
+        }
+      />
 
     <Route
      path="/club-agreement"
