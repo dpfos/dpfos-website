@@ -1,0 +1,135 @@
+
+.data-deletion-page {
+  min-height: 100vh;
+  padding: 64px 24px;
+  color: #f7f7f7;
+  background:
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(211, 170, 74, 0.13),
+      transparent 42%
+    ),
+    linear-gradient(145deg, #080a0f, #11151e 55%, #080a0f);
+}
+
+.data-deletion-container {
+  width: 100%;
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+.data-deletion-eyebrow {
+  display: inline-block;
+  margin-bottom: 18px;
+  color: #d8b35c;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.data-deletion-page h1 {
+  margin: 0 0 18px;
+  color: #ffffff;
+  font-size: clamp(32px, 5vw, 46px);
+  line-height: 1.15;
+  font-weight: 750;
+}
+
+.data-deletion-intro {
+  max-width: 680px;
+  margin: 0 0 32px;
+  color: #c6cad3;
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.data-deletion-card {
+  margin-bottom: 20px;
+  padding: 28px;
+  border: 1px solid rgba(216, 179, 92, 0.25);
+  border-radius: 16px;
+  background: linear-gradient(
+    145deg,
+    rgba(29, 32, 40, 0.96),
+    rgba(12, 14, 20, 0.98)
+  );
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.2);
+}
+
+.data-deletion-card h2 {
+  margin: 0 0 14px;
+  color: #e5c36f;
+  font-size: 20px;
+  font-weight: 650;
+}
+
+.data-deletion-card p,
+.data-deletion-card li {
+  color: #d0d3da;
+  font-size: 15px;
+  line-height: 1.85;
+}
+
+.data-deletion-card p {
+  margin: 0 0 16px;
+}
+
+.data-deletion-card ol {
+  margin: 0;
+  padding-left: 22px;
+}
+
+.data-deletion-card li + li {
+  margin-top: 10px;
+}
+
+.data-deletion-card a {
+  color: #f0cf78;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.data-deletion-email {
+  display: inline-block;
+  margin: 0 0 18px;
+  overflow-wrap: anywhere;
+  font-weight: 650;
+}
+
+.data-deletion-button {
+  display: block;
+  padding: 12px 18px;
+  border: 1px solid #d8b35c;
+  border-radius: 9px;
+  color: #111111;
+  background: linear-gradient(135deg, #f0d48a, #c49a3d);
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.data-deletion-button:hover {
+  filter: brightness(1.08);
+}
+
+.data-deletion-footer {
+  margin-top: 32px;
+  color: #858b98;
+  font-size: 12px;
+  line-height: 1.8;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .data-deletion-page {
+    padding: 40px 16px;
+  }
+
+  .data-deletion-card {
+    padding: 22px 18px;
+  }
+
+  .data-deletion-intro {
+    font-size: 15px;
+  }
+}

@@ -22,6 +22,7 @@ import ResetPassword from "./pages/ResetPassword";
 import Terms from "./pages/Terms";
 import Privacy from "./pages/Privacy";
 import Cookies from "./pages/Cookies";
+import DataDeletion from "./pages/DataDeletion";
 import ClubAgreement from "./pages/ClubAgreement";
 import DataProcessingTerms from "./pages/DataProcessingTerms";
 import ServiceLevelAgreement from "./pages/ServiceLevelAgreement";
@@ -187,6 +188,14 @@ function App() {
            <PublicPage>
            <Cookies />
            </PublicPage>
+  }
+/>
+        <Route
+         path="/data-deletion"
+         element={
+        <PublicPage>
+        <DataDeletion />
+         </PublicPage>
   }
 />
 
